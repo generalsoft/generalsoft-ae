@@ -1,0 +1,308 @@
+/* Electronic Systems & IoT Hero Section Styles */
+.iot-hero {
+    margin-top: 80px;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: linear-gradient(135deg, #141e30 0%, #243b55 50%, #0f2027 100%);
+}
+
+.iot-hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.circuit-board {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+#iotCanvas {
+    width: 100%;
+    height: 100%;
+}
+
+.connection-pulses {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 30% 40%, rgba(255, 165, 0, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 70% 60%, rgba(0, 174, 255, 0.1) 0%, transparent 40%);
+    animation: pulseGlow 4s ease-in-out infinite alternate;
+}
+
+@keyframes pulseGlow {
+    0% {
+        opacity: 0.3;
+        transform: scale(0.95);
+    }
+    100% {
+        opacity: 0.7;
+        transform: scale(1.05);
+    }
+}
+
+.iot-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    padding: 2rem;
+    text-align: center;
+    color: white;
+}
+
+.iot-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    background: rgba(255, 165, 0, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 165, 0, 0.3);
+    border-radius: 50px;
+    margin-bottom: 2rem;
+    animation: fadeInDown 1s ease;
+}
+
+.badge-icon {
+    font-size: 1.5rem;
+    animation: plugPulse 2s ease-in-out infinite;
+}
+
+@keyframes plugPulse {
+    0%, 100% { 
+        transform: scale(1) rotate(0deg);
+        filter: drop-shadow(0 0 5px rgba(255, 165, 0, 0.5));
+    }
+    50% { 
+        transform: scale(1.15) rotate(10deg);
+        filter: drop-shadow(0 0 15px rgba(255, 165, 0, 0.8));
+    }
+}
+
+.badge-text {
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    color: #ffa500;
+}
+
+.iot-hero-title {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    animation: fadeInUp 1s ease 0.2s backwards;
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #ffa500 0%, #00aeff 50%, #ffa500 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 3s ease infinite;
+    background-size: 200% 200%;
+}
+
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.iot-hero-description {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    opacity: 0.9;
+    animation: fadeInUp 1s ease 0.4s backwards;
+}
+
+.iot-hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-bottom: 3rem;
+    animation: fadeInUp 1s ease 0.6s backwards;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #ffa500 0%, #00aeff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+    filter: drop-shadow(0 0 10px rgba(255, 165, 0, 0.3));
+}
+
+.stat-label {
+    font-size: 1rem;
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.iot-hero-cta {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    animation: fadeInUp 1s ease 0.8s backwards;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #ffa500 0%, #ff8c00 100%);
+    color: white;
+    box-shadow: 0 10px 30px rgba(255, 165, 0, 0.4);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(255, 165, 0, 0.6);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #ffa500;
+    border: 2px solid rgba(255, 165, 0, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 165, 0, 0.1);
+    border-color: #ffa500;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 165, 0, 0.3);
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    text-align: center;
+    animation: fadeIn 2s ease 1s backwards;
+}
+
+.mouse {
+    width: 30px;
+    height: 50px;
+    border: 2px solid rgba(255, 165, 0, 0.5);
+    border-radius: 20px;
+    margin: 0 auto 0.5rem;
+    position: relative;
+}
+
+.wheel {
+    width: 4px;
+    height: 8px;
+    background: rgba(255, 165, 0, 0.7);
+    border-radius: 2px;
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scrollWheel 2s ease-in-out infinite;
+}
+
+@keyframes scrollWheel {
+    0%, 100% { top: 8px; opacity: 1; }
+    50% { top: 20px; opacity: 0.3; }
+}
+
+.scroll-indicator p {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    color: white;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .iot-hero-title {
+        font-size: 2.5rem;
+    }
+
+    .iot-hero-description {
+        font-size: 1.1rem;
+    }
+
+    .iot-hero-stats {
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .iot-hero-cta {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        max-width: 300px;
+    }
+}

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - GeneralSoft</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="/css/contact.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Generalsoft</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#services" class="dropbtn">Services</a>
+                    <div class="dropdown-content">
+                        <a href="services/custom-software.html">Custom Software Development</a>
+                        <a href="services/education-training.html">Education & Training</a>
+                        <a href="services/ai-development.html">AI Development</a>
+                        <a href="services/systems-design.html">Systems & Software Design</a>
+                        <a href="services/cyber-security.html">Cyber Security</a>
+                        <a href="services/web-design.html">Network & Web Design</a>
+                        <a href="services/mobile-apps.html">Mobile Learning Apps</a>
+                        <a href="services/electronic-systems.html">Electronic Systems</a>
+                    </div>
+                </li>
+                <li><a href="../contact.html">Contact</a></li>
+                <li><a href="../index.html#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact-page-hero">
+        <div class="container">
+            <h1>Get in Touch</h1>
+            <p>We'd love to hear from you. Let's discuss how we can help transform your business.</p>
+        </div>
+    </section>
+
+    <section class="contact-page-content">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-form-container">
+                    <h2>Send us a Message</h2>
+                    <form id="contactForm" class="contact-form" method="POST">
+                        <!-- FormSubmit Configuration -->
+                        <input type="hidden" name="_subject" value="New Contact Form Submission from GeneralSoft">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="company">Company Name</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Service Interested In</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service</option>
+                                <option value="services/Custom Software Development">Custom Software Development
+                                </option>
+                                <option value="services/Education & Training">Education & Training</option>
+                                <option value="services/AI Development">AI Development</option>
+                                <option value="services/Systems & Software Design">Systems & Software Design</option>
+                                <option value="services/Cyber Security">Cyber Security</option>
+                                <option value="services/Network & Web Design">Network & Web Design</option>
+                                <option value="services/Mobile Learning Apps">Mobile Learning Apps</option>
+                                <option value="services/Electronic Systems">Electronic Systems</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Send Message</button>
+                        <div id="formMessage" class="form-message"></div>
+                    </form>
+                </div>
+
+                <div class="contact-info-container">
+                    <h2>Contact Information</h2>
+
+                    <div class="info-item">
+                        <div class="info-icon">📧</div>
+                        <div class="info-content">
+                            <h3>Email</h3>
+                            <a href="mailto:info@generalsoft.ae">info@generalsoft.ae</a>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">🌐</div>
+                        <div class="info-content">
+                            <h3>Website</h3>
+                            <a href="https://generalsoft.ae">generalsoft.ae</a>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">📍</div>
+                        <div class="info-content">
+                            <h3>Location</h3>
+                            <p>RAKEZ, Ras Al Khimah, United Arab Emirates</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">🕐</div>
+                        <div class="info-content">
+                            <div class="business-hours-compact">
+                                <h3>Business Hours</h3>
+                                <table class="hours-table">
+                                    <tr>
+                                        <td>Monday - Thursday</td>
+                                        <td>9:00 AM - 4:00 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Friday</td>
+                                        <td>9:00 AM - 12:00 PM<br>2:00 PM - 4:00 PM</td>
+                                    </tr>
+                                    <tr class="closed-row">
+                                        <td>Saturday - Sunday</td>
+                                        <td>Closed</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 GeneralSoft - Software for Everyone | Custom Software Solutions Provider</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+
+</html>

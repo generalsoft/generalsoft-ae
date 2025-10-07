@@ -1,0 +1,119 @@
+        .business-hours {
+            max-width: 400px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            color: white;
+        }
+
+        .business-hours h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .hours-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .hours-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 1rem;
+            margin-bottom: 0.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 8px;
+            border-left: 3px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .hours-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-left-color: white;
+            transform: translateX(5px);
+        }
+
+        .hours-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .day {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .time {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            text-align: right;
+            line-height: 1.5;
+        }
+
+        .closed {
+            color: rgba(255, 255, 255, 0.7);
+            font-style: italic;
+        }
+
+        /* Alternative compact style */
+        .business-hours-compact {
+            max-width: 350px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .business-hours-compact h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            color: #667eea;
+            font-weight: 700;
+        }
+
+        .hours-table {
+            width: 100%;
+        }
+
+        .hours-table tr {
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .hours-table tr:last-child {
+            border-bottom: none;
+        }
+
+        .hours-table td {
+            padding: 0.75rem 0.5rem;
+            color: #333;
+        }
+
+        .hours-table td:first-child {
+            font-weight: 600;
+            color: #667eea;
+        }
+
+        .hours-table td:last-child {
+            text-align: right;
+            color: #666;
+        }
+
+        .hours-table .closed-row td:last-child {
+            color: #999;
+            font-style: italic;
+        }
+
+        /* Icon style */
+        .clock-icon {
+            font-size: 1.2rem;
+            margin-right: 0.5rem;
+        }
