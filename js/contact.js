@@ -13,7 +13,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     const formData = new FormData(this);
     
     // Send to FormSubmit
-    fetch('https://formsubmit.co/daebdc2076e5fff0d013535a998b6529', {
+    fetch('https://formsubmit.co/9a7f07b21b85b9f8680835f2768181a7', {
         method: 'POST',
         body: formData
     })
