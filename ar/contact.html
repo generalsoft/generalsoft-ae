@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا - جنرال سوفت</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="stylesheet" href="../css/rtl.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FNN01YQ1B4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-FNN01YQ1B4');
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                    <img width="48" src="../img/logo.png" alt="شعار جنرال سوفت"/>
+                    <span class="logo-text">Generalsoft<span class="logo-legal">FZ-LLC</span></span>
+                </div>
+            <span class="lang-switch"><a href="../contact.html">English</a></span>
+            <ul class="nav-links">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li class="dropdown">
+                    <a href="#services" class="dropbtn">الخدمات</a>
+                    <div class="dropdown-content">
+                        <a href="services/custom-software.html">تطوير البرمجيات المخصصة</a>
+                        <a href="services/education-training.html">التعليم والتدريب</a>
+                        <a href="services/ai-development.html">تطوير الذكاء الاصطناعي</a>
+                        <a href="services/systems-design.html">تصميم الأنظمة والبرمجيات</a>
+                        <a href="services/cyber-security.html">الأمن السيبراني</a>
+                        <a href="services/web-design.html">تصميم الشبكات والمواقع</a>
+                        <a href="services/mobile-apps.html">تطبيقات التعلم المحمولة</a>
+                        <a href="services/electronic-systems.html">الأنظمة الإلكترونية</a>
+                    </div>
+                </li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+                <li><a href="index.html#about">من نحن</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact-page-hero">
+        <div class="container">
+            <h1>تواصل معنا</h1>
+            <p>يسعدنا التواصل معك. دعنا نناقش كيف يمكننا المساعدة في تحويل أعمالك.</p>
+        </div>
+    </section>
+
+    <section class="contact-page-content">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-form-container">
+                    <h2>أرسل لنا رسالة</h2>
+                    <form id="contactForm" class="contact-form" method="POST">
+                        <!-- FormSubmit Configuration -->
+                        <input type="hidden" name="_subject" value="New Contact Form Submission from GeneralSoft">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+
+                        <div class="form-group">
+                            <label for="name">الاسم الكامل *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">البريد الإلكتروني *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">رقم الهاتف</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="company">اسم الشركة</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">الخدمة المطلوبة</label>
+                            <select id="service" name="service">
+                                <option value="">اختر خدمة</option>
+                                <option value="تطوير البرمجيات المخصصة">تطوير البرمجيات المخصصة</option>
+                                <option value="التعليم والتدريب">التعليم والتدريب</option>
+                                <option value="تطوير الذكاء الاصطناعي">تطوير الذكاء الاصطناعي</option>
+                                <option value="تصميم الأنظمة والبرمجيات">تصميم الأنظمة والبرمجيات</option>
+                                <option value="الأمن السيبراني">الأمن السيبراني</option>
+                                <option value="تصميم الشبكات والمواقع">تصميم الشبكات والمواقع</option>
+                                <option value="تطبيقات التعلم المحمولة">تطبيقات التعلم المحمولة</option>
+                                <option value="الأنظمة الإلكترونية">الأنظمة الإلكترونية</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">الرسالة *</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">إرسال الرسالة</button>
+                        <div id="formMessage" class="form-message"></div>
+                    </form>
+                </div>
+
+                <div class="contact-info-container">
+                    <h2>معلومات التواصل</h2>
+
+                    <div class="info-item">
+                        <div class="info-icon">📧</div>
+                        <div class="info-content">
+                            <h3>البريد الإلكتروني</h3>
+                            <p>info@generalsoft.ae</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">📞</div>
+                        <div class="info-content">
+                            <h3>الهاتف</h3>
+                            <p>+971.55.880.9863</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">📍</div>
+                        <div class="info-content">
+                            <h3>العنوان</h3>
+                            <p>منطقة رأس الخيمة الاقتصادية (RAKEZ)<br>رأس الخيمة، الإمارات العربية المتحدة</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">🕐</div>
+                        <div class="info-content">
+                            <h3>ساعات العمل</h3>
+                            <p>الأحد - الخميس: 9:00 صباحاً - 6:00 مساءً<br>الجمعة - السبت: عطلة</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Generalsoft FZ-LLC</p>
+        </div>
+    </footer>
+    <script src="../js/script.js"></script>
+    <script src="../js/contact.js"></script>
+</body>
+
+</html>
