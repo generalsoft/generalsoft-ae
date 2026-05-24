@@ -1,0 +1,105 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import heroImage from '../../assets/hero-banner.png'; 
+---
+
+<Layout 
+  title="جنرال سوفت | حلول البرمجيات المخصصة وتطوير الويب في الإمارات"
+  description="خبراء في حلول البرمجيات المخصصة، تطوير تطبيقات الهاتف المحمول، وتصميم أنظمة إنترنت الأشياء في دبي."
+  path="/"
+  isArabic={true}
+>
+  <header>
+    <nav>
+      <div class="logo">
+        <img width="48" src="/img/logo.webp" alt="شعار جنرال سوفت"/>
+        <span class="logo-text">Generalsoft<span class="logo-legal">FZ-LLC</span></span>
+      </div>
+      <span class="lang-switch"><a href="/">English</a></span>
+      <ul class="nav-links">
+        <li><a href="/ar/">الرئيسية</a></li>
+        <li class="dropdown">
+          <a href="#services" class="dropbtn">الخدمات</a>
+          <div class="dropdown-content">
+            <a href="/ar/services/custom-software/">تطوير البرمجيات المخصصة</a>
+            <a href="/ar/services/education-training/">التعليم والتدريب</a>
+            <a href="/ar/services/ai-development/">تطوير الذكاء الاصطناعي</a>
+            <a href="/ar/services/systems-design/">تصميم الأنظمة والبرمجيات</a>
+            <a href="/ar/services/cyber-security/">الأمن السيبراني</a>
+            <a href="/ar/services/web-design/">تصميم الشبكات والمواقع</a>
+            <a href="/ar/services/mobile-apps/">تطبيقات التعلم المحمولة</a>
+            <a href="/ar/services/electronic-systems/">الأنظمة الإلكترونية</a>
+          </div>
+        </li>
+        <li><a href="/ar/contact/">اتصل بنا</a></li>
+        <li><a href="#about">من نحن</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>حلول برمجية مخصصة للشركات العالمية</h1>
+        <p>نحن نبني تطبيقات قابلة للتطوير وعالية الأداء ومصممة خصيصاً لتلبية احتياجاتك الفريدة.</p>
+        <Image 
+          src={heroImage} 
+          alt="تحويل الأعمال من خلال البرمجيات المخصصة" 
+          loading="eager"
+          fetchpriority="high"
+          width={1200}
+          height={600}
+        />
+      </div>
+    </section>
+
+    <section class="about-detailed">
+      <h2>هندسة البرمجيات الشاملة في الإمارات العربية المتحدة</h2>
+      <p>
+        في جنرال سوفت، نحن متخصصون في سد الفجوة بين تحديات الأعمال المعقدة والحلول التقنية المبتكرة. 
+        تشمل خبراتنا تصميم الأنظمة، وتطوير تطبيقات الهاتف المحمول، والأنظمة الإلكترونية (إنترنت الأشياء). 
+        من خلال الاستفادة من المعماريات الحديثة، نضمن أن تكون بنيتك التحتية الرقمية قوية اليوم وقابلة للتطوير لنمو الغد.
+      </p>
+    </section>
+
+    <section class="services-detailed">
+      <div class="container">
+        <h2>تخصصاتنا الأساسية</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <h3>تطوير البرمجيات المخصصة</h3>
+            <p>نحن نبني حلولاً برمجية مخصصة مصممة لتبسيط سير العمل الفريد لعملك. من تخطيط موارد المؤسسات (ERP) إلى إدارة علاقات العملاء (CRM)، يركز فريقنا الهندسي على الأمان والقابلية للتوسع.</p>
+          </div>
+          <div class="service-card">
+            <h3>هندسة تطبيقات الهاتف المحمول</h3>
+            <p>تغطي حلول الهاتف المحمول لدينا تطوير تطبيقات iOS و Android الأصلية باستخدام أحدث الأطر مثل Flutter و React Native، مما يضمن تجربة مستخدم ممتازة.</p>
+          </div>
+          <div class="service-card">
+            <h3>إنترنت الأشياء والأنظمة الإلكترونية</h3>
+            <p>تقوم جنرال سوفت بسد الفجوة بين الأجهزة والبرامج. نصمم هياكل إنترنت أشياء قوية للمراقبة الذكية والأنظمة الصناعية المؤتمتة.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="process">
+      <div class="container">
+        <h2>عملية التطوير لدينا</h2>
+        <p>منهجيتنا متجذرة في فلسفة Agile، مما يضمن الشفافية والتسليم السريع. نتبع خطوات دقيقة من الاكتشاف إلى النشر والداعم الفني المستمر.</p>
+        <ul>
+          <li><strong>الاكتشاف والاستراتيجية:</strong> مواءمة أهداف العمل مع الجدوى التقنية.</li>
+          <li><strong>تصميم المعمارية:</strong> وضع مخططات لهياكل الأنظمة القابلة للتطوير.</li>
+          <li><strong>التطوير:</strong> كود نظيف وموثق يتبع أفضل ممارسات الصناعة.</li>
+          <li><strong>النشر والدعم:</strong> انطلاق سلس وصيانة مستمرة.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="tech-stack">
+      <div class="container">
+        <h2>تقنياتنا المتطورة</h2>
+        <p>نحن نستخدم أحدث التقنيات لبناء حلول مستقبلية، بما في ذلك <strong>Node.js</strong>، <strong>Astro</strong>، <strong>React</strong>، و <strong>Python</strong> للذكاء الاصطناعي، و <strong>AWS/Azure</strong> للبنية التحتية السحابية.</p>
+      </div>
+    </section>
+  </main>
+</Layout>

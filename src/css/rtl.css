@@ -1,0 +1,153 @@
+/* RTL Support Styles */
+[dir="rtl"] .nav-links {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .dropdown-content {
+  right: auto;
+  left: 0;
+  text-align: right;
+}
+
+[dir="rtl"] .service-section ul li {
+  padding-left: 0;
+  padding-right: 1.5rem;
+}
+
+[dir="rtl"] .service-section ul li::before {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .contact-grid {
+  direction: rtl;
+}
+
+[dir="rtl"] .info-item {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .features-grid {
+  direction: rtl;
+}
+
+[dir="rtl"] .service-card {
+  text-align: right;
+}
+
+[dir="rtl"] .hero-content {
+  text-align: right;
+}
+
+[dir="rtl"] .about-content {
+  text-align: right;
+}
+
+[dir="rtl"] .process ul {
+  text-align: right;
+}
+
+[dir="rtl"] .process li {
+  text-align: right;
+}
+
+[dir="rtl"] .contact-content {
+  text-align: right;
+}
+
+[dir="rtl"] .contact-info {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .lang-switch {
+  order: -1;
+}
+
+[dir="rtl"] .logo {
+  order: 1;
+}
+
+[dir="rtl"] .menu-toggle {
+  order: 0;
+}
+
+/* RTL Bullet fixes for service-section lists */
+[dir="rtl"] .service-section ul {
+  padding-right: 0;
+}
+
+[dir="rtl"] .service-section ul li {
+  padding-left: 0;
+  padding-right: 1.5rem;
+  text-align: right;
+}
+
+[dir="rtl"] .service-section ul li::before {
+  left: auto;
+  right: 0;
+}
+
+/* RTL for feature boxes */
+[dir="rtl"] .feature-box {
+  text-align: right;
+}
+
+/* RTL for contact page form */
+[dir="rtl"] .contact-form-container {
+  text-align: right;
+}
+
+[dir="rtl"] .contact-form .form-group label {
+  text-align: right;
+}
+
+[dir="rtl"] .contact-form .form-group input,
+[dir="rtl"] .contact-form .form-group select,
+[dir="rtl"] .contact-form .form-group textarea {
+  text-align: right;
+}
+
+/* RTL for contact info container */
+[dir="rtl"] .contact-info-container {
+  text-align: right;
+}
+
+[dir="rtl"] .info-content {
+  text-align: right;
+}
+
+/* RTL for contact page hero */
+[dir="rtl"] .contact-page-hero {
+  text-align: right;
+}
+
+/* RTL for service-content section */
+[dir="rtl"] .service-content {
+  text-align: right;
+}
+
+[dir="rtl"] .service-section {
+  text-align: right;
+}
+
+[dir="rtl"] .service-section p {
+  text-align: right;
+}
+
+/* RTL for ai-hero section */
+[dir="rtl"] .ai-hero-content {
+  text-align: right;
+}
+
+[dir="rtl"] .ai-hero-description {
+  text-align: right;
+}
+
+[dir="rtl"] .ai-hero-cta {
+  justify-content: flex-start;
+}
+
+/* RTL for scroll indicator */
+[dir="rtl"] .scroll-indicator p {
+  text-align: center;
+}

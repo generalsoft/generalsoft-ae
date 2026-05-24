@@ -1,0 +1,48 @@
+---
+import SEO from '../components/SEO.astro';
+import '../css/styles.css';
+
+interface Props {
+  title?: string;
+  description: string;
+  path?: string;
+  isArabic?: boolean;
+}
+const { title, description, path, isArabic } = Astro.props;
+const lang = isArabic ? 'ar' : Astro.currentLocale || 'en';
+const dir = lang === 'ar' ? 'rtl' : 'ltr';
+---
+<!DOCTYPE html>
+<html lang={lang} dir={dir}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <SEO title={title} description={description} path={path} isArabic={isArabic} />
+    
+    {lang === 'ar' && <link rel="stylesheet" href="/css/rtl.css" />}
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "GeneralSoft",
+        "url": "https://generalsoft.ae",
+        "logo": "https://generalsoft.ae/logo.png",
+        "description": "GeneralSoft provides world-class custom software development, mobile apps, and IoT solutions in the UAE.",
+        "sameAs": [
+          "https://www.linkedin.com/company/generalsoft"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <slot />
+    <footer>
+      <div class="container">
+        <p>© Copyrights 2026 Generalsoft <span class="legal-small">FZ-LLC</span></p>
+      </div>
+    </footer>
+    <script src="/js/script.js" is:inline></script>
+  </body>
+</html>

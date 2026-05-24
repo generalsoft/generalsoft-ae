@@ -1,0 +1,60 @@
+---
+interface Props {
+  title?: string;
+  description: string;
+  image?: string;
+  /** The current page path (e.g., "/services/ai-development/") */
+  path?: string;
+  /** Whether this is the Arabic version of the page */
+  isArabic?: boolean;
+}
+const { 
+  title = "GeneralSoft | Custom Software & Web Development UAE", 
+  description, 
+  image = "/default-og.jpg",
+  path = "",
+  isArabic = false
+} = Astro.props;
+
+// Determine the current page path from Astro.url if not explicitly provided
+// The path prop should always be the English path (e.g., "/", "/services/ai-development/")
+const currentPath = path || Astro.url.pathname;
+
+// Normalize paths: ensure they end with / for consistency
+const normalizePath = (p: string) => {
+  if (p === "/") return "/";
+  return p.endsWith("/") ? p : `${p}/`;
+};
+
+// Build the English and Arabic URLs for the current page
+// The path prop is always the English path. For Arabic pages, we derive the English path
+// by stripping /ar/ prefix, and the Arabic path by prepending /ar/ to the English path.
+const enPath = normalizePath(isArabic ? currentPath.replace(/^\/ar/, "") || "/" : currentPath);
+const arPath = normalizePath(isArabic ? `/ar${currentPath.replace(/^\/ar/, "") || "/"}` : `/ar${currentPath}`);
+
+const enUrl = `https://generalsoft.ae${enPath}`;
+const arUrl = `https://generalsoft.ae${arPath}`;
+---
+<!-- Primary Meta Tags -->
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={isArabic ? arUrl : enUrl} />
+
+<!-- Hreflang Tags -->
+<link rel="alternate" hreflang="en" href={enUrl} />
+<link rel="alternate" hreflang="ar" href={arUrl} />
+<link rel="alternate" hreflang="x-default" href={enUrl} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={isArabic ? arUrl : enUrl} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={new URL(image, Astro.url)} />
+
+<!-- X / Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={isArabic ? arUrl : enUrl} />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={new URL(image, Astro.url)} />

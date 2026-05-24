@@ -1,0 +1,105 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import heroImage from '../assets/hero-banner.png'; 
+---
+
+<Layout 
+  title="GeneralSoft | Custom Software & Web Development UAE"
+  description="Expert custom software solutions, mobile app development, and IoT systems design in Dubai. Transform your business with GeneralSoft's innovative engineering."
+  path="/"
+>
+  <header>
+    <nav>
+      <div class="logo">
+        <img width="48" src="/img/logo.webp" alt="GeneralSoft Logo"/>
+        <span class="logo-text">Generalsoft<span class="logo-legal">FZ-LLC</span></span>
+      </div>
+      <span class="lang-switch"><a href="/ar/">العربية</a></span>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li class="dropdown">
+          <a href="#services" class="dropbtn">Services</a>
+          <div class="dropdown-content">
+            <a href="/services/custom-software/">Custom Software Development</a>
+            <a href="/services/education-training/">Education & Training</a>
+            <a href="/services/ai-development/">AI Development</a>
+            <a href="/services/systems-design/">Systems & Software Design</a>
+            <a href="/services/cyber-security/">Cyber Security</a>
+            <a href="/services/web-design/">Web & Network Design</a>
+            <a href="/services/mobile-apps/">Mobile Applications</a>
+            <a href="/services/electronic-systems/">Electronic Systems</a>
+          </div>
+        </li>
+        <li><a href="/contact/">Contact Us</a></li>
+        <li><a href="#about">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Custom Software Solutions for Global Businesses</h1>
+        <p>We build scalable, high-performance applications tailored to your specific needs.</p>
+        <Image 
+          src={heroImage} 
+          alt="Transforming businesses with custom software" 
+          loading="eager"
+          fetchpriority="high"
+          width={1200}
+          height={600}
+        />
+      </div>
+    </section>
+
+    <section class="about-detailed">
+      <h2>Comprehensive Software Engineering in the UAE</h2>
+      <p>
+        At GeneralSoft, we specialize in bridging the gap between complex business challenges and 
+        elegant technical solutions. Our expertise spans across Systems Design, Mobile App Development, 
+        and Electronic Systems (IoT). By leveraging modern architectures, we ensure that your 
+        digital infrastructure is not only robust for today but scalable for tomorrow's growth.
+      </p>
+    </section>
+
+    <section class="services-detailed">
+      <div class="container">
+        <h2>Our Core Specializations</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <h3>Custom Software Development</h3>
+            <p>We build bespoke software solutions designed to streamline your unique business workflows. From enterprise resource planning (ERP) to customer relationship management (CRM), our engineering team focuses on security, scalability, and seamless integration with your existing legacy systems.</p>
+          </div>
+          <div class="service-card">
+            <h3>Mobile Application Engineering</h3>
+            <p>Our mobile solutions span native iOS and Android development using modern frameworks like Flutter and React Native. we ensure your brand delivers a premium user experience with high-performance interfaces and offline-first capabilities.</p>
+          </div>
+          <div class="service-card">
+            <h3>IoT & Electronic Systems</h3>
+            <p>GeneralSoft bridges the gap between hardware and software. We design robust IoT architectures for smart monitoring, automated industrial systems, and consumer electronics, ensuring real-time data flow and reliable connectivity.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="process">
+      <div class="container">
+        <h2>Our Development Process</h2>
+        <p>Our methodology is rooted in the Agile philosophy, ensuring transparency and rapid delivery. We begin with a deep discovery phase to understand your technical requirements, followed by iterative development sprints, rigorous QA testing, and automated CI/CD deployment pipelines.</p>
+        <ul>
+          <li><strong>Discovery & Strategy:</strong> Aligning business goals with technical feasibility.</li>
+          <li><strong>Architecture Design:</strong> Blueprinting scalable system structures.</li>
+          <li><strong>Development:</strong> Clean, documented code following industry best practices.</li>
+          <li><strong>Deployment & Support:</strong> Seamless go-live and ongoing maintenance.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="tech-stack">
+      <div class="container">
+        <h2>Cutting-Edge Tech Stack</h2>
+        <p>We leverage a modern tech stack to build future-proof solutions, including <strong>Node.js</strong>, <strong>Astro</strong>, <strong>React</strong>, <strong>Python</strong> for AI/ML, and <strong>AWS/Azure</strong> for cloud infrastructure. This ensures your project benefits from the latest security patches and performance optimizations available in the ecosystem.</p>
+      </div>
+    </section>
+  </main>
+</Layout>
