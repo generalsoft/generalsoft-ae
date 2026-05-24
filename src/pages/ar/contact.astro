@@ -3,8 +3,8 @@ import Layout from '../../layouts/Layout.astro';
 ---
 
 <Layout 
-  title="اتصل بنا | جنرال سوفت الإمارات"
-  description="تواصل مع جنرال سوفت لتطوير البرمجيات المخصصة وتطبيقات الهاتف المحمول وإنترنت الأشياء وحلول الذكاء الاصطناعي في الإمارات."
+  title="اتصل بشركة جنرال سوفت FZ-LLC | شركة برمجيات في دبي، الإمارات"
+  description="تواصل مع شركة جنرال سوفت FZ-LLC في دبي، الإمارات لتطوير البرمجيات وحلول الذكاء الاصطناعي وخدمات تقنية المعلومات. اتصل أو أرسل بريداً إلكترونياً أو زرنا."
   path="/contact/"
   isArabic={true}
 >
@@ -48,12 +48,7 @@ import Layout from '../../layouts/Layout.astro';
       <div class="contact-grid">
         <div class="contact-form-container">
           <h2>أرسل لنا رسالة</h2>
-          <form id="contactForm" class="contact-form" method="POST" action="https://formsubmit.co/info@generalsoft.ae">
-            <!-- FormSubmit Configuration -->
-            <input type="hidden" name="_subject" value="نموذج اتصال جديد من جنرال سوفت">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_template" value="table">
-
+          <form id="contactForm" class="contact-form" novalidate>
             <div class="form-group">
               <label for="name">الاسم الكامل *</label>
               <input type="text" id="name" name="name" required>
@@ -138,4 +133,8 @@ import Layout from '../../layouts/Layout.astro';
     </div>
   </section>
 
+  <script>
+    import { initContactForm } from '../../js/firebase-contact.js';
+    initContactForm('contactForm', 'formMessage', {}, 'ar');
+  </script>
 </Layout>
