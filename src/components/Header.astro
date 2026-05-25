@@ -4,6 +4,12 @@ interface Props {
 }
 const { isArabic } = Astro.props;
 const langPath = isArabic ? '/ar' : '';
+
+// Logic to toggle current path between English and Arabic
+const currentPath = Astro.url.pathname;
+const toggleUrl = isArabic 
+  ? currentPath.replace(/^\/ar/, '') || '/' 
+  : `/ar${currentPath === '/' ? '/' : currentPath}`;
 ---
 <header>
   <nav>
@@ -12,7 +18,7 @@ const langPath = isArabic ? '/ar' : '';
       <span class="logo-text">Generalsoft<span class="logo-legal">FZ-LLC</span></span>
     </a>
     <span class="lang-switch">
-      {isArabic ? <a href="/">English</a> : <a href="/ar/">العربية</a>}
+      <a href={toggleUrl}>{isArabic ? 'English' : 'العربية'}</a>
     </span>
     <ul class="nav-links">
       <li><a href={isArabic ? "/ar/" : "/"}>{isArabic ? 'الرئيسية' : 'Home'}</a></li>
