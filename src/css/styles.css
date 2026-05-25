@@ -125,6 +125,23 @@ nav {
   position: relative;
 }
 
+.dropbtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.dropdown-arrow {
+  display: inline-block;
+  font-size: 0.65rem;
+  transition: transform 0.2s ease;
+  line-height: 1;
+}
+
+.dropdown:hover .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -146,15 +163,174 @@ nav {
   display: block;
   padding: 0.5rem 1rem;
   font-size: 0.875rem;
+  transition: background 0.15s ease, color 0.15s ease;
 }
 
 .dropdown-content a:hover {
-  background: var(--bg-alt);
-  color: var(--primary);
+  background: var(--primary);
+  color: white;
+}
+
+/* Hero Carousel */
+.hero-carousel {
+  margin-top: 80px;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-dark);
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-carousel-track {
+  display: flex;
+  direction: ltr;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.hero-carousel-slide {
+  min-width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  cursor: pointer;
+}
+
+.hero-carousel-slide[data-href]:hover .hero-carousel-overlay h2 {
+  color: var(--accent);
+}
+
+.hero-carousel-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-carousel-image img,
+.hero-carousel-image svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-carousel-image svg {
+  display: block;
+}
+
+.hero-carousel-overlay {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero-carousel-overlay h1,
+.hero-carousel-overlay h2 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.hero-carousel-overlay p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.125rem;
+  line-height: 1.7;
+  text-shadow: 0 1px 5px rgba(0,0,0,0.2);
+}
+
+.hero-carousel-nav {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  z-index: 10;
+}
+
+.hero-carousel-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgba(255,255,255,0.5);
+  border-radius: 50%;
+  background: rgba(0,0,0,0.3);
+  cursor: pointer;
+  color: white;
+  transition: all 0.2s;
+}
+
+.hero-carousel-btn:hover {
+  border-color: white;
+  background: rgba(0,0,0,0.5);
+}
+
+.hero-carousel-dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.hero-carousel-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.4);
+  border: 2px solid rgba(255,255,255,0.6);
+  cursor: pointer;
+  transition: all 0.2s;
+  padding: 0;
+}
+
+.hero-carousel-dot.active {
+  background: white;
+  border-color: white;
+  transform: scale(1.2);
+}
+
+.hero-carousel-dot:hover {
+  background: rgba(255,255,255,0.7);
+}
+
+@media (max-width: 768px) {
+  .hero-carousel {
+    min-height: 50vh;
+  }
+
+  .hero-carousel-slide {
+    min-height: 50vh;
+  }
+
+  .hero-carousel-overlay h1,
+  .hero-carousel-overlay h2 {
+    font-size: 1.75rem;
+  }
+
+  .hero-carousel-overlay p {
+    font-size: 1rem;
+  }
 }
 
 /* Hero Section */
 .hero {
+
+
   margin-top: 80px;
   min-height: 80vh;
   display: flex;
@@ -531,6 +707,25 @@ footer p {
   outline: none;
   border-color: var(--primary);
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.form-group input.error,
+.form-group select.error,
+.form-group textarea.error {
+  border-color: #dc3545;
+}
+
+.form-group input.error:focus,
+.form-group select.error:focus,
+.form-group textarea.error:focus {
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
+}
+
+.field-error {
+  color: #dc3545;
+  font-size: 0.8125rem;
+  margin-top: 0.25rem;
+  display: block;
 }
 
 .submit-btn {
