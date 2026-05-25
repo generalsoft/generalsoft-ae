@@ -15,7 +15,7 @@ const toggleUrl = isArabic
   <nav>
     <a href={isArabic ? "/ar/" : "/"} class="logo">
       <img width="48" src="/img/logo.webp" alt="GeneralSoft Logo"/>
-      <span class="logo-text">Generalsoft<span class="logo-legal">FZ-LLC</span></span>
+      <span class="logo-text">{isArabic ? 'جنرال سوفت' : 'Generalsoft'}<span class="logo-legal">{isArabic ? 'ش.م.ح – ذ.م.م' : 'FZ-LLC'}</span></span>
     </a>
     <span class="lang-switch">
       <a href={toggleUrl}>{isArabic ? 'English' : 'العربية'}</a>

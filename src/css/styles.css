@@ -813,6 +813,48 @@ footer p {
   z-index: 9999;
 }
 
+.qr-wrapper {
+  position: relative;
+}
+
+.qr-btn {
+  background: #333;
+  cursor: pointer;
+  border: none;
+}
+
+.qr-popup {
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  background: white;
+  padding: 15px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  width: 180px;
+  text-align: center;
+  display: none;
+  border: 1px solid var(--border);
+}
+
+.qr-popup img {
+  max-width: 100%;
+  height: auto;
+}
+
+.qr-popup p {
+  margin: 10px 0 0;
+  font-size: 0.75rem;
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* Show popup on hover for desktop, or toggle via JS for mobile */
+.qr-wrapper:hover .qr-popup,
+.qr-wrapper:focus-within .qr-popup {
+  display: block;
+}
+
 .float-btn {
   display: flex;
   align-items: center;
