@@ -9,10 +9,17 @@ import Layout from '../../layouts/Layout.astro';
   isArabic={true}
 >
   <main>
-    <section class="page-header" style="padding: 100px 0 50px; text-align: center; background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d); color: white;">
+    <section
+      class="page-header"
+      style="padding: 100px 0 50px; text-align: center; background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d); color: white;"
+    >
       <div class="container">
-        <h1 style="font-size: 3rem; margin-bottom: 20px;">شراكات استراتيجية</h1>
-        <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto;">نتعاون مع شركات التكنولوجيا الأكثر ابتكاراً في العالم لتمكين الشركات في دولة الإمارات العربية المتحدة وخارجها.</p>
+        <h1 style="font-size: 3rem; margin-bottom: 20px;">
+          شراكات استراتيجية
+        </h1>
+        <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto;">
+          نتعاون مع أكثر شركات التكنولوجيا ابتكاراً في العالم لتمكين الشركات في دولة الإمارات العربية المتحدة وخارجها.
+        </p>
       </div>
     </section>
 
@@ -20,38 +27,103 @@ import Layout from '../../layouts/Layout.astro';
       <div class="container">
         <div class="services-grid">
           <div class="service-card">
-            <h3 style="color: #2563eb;">مايكروسوفت (Microsoft)</h3>
-            <p>الاستفادة من أنظمة Azure السحابية ومجموعات البرامج المؤسسية لبناء تطبيقات سحابية قابلة للتطوير وآمنة لمكان العمل الحديث.</p>
+            <h3>
+              <a
+                href="https://www.microsoft.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                مايكروسوفت (Microsoft)
+              </a>
+            </h3>
+            <p>
+              نقوم بتخصيص وتنفيذ حلول Microsoft Dynamics 365 ERP وCRM لمساعدة الشركات على تحسين عملياتها وعلاقاتها مع العملاء، وإضافة تدفقات عمل ذكية ومستقلة.
+            </p>
+            <small> شريك تكنولوجي • الحلول السحابية والمؤسسية </small>
           </div>
+
           <div class="service-card">
-            <h3 style="color: #4285F4;">جوجل (Google)</h3>
-            <p>استخدام منصة Google Cloud وأطر عمل TensorFlow المتطورة لدمج الذكاء الاصطناعي المتقدم والتعلم الآلي في حلولنا.</p>
+            <h3>
+              <a
+                href="https://cloud.google.com/partners"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                جوجل (Google)
+              </a>
+            </h3>
+            <p>
+              نعمل مع تقنيات جوجل للذكاء الاصطناعي، وWorkspaces، والموارد السحابية، وFirebase، وأطر تطوير التطبيقات لإنشاء تطبيقات ذكية وتفاعلية تعتمد على البيانات لتلبية الاحتياجات المتطورة لعملائنا.
+            </p>
+            <small>مطور تطبيقات</small>
           </div>
+
           <div class="service-card">
-            <h3 style="color: #000;">أبل (Apple)</h3>
-            <p>تطوير تجارب iOS و macOS أصلية ومتميزة، مما يضمن تلبية تطبيقات الهاتف المحمول لدينا لأعلى معايير الأداء والتصميم.</p>
+            <h3>
+              <a
+                href="https://www.apple.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                أبل (Apple)
+              </a>
+            </h3>
+            <p>
+              تطوير تجارب iOS وmacOS أصلية ومتميزة، مما يضمن تلبية تطبيقات الهاتف المحمول لدينا لأعلى معايير الأداء والتصميم.
+            </p>
+            <small>مطور تطبيقات</small>
           </div>
+
           <div class="service-card">
-            <h3 style="color: #0530ad;">آي بي إم (IBM)</h3>
-            <p>الشراكة في البنية التحتية للمؤسسات وتصميم الأنظمة المتخصصة، مع التركيز على السحابة الهجينة وإدارة البيانات القوية.</p>
+            <h3>
+              <a
+                href="https://www.cisco.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                سيسكو (Cisco)
+              </a>
+            </h3>
+            <p>
+              دمج أجهزة الشبكات والأمن عالمية المستوى لتزويد عملائنا بتصاميم شبكات موثوقة وعالية الأداء وبنية تحتية لإنترنت الأشياء.
+            </p>
+            <small>شريك متكامل</small>
           </div>
+
           <div class="service-card">
-            <h3 style="color: #1271bf;">سيسكو (Cisco)</h3>
-            <p>دمج أجهزة الشبكات والأمن عالمية المستوى لتزويد عملائنا بتصاميم شبكات عالية الأداء وبنية تحتية لإنترنت الأشياء موثوقة.</p>
-          </div>
-          <div class="service-card">
-            <h3 style="color: #f80000;">أوراكل (Oracle)</h3>
-            <p>بناء تطبيقات كثيفة البيانات مدعومة بأنظمة إدارة قواعد البيانات الرائدة من أوراكل وحلول ERP السحابية.</p>
+            <h3>
+              <a
+                href="https://www.oracle.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                أوراكل (Oracle)
+              </a>
+            </h3>
+            <p>
+              بناء تطبيقات كثيفة البيانات مدعومة بأنظمة إدارة قواعد البيانات الرائدة من أوراكل وحلول ERP السحابية.
+            </p>
+            <small>عضو</small>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="cta" style="padding: 60px 0; background: #f8f9fa; text-align: center;">
+    <section
+      class="cta"
+      style="padding: 60px 0; background: #f8f9fa; text-align: center;"
+    >
       <div class="container">
         <h2>هل أنت مستعد للبناء مع الأفضل؟</h2>
-        <p>اتصل بنا اليوم لمناقشة كيف يمكن لشراكاتنا أن تفيد مشروعك القادم.</p>
-        <a href="/ar/contact/" class="btn" style="display: inline-block; margin-top: 20px; padding: 12px 30px; background: #2563eb; color: white; text-decoration: none; border-radius: 5px;">تواصل معنا</a>
+        <p>
+          اتصل بنا اليوم لمناقشة كيف يمكن لشراكاتنا أن تفيد مشروعك القادم.
+        </p>
+        <a
+          href="/ar/contact/"
+          class="btn"
+          style="display: inline-block; margin-top: 20px; padding: 12px 30px; background: #2563eb; color: white; text-decoration: none; border-radius: 5px;"
+          >تواصل معنا</a
+        >
       </div>
     </section>
   </main>
