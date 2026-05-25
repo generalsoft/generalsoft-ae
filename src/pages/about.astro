@@ -41,11 +41,6 @@ import Layout from "../layouts/Layout.astro";
               <h3>Our Vision</h3>
               <p>To be the most trusted technology partner in the UAE, recognized for our commitment to technical excellence and client success.</p>
             </div>
-            <div class="service-card" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-              <h3>Digital vCard</h3>
-              <img src="/img/generalsoft_qr_vcard.png" alt="Generalsoft vCard QR" width="120" style="margin: 1rem 0;" />
-              <p style="font-size: 0.85rem;">Scan this code with your phone camera to instantly save our contact details to your address book.</p>
-            </div>
           </div>
         </div>
       </div>
@@ -73,13 +68,22 @@ import Layout from "../layouts/Layout.astro";
 
     <section class="cta" style="padding: 60px 0; background: #f8f9fa; text-align: center;">
       <div class="container">
-        <h2>Partner with Engineering Experts</h2>
-        <p>
-          Let's discuss how our team can help you achieve your digital goals.
-        </p>
-        <a href="/contact/" class="cta-button" style="margin-top: 20px;">
-          Get in Touch
-        </a>
+        <div class="cta-content-with-qr">
+          <div class="cta-text-group">
+            <h2>Partner with Engineering Experts</h2>
+            <p>
+              Let's discuss how our team can help you achieve your digital goals.
+            </p>
+            <a href="/contact/" class="cta-button" style="margin-top: 20px;">
+              Get in Touch
+            </a>
+          </div>
+          <div class="cta-qr-card">
+            <h3>Digital vCard</h3>
+            <img src="/img/generalsoft_qr_vcard.png" alt="Generalsoft vCard QR" width="120" style="margin: 0.5rem 0;" />
+            <p>Scan this code with your phone camera to instantly save our contact details to your address book.</p>
+          </div>
+        </div>
       </div>
     </section>
   </main>

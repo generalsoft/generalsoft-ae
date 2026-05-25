@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     nav.prepend(menuToggle);
 
     menuToggle.addEventListener('click', function() {
-      const navLinks = document.querySelector('.nav-links');
+      const navLinks = this.parentElement.querySelector('.nav-links');
       if (navLinks) {
         const isExpanded = navLinks.classList.contains('active');
         menuToggle.setAttribute('aria-expanded', !isExpanded);
