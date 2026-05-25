@@ -1,0 +1,37 @@
+---
+interface Props {
+  isArabic?: boolean;
+}
+const { isArabic } = Astro.props;
+const langPath = isArabic ? '/ar' : '';
+---
+<header>
+  <nav>
+    <a href={isArabic ? "/ar/" : "/"} class="logo">
+      <img width="48" src="/img/logo.webp" alt="GeneralSoft Logo"/>
+      <span class="logo-text">Generalsoft<span class="logo-legal">FZ-LLC</span></span>
+    </a>
+    <span class="lang-switch">
+      {isArabic ? <a href="/">English</a> : <a href="/ar/">العربية</a>}
+    </span>
+    <ul class="nav-links">
+      <li><a href={isArabic ? "/ar/" : "/"}>{isArabic ? 'الرئيسية' : 'Home'}</a></li>
+      <li class="dropdown">
+        <a href={isArabic ? "/ar/#services" : "/#services"} class="dropbtn">{isArabic ? 'خدماتنا' : 'Services'} <span class="dropdown-arrow">▼</span></a>
+        <div class="dropdown-content">
+          <a href={`${langPath}/services/custom-software/`}>{isArabic ? 'تطوير البرمجيات' : 'Custom Software Development'}</a>
+          <a href={`${langPath}/services/education-training/`}>{isArabic ? 'التعليم والتدريب' : 'Education & Training'}</a>
+          <a href={`${langPath}/services/ai-development/`}>{isArabic ? 'تطوير الذكاء الاصطناعي' : 'AI Development'}</a>
+          <a href={`${langPath}/services/systems-design/`}>{isArabic ? 'تصميم الأنظمة' : 'Systems & Software Design'}</a>
+          <a href={`${langPath}/services/cyber-security/`}>{isArabic ? 'الأمن السيبراني' : 'Cyber Security'}</a>
+          <a href={`${langPath}/services/web-design/`}>{isArabic ? 'تصميم المواقع' : 'Web & Network Design'}</a>
+          <a href={`${langPath}/services/mobile-apps/`}>{isArabic ? 'تطبيقات الجوال' : 'Mobile Applications'}</a>
+          <a href={`${langPath}/services/electronic-systems/`}>{isArabic ? 'الأنظمة الإلكترونية' : 'Electronic Systems'}</a>
+        </div>
+      </li>
+      <li><a href={isArabic ? "/ar/partners/" : "/partners/"}>{isArabic ? 'الشركاء' : 'Partners'}</a></li>
+      <li><a href={isArabic ? "/ar/contact/" : "/contact/"}>{isArabic ? 'اتصل بنا' : 'Contact Us'}</a></li>
+      <li><a href={isArabic ? "/ar/#about" : "/#about"}>{isArabic ? 'من نحن' : 'About Us'}</a></li>
+    </ul>
+  </nav>
+</header>

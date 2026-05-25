@@ -6,12 +6,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.createElement('button');
     menuToggle.className = 'menu-toggle';
     menuToggle.setAttribute('aria-label', 'Toggle navigation menu');
+    menuToggle.setAttribute('aria-expanded', 'false');
     menuToggle.innerHTML = '<span></span><span></span><span></span>';
     nav.prepend(menuToggle);
 
     menuToggle.addEventListener('click', function() {
       const navLinks = document.querySelector('.nav-links');
       if (navLinks) {
+        const isExpanded = navLinks.classList.contains('active');
+        menuToggle.setAttribute('aria-expanded', !isExpanded);
         navLinks.classList.toggle('active');
         menuToggle.classList.toggle('active');
       }
@@ -135,4 +138,3 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
 });
-

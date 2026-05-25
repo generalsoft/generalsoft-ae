@@ -1,6 +1,8 @@
 ---
+import Header from '../components/Header.astro';
 import SEO from '../components/SEO.astro';
 import '../css/styles.css';
+import '../css/rtl.css';
 
 interface Props {
   title?: string;
@@ -9,8 +11,8 @@ interface Props {
   isArabic?: boolean;
 }
 const { title, description, path, isArabic } = Astro.props;
-const lang = isArabic ? 'ar' : Astro.currentLocale || 'en';
-const dir = lang === 'ar' ? 'rtl' : 'ltr';
+const lang = isArabic ? 'ar' : 'en';
+const dir = isArabic ? 'rtl' : 'ltr';
 ---
 <!DOCTYPE html>
 <html lang={lang} dir={dir}>
@@ -22,8 +24,6 @@ const dir = lang === 'ar' ? 'rtl' : 'ltr';
     <link rel="shortcut icon" href="/favicon.ico" />
     <SEO title={title} description={description} path={path} isArabic={isArabic} />
     
-    {lang === 'ar' && <link rel="stylesheet" href="/css/rtl.css" />}
-
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -39,6 +39,7 @@ const dir = lang === 'ar' ? 'rtl' : 'ltr';
     </script>
   </head>
   <body>
+    <Header isArabic={isArabic} />
     <slot />
     <footer>
       <div class="container">
@@ -56,6 +57,9 @@ const dir = lang === 'ar' ? 'rtl' : 'ltr';
       </a>
     </div>
 
-    <script src="/js/script.js" is:inline></script>
+    {/* Ensure script.js is handled by Astro's bundler */}
+    <script>
+      import '../js/script.js';
+    </script>
   </body>
 </html>
