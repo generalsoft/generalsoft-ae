@@ -1,94 +1,374 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import Layout from "../../layouts/Layout.astro";
 ---
-<Layout 
+
+<Layout
   title="Systems & Software Design Services | GeneralSoft UAE"
   description="Professional systems design and software architecture services including microservices, cloud architecture, and enterprise design in the UAE."
   path="/services/systems-design/"
+  image="/img/og-systems-design.jpg"
 >
-
-  <section class="service-content" id="design-services">
+  <section class="service-content" id="software-services">
     <div class="service-section" style="margin-top: 120px;">
-      <h2>Systems & Software Design Services</h2>
-      <p>We provide comprehensive systems engineering and software design services that lay solid foundations for your technology initiatives. Our expert architects design scalable, maintainable, and future-proof solutions.</p>
-
+      <h2 class="service-title">System & Software Design Services</h2>
+      <p>
+        The difference between software that scales gracefully and software that
+        collapses under its own weight is almost always decided at the
+        architecture stage, long before the first line of production code is
+        written. Poor architectural decisions are expensive to reverse — they
+        compound over time, creating technical debt that slows every future
+        feature, complicates every new integration, and introduces fragility
+        that eventually shows up as outages, data inconsistencies, or security
+        gaps. Getting the architecture right at the start is one of the
+        highest-value investments a technology organization can make.
+      </p>
+      <p>
+        At GeneralSoft, systems and software design is treated as a discipline
+        in its own right, not a footnote in a development proposal. Our
+        architects bring experience across enterprise systems, cloud-native
+        platforms, distributed microservices, and embedded systems — with a
+        focus on designing solutions that are not just technically sound today,
+        but maintainable and extensible as your business grows and your
+        requirements change. We work with organizations at different stages:
+        greenfield platforms that need an architecture designed from scratch,
+        existing systems that have grown beyond their original design and need
+        restructuring, and teams that want an independent architectural review
+        before committing to a build.
+      </p>
+      <p>
+        For UAE-based organizations navigating digital transformation — whether
+        within a free zone, a government entity, or a private enterprise — the
+        architectural challenges are often compounded by legacy system
+        constraints, data sovereignty requirements, and the need to integrate
+        with local regulatory platforms. We bring specific experience with these
+        environments and factor them into every architectural recommendation.
+      </p>
+      <p>
+        Architectural work is delivered as documented artefacts — high-level
+        design documents, component diagrams, data models, API specifications,
+        and infrastructure blueprints — that your development team or future
+        technology partners can implement with confidence. We can also embed
+        with your engineering team through the build phase to ensure the
+        architecture is followed consistently and to make real-time decisions as
+        implementation reveals new complexity.
+      </p>
       <h3>Software Architecture</h3>
       <div class="features-grid">
-        <div class="feature-box"><h4>Microservices Architecture</h4><p>Design distributed systems with independently deployable services for scalability and flexibility.</p></div>
-        <div class="feature-box"><h4>Monolith to Microservices</h4><p>Strategic planning and execution of transitioning from legacy monolithic systems to modern architecture.</p></div>
-        <div class="feature-box"><h4>Event-Driven Architecture</h4><p>Asynchronous, loosely coupled systems using event streaming and message queues.</p></div>
-        <div class="feature-box"><h4>Serverless Architecture</h4><p>Cloud-native designs leveraging FaaS, managed services, and auto-scaling infrastructure.</p></div>
+        <div class="feature-box">
+          <h4>Microservices Architecture</h4><p>
+            Design distributed systems with independently deployable services
+            for scalability and flexibility.
+          </p>
+        </div>
+        <div class="feature-box">
+          <h4>Monolith to Microservices</h4><p>
+            Strategic planning and execution of transitioning from legacy
+            monolithic systems to modern architecture.
+          </p>
+        </div>
+        <div class="feature-box">
+          <h4>Event-Driven Architecture</h4><p>
+            Asynchronous, loosely coupled systems using event streaming and
+            message queues.
+          </p>
+        </div>
+        <div class="feature-box">
+          <h4>Serverless Architecture</h4><p>
+            Cloud-native designs leveraging FaaS, managed services, and
+            auto-scaling infrastructure.
+          </p>
+        </div>
       </div>
 
       <h3>System Design</h3>
-      <p>Comprehensive system design services for complex enterprise applications:</p>
+      <p>
+        Comprehensive system design services for complex enterprise
+        applications:
+      </p>
       <ul>
-        <li><strong>High-Level Design:</strong> System components, interactions, data flow, and integration points</li>
-        <li><strong>Low-Level Design:</strong> Detailed component design, class diagrams, and implementation specifications</li>
-        <li><strong>Database Design:</strong> Schema design, normalization, indexing strategies, and query optimization</li>
-        <li><strong>API Design:</strong> RESTful and GraphQL specifications with versioning and documentation</li>
-        <li><strong>Integration Design:</strong> Third-party integrations, middleware, and enterprise service bus</li>
-        <li><strong>Security Architecture:</strong> Authentication, authorization, encryption, and security patterns</li>
+        <li>
+          <strong>High-Level Design:</strong> System components, interactions, data
+          flow, and integration points
+        </li>
+        <li>
+          <strong>Low-Level Design:</strong> Detailed component design, class diagrams,
+          and implementation specifications
+        </li>
+        <li>
+          <strong>Database Design:</strong> Schema design, normalization, indexing
+          strategies, and query optimization
+        </li>
+        <li>
+          <strong>API Design:</strong> RESTful and GraphQL specifications with versioning
+          and documentation
+        </li>
+        <li>
+          <strong>Integration Design:</strong> Third-party integrations, middleware,
+          and enterprise service bus
+        </li>
+        <li>
+          <strong>Security Architecture:</strong> Authentication, authorization, encryption,
+          and security patterns
+        </li>
       </ul>
 
       <h3>Scalability & Performance Design</h3>
       <div class="features-grid">
-        <div class="feature-box"><h4>Load Balancing</h4><p>Distribute traffic across servers with horizontal scaling and failover strategies.</p></div>
-        <div class="feature-box"><h4>Caching Strategies</h4><p>Multi-level caching using Redis, Memcached, and CDNs for optimal performance.</p></div>
-        <div class="feature-box"><h4>Database Scaling</h4><p>Sharding, replication, read replicas, and CQRS patterns for data scaling.</p></div>
-        <div class="feature-box"><h4>Performance Optimization</h4><p>Identify bottlenecks, optimize queries, and tune resource utilization.</p></div>
+        <div class="feature-box">
+          <h4>Load Balancing</h4><p>
+            Distribute traffic across servers with horizontal scaling and
+            failover strategies.
+          </p>
+        </div>
+        <div class="feature-box">
+          <h4>Caching Strategies</h4><p>
+            Multi-level caching using Redis, Memcached, and CDNs for optimal
+            performance.
+          </p>
+        </div>
+        <div class="feature-box">
+          <h4>Database Scaling</h4><p>
+            Sharding, replication, read replicas, and CQRS patterns for data
+            scaling.
+          </p>
+        </div>
+        <div class="feature-box">
+          <h4>Performance Optimization</h4><p>
+            Identify bottlenecks, optimize queries, and tune resource
+            utilization.
+          </p>
+        </div>
       </div>
 
       <h3>Cloud Architecture</h3>
-      <p>Designing cloud-native solutions that leverage modern cloud capabilities:</p>
+      <p>
+        Designing cloud-native solutions that leverage modern cloud
+        capabilities:
+      </p>
       <ul>
-        <li><strong>Multi-Cloud Strategy:</strong> Architectures that work across AWS, Azure, and Google Cloud</li>
-        <li><strong>Hybrid Cloud:</strong> Seamless integration between on-premise and cloud infrastructure</li>
-        <li><strong>Cloud Migration:</strong> Strategic planning and execution of migration to cloud platforms</li>
-        <li><strong>Infrastructure as Code:</strong> Terraform, CloudFormation, ARM templates for repeatable infrastructure</li>
-        <li><strong>Container Orchestration:</strong> Kubernetes, ECS, AKS — architecture and deployment strategies</li>
-        <li><strong>Cost Optimization:</strong> Right-sizing, reserved instances, and efficient resource utilization</li>
+        <li>
+          <strong>Multi-Cloud Strategy:</strong> Architectures that work across AWS,
+          Azure, and Google Cloud
+        </li>
+        <li>
+          <strong>Hybrid Cloud:</strong> Seamless integration between on-premise and
+          cloud infrastructure
+        </li>
+        <li>
+          <strong>Cloud Migration:</strong> Strategic planning and execution of migration
+          to cloud platforms
+        </li>
+        <li>
+          <strong>Infrastructure as Code:</strong> Terraform, CloudFormation, ARM
+          templates for repeatable infrastructure
+        </li>
+        <li>
+          <strong>Container Orchestration:</strong> Kubernetes, ECS, AKS — architecture
+          and deployment strategies
+        </li>
+        <li>
+          <strong>Cost Optimization:</strong> Right-sizing, reserved instances, and
+          efficient resource utilization
+        </li>
       </ul>
 
       <h3>Enterprise Architecture</h3>
       <div class="features-grid">
-        <div class="feature-box"><h4>Business Architecture</h4><p>Aligning IT systems with business goals, processes, and organizational structure.</p></div>
-        <div class="feature-box"><h4>Application Architecture</h4><p>Defining application portfolio, integration patterns, and technology standards.</p></div>
-        <div class="feature-box"><h4>Data Architecture</h4><p>Enterprise data models, data governance, master data management, and data lakes.</p></div>
-        <div class="feature-box"><h4>Technology Architecture</h4><p>Technology stack selection, infrastructure standards, and platform strategies.</p></div>
+        <div class="feature-box">
+          <h4>Business Architecture</h4><p>
+            Aligning IT systems with business goals, processes, and
+            organizational structure.
+          </p>
+        </div>
+        <div class="feature-box">
+          <h4>Application Architecture</h4><p>
+            Defining application portfolio, integration patterns, and technology
+            standards.
+          </p>
+        </div>
+        <div class="feature-box">
+          <h4>Data Architecture</h4><p>
+            Enterprise data models, data governance, master data management, and
+            data lakes.
+          </p>
+        </div>
+        <div class="feature-box">
+          <h4>Technology Architecture</h4><p>
+            Technology stack selection, infrastructure standards, and platform
+            strategies.
+          </p>
+        </div>
       </div>
 
       <h3>Design Patterns & Best Practices</h3>
       <ul>
-        <li><strong>Creational Patterns:</strong> Singleton, Factory, Builder, Prototype</li>
-        <li><strong>Structural Patterns:</strong> Adapter, Decorator, Facade, Proxy</li>
-        <li><strong>Behavioral Patterns:</strong> Observer, Strategy, Command, State</li>
-        <li><strong>SOLID Principles:</strong> Maintainable, testable, and extensible code design</li>
-        <li><strong>Domain-Driven Design:</strong> Modeling complex business domains with bounded contexts</li>
+        <li>
+          <strong>Creational Patterns:</strong> Singleton, Factory, Builder, Prototype
+        </li>
+        <li>
+          <strong>Structural Patterns:</strong> Adapter, Decorator, Facade, Proxy
+        </li>
+        <li>
+          <strong>Behavioral Patterns:</strong> Observer, Strategy, Command, State
+        </li>
+        <li>
+          <strong>SOLID Principles:</strong> Maintainable, testable, and extensible
+          code design
+        </li>
+        <li>
+          <strong>Domain-Driven Design:</strong> Modeling complex business domains
+          with bounded contexts
+        </li>
       </ul>
 
       <h3>Architecture Review & Assessment</h3>
       <ul>
-        <li><strong>Architecture Evaluation:</strong> Review existing architecture against best practices and patterns</li>
-        <li><strong>Technical Debt Analysis:</strong> Identify areas of technical debt and prioritize remediation</li>
-        <li><strong>Performance Audit:</strong> Analyze bottlenecks, resource utilization, and optimization opportunities</li>
-        <li><strong>Security Review:</strong> Identify vulnerabilities and security gaps in system design</li>
-        <li><strong>Scalability Planning:</strong> Assess capacity to handle growth and plan for future needs</li>
-        <li><strong>Modernization Strategy:</strong> Roadmap for upgrading legacy systems to modern architecture</li>
+        <li>
+          <strong>Architecture Evaluation:</strong> Review existing architecture against
+          best practices and patterns
+        </li>
+        <li>
+          <strong>Technical Debt Analysis:</strong> Identify areas of technical debt
+          and prioritize remediation
+        </li>
+        <li>
+          <strong>Performance Audit:</strong> Analyze bottlenecks, resource utilization,
+          and optimization opportunities
+        </li>
+        <li>
+          <strong>Security Review:</strong> Identify vulnerabilities and security
+          gaps in system design
+        </li>
+        <li>
+          <strong>Scalability Planning:</strong> Assess capacity to handle growth
+          and plan for future needs
+        </li>
+        <li>
+          <strong>Modernization Strategy:</strong> Roadmap for upgrading legacy systems
+          to modern architecture
+        </li>
       </ul>
     </div>
   </section>
 
-  <section class="contact" id="contact">
-    <div class="container"><div class="contact-content">
-      <h2>Let's Build Something Great Together</h2>
-      <p>Ready to transform your business with cutting-edge technology solutions? Get in touch with our team today.</p>
-      <div class="contact-info">
-        <div class="contact-item"><div class="contact-item-icon">🌐</div><strong>Website</strong><a href="https://generalsoft.ae">generalsoft.ae</a></div>
-        <div class="contact-item"><a href="/contact/"><div class="contact-item-icon">📧</div><strong>Contact Us</strong><br>Get in touch</a></div>
-        <div class="contact-item"><div class="contact-item-icon">📍</div><strong>Location</strong><span>Ras Al Khaimah</span></div>
+  <section class="faq-section">
+    <div class="container">
+      <div class="faq-container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">
+          Common questions about our custom software development process in the
+          UAE.
+        </p>
+
+        <div class="faq-list">
+          <details>
+            <summary>How long does it take to build custom software?</summary>
+            <p>
+              The timeline for building custom software varies based on the
+              complexity of the project, the size of the development team, and
+              the specific requirements. A simple application might take a few
+              weeks, while a complex enterprise solution could take several
+              months.
+            </p>
+          </details>
+          <details>
+            <summary
+              >What is software architecture and why does it matter?</summary
+            >
+            <p>
+              Software architecture defines the high-level structure of a system
+              — how components are organized, how they communicate, how data
+              flows, and how the system handles failure, load, and growth. Good
+              architecture makes a system reliable, maintainable, and easy to
+              extend. Poor architecture means that every new feature costs more
+              than the last, the system becomes increasingly fragile, and
+              eventually a rewrite becomes unavoidable.
+            </p>
+          </details>
+          <details>
+            <summary
+              >When should we invest in a dedicated architecture phase?</summary
+            >
+            <p>
+              Any time you are building a system that will need to scale, handle
+              sensitive data, integrate with multiple external systems, or be
+              maintained by a team over multiple years. It is also worth
+              conducting an architectural review of existing systems before
+              beginning a significant new phase of development, or if you are
+              experiencing recurring performance problems, integration failures,
+              or escalating maintenance costs.
+            </p>
+          </details>
+          <details>
+            <summary
+              >What is the difference between microservices and a monolithic
+              architecture?</summary
+            >
+            <p>
+              A monolithic architecture bundles all application functionality
+              into a single deployable unit. This is simpler to develop and
+              operate initially but becomes difficult to scale and maintain as
+              the system grows. A microservices architecture breaks the system
+              into independently deployable services, each responsible for a
+              specific capability. This enables independent scaling, faster
+              deployment cycles, and clearer team ownership — but requires more
+              sophisticated infrastructure and operational discipline. We help
+              you evaluate which is appropriate for your stage and requirements.
+            </p>
+          </details>
+          <details>
+            <summary
+              >Can you review and improve our existing architecture?</summary
+            >
+            <p>
+              Yes. Our architecture review service assesses your existing system
+              against best practices, identifies areas of technical debt and
+              risk, and produces a prioritized remediation roadmap. This is
+              often the right starting point before committing to a major new
+              development phase.
+            </p>
+          </details>
+          <details>
+            <summary>What documentation do we receive?</summary>
+            <p>
+              Architecture engagements produce a comprehensive documentation
+              package including component and sequence diagrams, data flow
+              diagrams, API specifications, infrastructure blueprints, ADRs
+              (Architecture Decision Records) explaining key decisions and their
+              rationale, and an implementation guide for the development team.
+            </p>
+          </details>
+        </div>
       </div>
-    </div></div>
+    </div>
   </section>
 
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-content">
+        <h2>Let's Build Something Great Together</h2>
+        <p>
+          Ready to transform your business with cutting-edge technology
+          solutions? Get in touch with our team today.
+        </p>
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-item-icon">🌐</div><strong>Website</strong><a
+              href="https://generalsoft.ae">generalsoft.ae</a
+            >
+          </div>
+          <div class="contact-item">
+            <a href="/contact/"
+              ><div class="contact-item-icon">📧</div><strong>Contact Us</strong
+              ><br />Get in touch</a
+            >
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">📍</div><strong>Location</strong
+            ><span>Ras Al Khaimah</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </Layout>

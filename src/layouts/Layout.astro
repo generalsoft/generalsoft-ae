@@ -9,8 +9,9 @@ interface Props {
   description: string;
   path?: string;
   isArabic?: boolean;
+  image?: string;
 }
-const { title, description, path, isArabic } = Astro.props;
+const { title, description, path, isArabic, image } = Astro.props;
 const lang = isArabic ? 'ar' : 'en';
 const dir = isArabic ? 'rtl' : 'ltr';
 ---
@@ -22,7 +23,7 @@ const dir = isArabic ? 'rtl' : 'ltr';
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="alternate icon" href="/favicon.png" type="image/png" sizes="32x32" />
     <link rel="shortcut icon" href="/favicon.ico" />
-    <SEO title={title} description={description} path={path} isArabic={isArabic} />
+    <SEO title={title} description={description} path={path} isArabic={isArabic} image={image} />
     
     <script type="application/ld+json">
       {

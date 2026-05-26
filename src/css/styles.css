@@ -489,7 +489,7 @@ p {
 }
 
 /* Contact Section */
-.contact {
+section.contact {
   background: var(--bg-dark);
   color: white;
 }
@@ -600,7 +600,7 @@ footer p {
 
 /* Service Content Pages */
 .service-content {
-  padding: 4rem 0;
+  padding: 4rem 0 2rem;
 }
 
 .service-section {
@@ -611,6 +611,10 @@ footer p {
 
 .service-section h2 {
   margin-bottom: 1rem;
+}
+
+.service-title {
+  color: var(--primary);
 }
 
 .service-section h3 {
@@ -841,6 +845,55 @@ footer p {
 .info-content p {
   font-size: 0.9375rem;
   margin: 0;
+}
+
+/* FAQ Section */
+section.faq-section {
+  padding: 2rem 0 5rem;
+  background: var(--bg-alt);
+}
+
+.faq-section .section-title {
+  color: var(--primary);
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-list {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-item {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+
+.faq-item:hover {
+  box-shadow: var(--shadow);
+}
+
+.faq-item summary {
+  padding: 1.25rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+  color: var(--text);
+  position: relative;
+}
+
+.faq-item p {
+  padding: 0 1.5rem 1.25rem;
+  margin: 0;
+  font-size: 0.9375rem;
 }
 
 /* Floating Action Buttons */

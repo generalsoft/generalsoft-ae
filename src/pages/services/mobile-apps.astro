@@ -1,81 +1,313 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import { BRAND } from "astro:schema";
+import Layout from "../../layouts/Layout.astro";
 ---
-<Layout 
+
+<Layout
   title="Mobile App Development Services | GeneralSoft UAE"
   description="Professional mobile app development services for iOS, Android, and cross-platform solutions in the UAE."
   path="/services/mobile-apps/"
+  image="/img/og-mobile-apps.jpg"
 >
-
   <section class="service-content" id="mobile-services">
     <div class="service-section" style="margin-top: 120px;">
-      <h2>Mobile App Development Services</h2>
-      <p>We craft innovative mobile applications that deliver exceptional user experiences across all devices and platforms. Our team of experts combines creative design with technical excellence to build apps that users love and businesses rely on.</p>
+      <h2 class="service-title">Mobile App Development Services</h2>
+      <p>
+        In the UAE's competitive digital market, a website is rarely just an
+        online brochure — it is often the primary point of contact between a
+        business and its customers, the destination of paid advertising spend,
+        the surface through which trust is established or lost, and
+        increasingly, the channel through which transactions happen. A website
+        that loads slowly, looks generic, or fails to communicate a clear value
+        proposition costs real money in lost leads and conversions.
+      </p>
+      <p>
+        At GeneralSoft, web development is approached as an engineering and
+        design discipline simultaneously. We build websites and web applications
+        using modern, performance-first frameworks — primarily React, Next.js,
+        and Astro — with a focus on Core Web Vitals scores that satisfy both
+        users and search engines. Visually, we design for clarity and
+        credibility: layouts that communicate trust immediately, information
+        hierarchies that guide visitors to the actions that matter, and brand
+        expression that differentiates rather than blends in.
+      </p>
+      <p>
+        The web and network combination reflects a practical reality for many of
+        our clients: the performance of a website or web application is
+        inseparable from the network infrastructure it runs on and connects to.
+        A beautifully built web application that sits behind a poorly configured
+        network, a CDN that isn't properly tuned, or an office network that
+        can't support the team using it is still a slow, unreliable experience.
+        We address both layers together, which is why clients working on office
+        expansions, data center migrations, or cloud deployments often engage us
+        for both the application and the network design.
+      </p>
+      <p>
+        For businesses in UAE free zones and corporate districts — where office
+        infrastructure often needs to be set up from scratch and must support
+        VoIP, video conferencing, cloud access, and secure remote work
+        simultaneously — our network design service provides a single point of
+        accountability for the entire connected environment.
+      </p>
 
       <h3>Native iOS Development</h3>
       <div class="features-grid">
-        <div class="feature-box"><h4>iPhone Apps</h4><p>Beautiful, high-performance iOS apps built with Swift and SwiftUI following Apple's Human Interface Guidelines.</p></div>
-        <div class="feature-box"><h4>iPad Apps</h4><p>Optimized iPad experiences with multitasking, split view, and Apple Pencil support.</p></div>
-        <div class="feature-box"><h4>Apple Watch Apps</h4><p>Wearable experiences that extend your iOS app with complications, notifications, and health tracking.</p></div>
-        <div class="feature-box"><h4>App Store Optimization</h4><p>Expert guidance on App Store submission, optimization, and download growth strategies.</p></div>
+        <div class="feature-box">
+          <h4>iPhone Apps</h4><p>
+            Beautiful, high-performance iOS apps built with Swift and SwiftUI
+            following Apple's Human Interface Guidelines.
+          </p>
+        </div>
+        <div class="feature-box">
+          <h4>iPad Apps</h4><p>
+            Optimized iPad experiences with multitasking, split view, and Apple
+            Pencil support.
+          </p>
+        </div>
+        <div class="feature-box">
+          <h4>Apple Watch Apps</h4><p>
+            Wearable experiences that extend your iOS app with complications,
+            notifications, and health tracking.
+          </p>
+        </div>
+        <div class="feature-box">
+          <h4>App Store Optimization</h4><p>
+            Expert guidance on App Store submission, optimization, and download
+            growth strategies.
+          </p>
+        </div>
       </div>
 
       <h3>Native Android Development</h3>
       <ul>
-        <li><strong>Kotlin Development:</strong> Modern, concise Android apps using Kotlin and Jetpack Compose</li>
-        <li><strong>Material Design:</strong> Beautiful interfaces following Google's Material Design 3 guidelines</li>
-        <li><strong>Tablet Optimization:</strong> Responsive layouts that adapt to different screen sizes and foldables</li>
-        <li><strong>Wear OS Apps:</strong> Smartwatch applications for Android wearable devices</li>
+        <li>
+          <strong>Kotlin Development:</strong> Modern, concise Android apps using
+          Kotlin and Jetpack Compose
+        </li>
+        <li>
+          <strong>Material Design:</strong> Beautiful interfaces following Google's
+          Material Design 3 guidelines
+        </li>
+        <li>
+          <strong>Tablet Optimization:</strong> Responsive layouts that adapt to different
+          screen sizes and foldables
+        </li>
+        <li>
+          <strong>Wear OS Apps:</strong> Smartwatch applications for Android wearable
+          devices
+        </li>
       </ul>
 
       <h3>Cross-Platform Development</h3>
       <div class="features-grid">
-        <div class="feature-box"><h4>React Native</h4><p>Build once, deploy on iOS and Android with native performance using React Native and JavaScript.</p></div>
-        <div class="feature-box"><h4>Flutter</h4><p>Beautiful natively compiled apps with Flutter's rich widget library and hot reload.</p></div>
-        <div class="feature-box"><h4>Progressive Web Apps</h4><p>Web applications that behave like native apps with offline support, notifications, and home screen installation.</p></div>
-        <div class="feature-box"><h4>Cost-Effective Solutions</h4><p>Reduce development time and cost by maintaining a single codebase for multiple platforms.</p></div>
+        <div class="feature-box">
+          <h4>React Native</h4><p>
+            Build once, deploy on iOS and Android with native performance using
+            React Native and JavaScript.
+          </p>
+        </div>
+        <div class="feature-box">
+          <h4>Flutter</h4><p>
+            Beautiful natively compiled apps with Flutter's rich widget library
+            and hot reload.
+          </p>
+        </div>
+        <div class="feature-box">
+          <h4>Progressive Web Apps</h4><p>
+            Web applications that behave like native apps with offline support,
+            notifications, and home screen installation.
+          </p>
+        </div>
+        <div class="feature-box">
+          <h4>Cost-Effective Solutions</h4><p>
+            Reduce development time and cost by maintaining a single codebase
+            for multiple platforms.
+          </p>
+        </div>
       </div>
 
       <h3>Types of Mobile Apps We Build</h3>
       <ul>
-        <li><strong>E-commerce Apps:</strong> Shopping apps with product catalogs, cart, payment integration, and order tracking</li>
-        <li><strong>Social Networking:</strong> Community platforms with messaging, feeds, profiles, and content sharing</li>
-        <li><strong>On-Demand Services:</strong> Uber-like apps for ride-sharing, food delivery, and service marketplaces</li>
-        <li><strong>Healthcare Apps:</strong> Telemedicine, fitness tracking, appointment booking, and health monitoring</li>
-        <li><strong>Education Apps:</strong> E-learning platforms, course delivery, quizzes, and progress tracking</li>
-        <li><strong>Finance & Banking:</strong> Mobile banking, payment apps, and investment platforms</li>
+        <li>
+          <strong>E-commerce Apps:</strong> Shopping apps with product catalogs, cart,
+          payment integration, and order tracking
+        </li>
+        <li>
+          <strong>Social Networking:</strong> Community platforms with messaging,
+          feeds, profiles, and content sharing
+        </li>
+        <li>
+          <strong>On-Demand Services:</strong> Uber-like apps for ride-sharing, food
+          delivery, and service marketplaces
+        </li>
+        <li>
+          <strong>Healthcare Apps:</strong> Telemedicine, fitness tracking, appointment
+          booking, and health monitoring
+        </li>
+        <li>
+          <strong>Education Apps:</strong> E-learning platforms, course delivery,
+          quizzes, and progress tracking
+        </li>
+        <li>
+          <strong>Finance & Banking:</strong> Mobile banking, payment apps, and investment
+          platforms
+        </li>
       </ul>
 
       <h3>Mobile App Security</h3>
       <ul>
-        <li><strong>Secure Authentication:</strong> Biometric authentication, OAuth 2.0, JWT tokens, and MFA</li>
-        <li><strong>Data Encryption:</strong> End-to-end encryption for sensitive data</li>
-        <li><strong>API Security:</strong> Secure communication with SSL pinning and request signing</li>
-        <li><strong>Secure Storage:</strong> Encrypted local storage using Keychain (iOS) and KeyStore (Android)</li>
+        <li>
+          <strong>Secure Authentication:</strong> Biometric authentication, OAuth
+          2.0, JWT tokens, and MFA
+        </li>
+        <li>
+          <strong>Data Encryption:</strong> End-to-end encryption for sensitive data
+        </li>
+        <li>
+          <strong>API Security:</strong> Secure communication with SSL pinning and
+          request signing
+        </li>
+        <li>
+          <strong>Secure Storage:</strong> Encrypted local storage using Keychain
+          (iOS) and KeyStore (Android)
+        </li>
       </ul>
 
       <h3>Our Mobile Tech Stack</h3>
       <ul>
-        <li><strong>iOS:</strong> Swift, SwiftUI, UIKit, Combine, Core Data, CloudKit</li>
-        <li><strong>Android:</strong> Kotlin, Jetpack Compose, Android SDK, Room, WorkManager</li>
-        <li><strong>Cross-Platform:</strong> React Native, Flutter, Dart, JavaScript/TypeScript</li>
-        <li><strong>Backend:</strong> Node.js, Firebase, AWS Amplify, GraphQL, REST APIs</li>
+        <li>
+          <strong>iOS:</strong> Swift, SwiftUI, UIKit, Combine, Core Data, CloudKit
+        </li>
+        <li>
+          <strong>Android:</strong> Kotlin, Jetpack Compose, Android SDK, Room, WorkManager
+        </li>
+        <li>
+          <strong>Cross-Platform:</strong> React Native, Flutter, Dart, JavaScript/TypeScript
+        </li>
+        <li>
+          <strong>Backend:</strong> Node.js, Firebase, AWS Amplify, GraphQL, REST
+          APIs
+        </li>
         <li><strong>Design:</strong> Figma, Sketch, Adobe XD</li>
         <li><strong>Testing:</strong> XCTest, Espresso, Jest, Detox, Appium</li>
       </ul>
     </div>
   </section>
 
-  <section class="contact" id="contact">
-    <div class="container"><div class="contact-content">
-      <h2>Let's Build Something Great Together</h2>
-      <p>Ready to transform your business with cutting-edge technology solutions? Get in touch with our team today.</p>
-      <div class="contact-info">
-        <div class="contact-item"><div class="contact-item-icon">🌐</div><strong>Website</strong><a href="https://generalsoft.ae">generalsoft.ae</a></div>
-        <div class="contact-item"><a href="/contact/"><div class="contact-item-icon">📧</div><strong>Contact Us</strong><br>Get in touch</a></div>
-        <div class="contact-item"><div class="contact-item-icon">📍</div><strong>Location</strong><span>Ras Al Khaimah</span></div>
+  <section class="faq-section">
+    <div class="container">
+      <div class="faq-container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">
+          Common questions about our custom software development process in the
+          UAE.
+        </p>
+
+        <div class="faq-list">
+          <details>
+            <summary
+              >Should I build a native app or a cross-platform app?</summary
+            >
+            <p>
+              It depends on your requirements. Native iOS and Android
+              development (Swift/Kotlin) delivers the highest performance, best
+              platform integration, and most polished experience — but requires
+              maintaining two separate codebases. Cross-platform frameworks like
+              Flutter and React Native let you share most of your codebase
+              across both platforms, reducing cost and development time with
+              minimal compromise on performance. For most business applications,
+              cross-platform is an excellent choice. For highly
+              performance-sensitive or hardware-dependent apps, native
+              development is worth the investment.
+            </p>
+          </details>
+          <details>
+            <summary>How long does it take to build a mobile app?</summary>
+            <p>
+              A focused app with a defined scope — for example, a service
+              booking app or an internal operations tool — typically takes eight
+              to fourteen weeks from wire-framing to App Store submission.
+              Feature-rich consumer apps with back-end infrastructure, payment
+              integration, and real-time data can take four to six months. We
+              provide a detailed timeline after the discovery and scoping phase.
+            </p>
+          </details>
+          <details>
+            <summary
+              >How much does mobile app development cost in the UAE?</summary
+            >
+            <p>
+              Cost depends on complexity, platform choice, and back-end
+              requirements. A straightforward single-platform app starts from
+              AED 35,000–50,000. Multi-platform apps with custom back-ends,
+              payment gateways, and third-party integrations typically range
+              from AED 80,000–200,000+. We provide a detailed proposal after
+              understanding your requirements.
+            </p>
+          </details>
+          <details>
+            <summary>Can you build an app that works offline?</summary>
+            <p>
+              Yes. We design offline-first architectures as a standard
+              consideration for apps that may be used in variable-connectivity
+              environments — common in logistics, field service, and industrial
+              applications. Data syncs automatically when connectivity is
+              restored, and the user experience remains functional throughout.
+            </p>
+          </details>
+          <details>
+            <summary>Can you update and maintain the app after launch?</summary>
+            <p>
+              Yes — and this is an important part of the engagement. Mobile
+              operating systems update regularly, and apps that aren't
+              maintained fall behind on performance, security, and
+              compatibility. We offer ongoing maintenance retainers covering OS
+              compatibility updates, security patches, performance monitoring,
+              and new feature development.
+            </p>
+          </details>
+          <details>
+            <summary
+              >Do you handle App Store and Google Play submission?</summary
+            >
+            <p>
+              Yes. We manage the full submission process for both the Apple App
+              Store and Google Play, including compliance with store guidelines,
+              metadata optimization, screenshot preparation, and responding to
+              any review feedback from Apple or Google.
+            </p>
+          </details>
+        </div>
       </div>
-    </div></div>
+    </div>
   </section>
 
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-content">
+        <h2>Let's Build Something Great Together</h2>
+        <p>
+          Ready to transform your business with cutting-edge technology
+          solutions? Get in touch with our team today.
+        </p>
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-item-icon">🌐</div><strong>Website</strong><a
+              href="https://generalsoft.ae">generalsoft.ae</a
+            >
+          </div>
+          <div class="contact-item">
+            <a href="/contact/"
+              ><div class="contact-item-icon">📧</div><strong>Contact Us</strong
+              ><br />Get in touch</a
+            >
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">📍</div><strong>Location</strong
+            ><span>Ras Al Khaimah</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </Layout>

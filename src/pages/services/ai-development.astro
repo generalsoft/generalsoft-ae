@@ -1,52 +1,138 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import '../../css/ai-hero.css';
+import Layout from "../../layouts/Layout.astro";
+import "../../css/ai-hero.css";
 ---
-<Layout 
+
+<Layout
   title="AI Development Services | GeneralSoft UAE"
   description="Expert AI development services including machine learning, deep learning, and intelligent automation solutions in the UAE."
   path="/services/ai-development/"
+  image="/img/og-ai-development.jpg"
 >
-  <section class="ai-hero">
-    <div class="ai-hero-background"><div class="neural-network"><canvas id="neuralCanvas"></canvas></div><div class="floating-particles"></div></div>
-    <div class="ai-hero-content">
-      <div class="ai-badge"><span class="badge-icon">🤖</span><span class="badge-text">Artificial Intelligence</span></div>
-      <h1 class="ai-hero-title"><span class="gradient-text">Intelligent Solutions</span><br>for Tomorrow's Challenges</h1>
-      <p class="ai-hero-description">Harness the power of machine learning, deep learning, and intelligent automation to transform your business operations and unlock unprecedented insights from your data.</p>
-      <div class="ai-hero-cta"><a href="#ai-services" class="btn-primary">Explore AI Solutions</a><a href="/contact/" class="btn-secondary">Get a Consultation</a></div>
-    </div>
-    <div class="scroll-indicator"><div class="mouse"><div class="wheel"></div></div><p>Scroll to explore</p></div>
-  </section>
-
-  <section class="service-content" id="ai-services">
-    <div class="service-section">
-      <h2>AI Development Services</h2>
-      <p>We specialize in developing cutting-edge AI solutions that deliver real business value and competitive advantage. Our AI expertise spans multiple domains and industries.</p>
-
+  <section class="service-content" id="software-services">
+    <div class="service-section" style="margin-top: 120px;">
+      <h2 class="service-title">AI Development Services</h2><p>
+        Artificial intelligence is reshaping how businesses across the UAE
+        operate — and the pace of change is accelerating. Dubai's National AI
+        Strategy and the UAE's broader ambition to become a global AI hub have
+        created one of the most investment-rich environments for AI adoption in
+        the world, with government-backed initiatives spanning healthcare,
+        logistics, financial services, smart infrastructure, and public
+        administration. For businesses operating in this environment,
+        integrating AI into core operations is increasingly a competitive
+        necessity, not a distant aspiration.
+      </p>
+      <p>
+        At GeneralSoft, we build practical, production-ready AI systems — the
+        kind that solve specific business problems and deliver measurable
+        results, not proof-of-concept demos that never reach production. Our
+        team works across the full AI development lifecycle: data assessment,
+        model selection, training, integration, deployment, and ongoing
+        performance monitoring. We have hands-on experience with both classical
+        machine learning and modern large language model (LLM) integrations,
+        which means we recommend the right tool for the problem rather than
+        defaulting to what's most fashionable.
+      </p>
+      <p>
+        AI implementations fail most often not because of weak models, but
+        because of poor data quality, vague problem definitions, or systems that
+        don't connect with existing infrastructure. We address this at the start
+        of every engagement with a structured AI readiness assessment —
+        evaluating your data assets, identifying the highest-value automation
+        opportunities, and defining clear success metrics before any model is
+        built.
+      </p>
+      <p>
+        Industries we serve in the UAE include retail and e-commerce (demand
+        forecasting, personalization engines, dynamic pricing), logistics (route
+        optimization, predictive maintenance, shipment anomaly detection),
+        healthcare (clinical analytics, patient risk scoring, document
+        processing), and financial services (fraud detection, KYC automation,
+        credit risk modeling). Regardless of sector, our goal is consistent: AI
+        that solves a real problem, integrates cleanly with your existing
+        systems, and delivers ROI you can measure.
+      </p>
       <h3>Machine Learning Solutions</h3>
       <div class="features-grid">
-        <div class="feature-box"><h4>Predictive Analytics</h4><p>Build models that forecast trends, customer behavior, and business outcomes with high accuracy.</p></div>
-        <div class="feature-box"><h4>Classification Systems</h4><p>Develop intelligent classification systems for document processing, image recognition, and data categorization.</p></div>
-        <div class="feature-box"><h4>Recommendation Engines</h4><p>Create personalized recommendation systems that enhance user experience and drive engagement.</p></div>
-        <div class="feature-box"><h4>Anomaly Detection</h4><p>Implement systems that identify unusual patterns and detect fraud, security threats, and system failures.</p></div>
+        <div class="feature-box">
+          <h4>Predictive Analytics</h4><p>
+            Build models that forecast trends, customer behavior, and business
+            outcomes with high accuracy.
+          </p>
+        </div>
+        <div class="feature-box">
+          <h4>Classification Systems</h4><p>
+            Develop intelligent classification systems for document processing,
+            image recognition, and data categorization.
+          </p>
+        </div>
+        <div class="feature-box">
+          <h4>Recommendation Engines</h4><p>
+            Create personalized recommendation systems that enhance user
+            experience and drive engagement.
+          </p>
+        </div>
+        <div class="feature-box">
+          <h4>Anomaly Detection</h4><p>
+            Implement systems that identify unusual patterns and detect fraud,
+            security threats, and system failures.
+          </p>
+        </div>
       </div>
 
       <h3>Deep Learning & Neural Networks</h3>
-      <p>Our deep learning expertise enables us to tackle complex problems that require advanced pattern recognition and decision-making capabilities.</p>
+      <p>
+        Our deep learning expertise enables us to tackle complex problems that
+        require advanced pattern recognition and decision-making capabilities.
+      </p>
       <ul>
-        <li>Computer Vision — Image and video analysis, object detection, facial recognition</li>
-        <li>Natural Language Processing — Text analysis, sentiment analysis, chatbots, machine translation</li>
-        <li>Speech Recognition — Voice-to-text, voice commands, audio processing</li>
-        <li>Generative AI — Content creation, image synthesis, creative applications</li>
+        <li>
+          Computer Vision — Image and video analysis, object detection, facial
+          recognition
+        </li>
+        <li>
+          Natural Language Processing — Text analysis, sentiment analysis,
+          chatbots, machine translation
+        </li>
+        <li>
+          Speech Recognition — Voice-to-text, voice commands, audio processing
+        </li>
+        <li>
+          Generative AI — Content creation, image synthesis, creative
+          applications
+        </li>
       </ul>
 
       <h3>Intelligent Automation</h3>
-      <p>Transform your business processes with AI-powered automation that learns and adapts over time.</p>
+      <p>
+        Transform your business processes with AI-powered automation that learns
+        and adapts over time.
+      </p>
       <div class="features-grid">
-        <div class="feature-box"><h4>Robotic Process Automation</h4><p>Automate repetitive tasks and workflows with intelligent bots that handle complex decision-making.</p></div>
-        <div class="feature-box"><h4>Intelligent Document Processing</h4><p>Extract and process information from documents automatically using AI-powered OCR and NLP.</p></div>
-        <div class="feature-box"><h4>Smart Chatbots</h4><p>Deploy AI-powered conversational agents for customer service, support, and engagement.</p></div>
-        <div class="feature-box"><h4>Process Optimization</h4><p>Use AI to continuously optimize business processes and resource allocation.</p></div>
+        <div class="feature-box">
+          <h4>Robotic Process Automation</h4><p>
+            Automate repetitive tasks and workflows with intelligent bots that
+            handle complex decision-making.
+          </p>
+        </div>
+        <div class="feature-box">
+          <h4>Intelligent Document Processing</h4><p>
+            Extract and process information from documents automatically using
+            AI-powered OCR and NLP.
+          </p>
+        </div>
+        <div class="feature-box">
+          <h4>Smart Chatbots</h4><p>
+            Deploy AI-powered conversational agents for customer service,
+            support, and engagement.
+          </p>
+        </div>
+        <div class="feature-box">
+          <h4>Process Optimization</h4><p>
+            Use AI to continuously optimize business processes and resource
+            allocation.
+          </p>
+        </div>
       </div>
 
       <h3>Our AI Tech Stack</h3>
@@ -60,37 +146,183 @@ import '../../css/ai-hero.css';
       </ul>
 
       <h3>AI Development Process</h3>
-      <p>We follow a structured approach to ensure successful AI implementation:</p>
+      <p>
+        We follow a structured approach to ensure successful AI implementation:
+      </p>
       <ul>
-        <li><strong>Discovery & Assessment:</strong> Understanding your business challenges and identifying AI opportunities</li>
-        <li><strong>Data Preparation:</strong> Collecting, cleaning, and preparing data for training</li>
-        <li><strong>Model Development:</strong> Building, testing, and optimizing machine learning models</li>
-        <li><strong>Deployment:</strong> Integrating models into your production environment</li>
-        <li><strong>Monitoring & Optimization:</strong> Continuous performance monitoring and model improvement</li>
+        <li>
+          <strong>Discovery & Assessment:</strong> Understanding your business challenges
+          and identifying AI opportunities
+        </li>
+        <li>
+          <strong>Data Preparation:</strong> Collecting, cleaning, and preparing data
+          for training
+        </li>
+        <li>
+          <strong>Model Development:</strong> Building, testing, and optimizing machine
+          learning models
+        </li>
+        <li>
+          <strong>Deployment:</strong> Integrating models into your production environment
+        </li>
+        <li>
+          <strong>Monitoring & Optimization:</strong> Continuous performance monitoring
+          and model improvement
+        </li>
       </ul>
 
       <h3>Industries We Serve</h3>
       <p>Our AI solutions help businesses across diverse sectors:</p>
       <ul>
-        <li><strong>Healthcare:</strong> AI-assisted diagnostics, predictive patient analytics, drug discovery</li>
-        <li><strong>Finance:</strong> Fraud detection, algorithmic trading, risk assessment, automated customer service</li>
-        <li><strong>Retail:</strong> Personalized recommendations, inventory management, demand forecasting</li>
-        <li><strong>Manufacturing:</strong> Predictive maintenance, quality control, supply chain optimization</li>
-        <li><strong>Education:</strong> Adaptive learning, automated assessment, personalized learning paths</li>
+        <li>
+          <strong>Healthcare:</strong> AI-assisted diagnostics, predictive patient
+          analytics, drug discovery
+        </li>
+        <li>
+          <strong>Finance:</strong> Fraud detection, algorithmic trading, risk assessment,
+          automated customer service
+        </li>
+        <li>
+          <strong>Retail:</strong> Personalized recommendations, inventory management,
+          demand forecasting
+        </li>
+        <li>
+          <strong>Manufacturing:</strong> Predictive maintenance, quality control,
+          supply chain optimization
+        </li>
+        <li>
+          <strong>Education:</strong> Adaptive learning, automated assessment, personalized
+          learning paths
+        </li>
       </ul>
     </div>
   </section>
 
-  <section class="contact" id="contact">
-    <div class="container"><div class="contact-content">
-      <h2>Let's Build Something Great Together</h2>
-      <p>Ready to transform your business with cutting-edge technology solutions? Get in touch with our team today.</p>
-      <div class="contact-info">
-        <div class="contact-item"><div class="contact-item-icon">🌐</div><strong>Website</strong><a href="https://generalsoft.ae">generalsoft.ae</a></div>
-        <div class="contact-item"><a href="/contact/"><div class="contact-item-icon">📧</div><strong>Contact Us</strong><br>Get in touch</a></div>
-        <div class="contact-item"><div class="contact-item-icon">📍</div><strong>Location</strong><span>Ras Al Khaimah</span></div>
+  <section class="faq-section">
+    <div class="container">
+      <div class="faq-container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">
+          Common questions about our custom software development process in the
+          UAE.
+        </p>
+
+        <div class="faq-list">
+          <details>
+            <summary
+              >Does my business need a large dataset to benefit from AI?</summary
+            >
+            <p>
+              Not necessarily. Some high-value AI applications — including
+              document processing, language model integrations, and pre-trained
+              computer vision systems — can be deployed with relatively limited
+              data. During our AI readiness assessment, we evaluate exactly what
+              you have and identify what's achievable today versus what might
+              require a data collection strategy first.
+            </p>
+          </details>
+
+          <details>
+            <summary
+              >What is the difference between machine learning and generative
+              AI?</summary
+            >
+            <p>
+              Machine learning typically refers to models trained to make
+              predictions or classifications from structured data — for example,
+              forecasting sales, detecting fraud, or predicting equipment
+              failure. Generative AI refers to models that produce new content
+              (text, code, images, summaries) based on patterns learned from
+              large datasets. Depending on your use case, we may recommend one,
+              the other, or a combination integrated into a single workflow.
+            </p>
+          </details>
+
+          <details>
+            <summary>How do you integrate AI into our existing systems?</summary
+            >
+            <p>
+              AI models are typically deployed as APIs that your existing
+              applications call in real time or in batch mode. We handle the
+              entire integration — model containerization, API design,
+              authentication, and connection to your CRM, ERP, mobile apps, or
+              data warehouse — so the AI becomes a seamless part of your
+              workflow rather than a separate tool your team has to switch
+              between.
+            </p>
+          </details>
+
+          <details>
+            <summary>How long does an AI development project take?</summary>
+            <p>
+              A focused model for a well-defined problem — such as churn
+              prediction, anomaly detection, or document classification —
+              typically takes six to twelve weeks from data assessment to
+              production. More complex systems involving custom model training,
+              multi-source data pipelines, or LLM fine-tuning generally require
+              three to six months. We provide a detailed timeline after the
+              discovery phase.
+            </p>
+          </details>
+
+          <details>
+            <summary
+              >Can you help us comply with UAE AI governance requirements?</summary
+            >
+            <p>
+              Yes. We follow the UAE's evolving AI ethics and governance
+              frameworks and can help you document model behavior, implement
+              explainability features, and design systems with fairness and
+              accountability built in. This is particularly important for
+              regulated industries such as finance and healthcare, where model
+              decisions may have significant impact on customers or patients.
+            </p>
+          </details>
+
+          <details>
+            <summary
+              >Can I use AI to automate customer service in Arabic?</summary
+            >
+            <p>
+              Yes. We have experience building Arabic-language NLP systems and
+              can integrate multilingual large language models that handle both
+              Arabic and English. Given the UAE's bilingual business
+              environment, this is one of the more common requirements we work
+              with.
+            </p>
+          </details>
+        </div>
       </div>
-    </div></div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-content">
+        <h2>Let's Build Something Great Together</h2>
+        <p>
+          Ready to transform your business with cutting-edge technology
+          solutions? Get in touch with our team today.
+        </p>
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-item-icon">🌐</div><strong>Website</strong><a
+              href="https://generalsoft.ae">generalsoft.ae</a
+            >
+          </div>
+          <div class="contact-item">
+            <a href="/contact/"
+              ><div class="contact-item-icon">📧</div><strong>Contact Us</strong
+              ><br />Get in touch</a
+            >
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">📍</div><strong>Location</strong
+            ><span>Ras Al Khaimah</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <script src="/js/ai-hero.js" is:inline></script>

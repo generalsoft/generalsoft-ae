@@ -1,92 +1,345 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import Layout from "../../layouts/Layout.astro";
 ---
-<Layout 
+
+<Layout
   title="Education & Training Services | GeneralSoft UAE"
   description="Professional technology education and training services including software development, AI, cybersecurity, and cloud computing training in the UAE."
   path="/services/education-training/"
+  image="/img/og-education-training.jpg"
 >
-
   <section class="service-content" id="training-services">
     <div class="service-section" style="margin-top: 120px;">
-      <h2>Education & Training Services</h2>
-      <p>We deliver comprehensive technology training programs designed to upskill your team and keep them at the forefront of innovation. Our expert instructors combine real-world experience with proven teaching methodologies to deliver impactful learning experiences.</p>
+      <h2 class="service-title">Education & Training Services</h2>
+      <p>
+        The UAE is investing heavily in building a technology-literate workforce
+        as a foundational requirement for its economic diversification goals.
+        Initiatives like the UAE Coding Programme, the national AI curriculum
+        rollout, and the push for Emiratization in technology roles have created
+        substantial demand for structured, high-quality technical training —
+        both for individuals entering the profession and for working
+        professionals upskilling in areas like AI, cloud computing, and
+        cybersecurity.
+      </p>
+      <p>
+        At GeneralSoft, our training programs are designed and delivered by
+        practicing engineers and developers — people who work with these
+        technologies in production environments every day, not trainers who
+        learned from slides. This makes a significant difference in the quality
+        of instruction: real-world context, practical exercises drawn from
+        actual project experience, and honest answers about when a technology is
+        the right choice and when it isn't.
+      </p>
+      <p>
+        We deliver training in two primary formats. Corporate training programs
+        are customized to an organization's specific technology stack, skill gap
+        profile, and learning objectives — often designed in conjunction with HR
+        or technology leadership to address a specific transition, such as
+        moving a development team to cloud-native architectures, upskilling an
+        analytics team in machine learning, or preparing a security team for a
+        new compliance requirement. Individual and small-group programs follow
+        structured curricula in software development, AI and data science,
+        cybersecurity, and web technologies, with options for instructor-led
+        classes, intensive bootcamps, and self-paced online formats.
+      </p>
+      <p>
+        Training is available in both English and Arabic, and can be delivered
+        on-site at your offices anywhere in the UAE, at our facility in Ras Al
+        Khaimah, or remotely for distributed teams. For corporate clients, we
+        provide pre and post-training assessments to measure skill development
+        and return on investment.
+      </p>
 
       <h3>Software Development Training</h3>
       <div class="features-grid">
-        <div class="feature-box"><h4>Full-Stack Development</h4><p>Comprehensive training in frontend and backend technologies including React, Node.js, databases, and modern development practices.</p></div>
-        <div class="feature-box"><h4>Mobile App Development</h4><p>Learn to build native and cross-platform applications using React Native, Flutter, Swift, and Kotlin.</p></div>
-        <div class="feature-box"><h4>Cloud Development</h4><p>Master cloud platforms including AWS, Azure, and Google Cloud with hands-on projects and certification prep.</p></div>
-        <div class="feature-box"><h4>DevOps & CI/CD</h4><p>Learn modern DevOps practices, containerization with Docker, orchestration with Kubernetes, and automation.</p></div>
+        <div class="feature-box">
+          <h4>Full-Stack Development</h4><p>
+            Comprehensive training in frontend and backend technologies
+            including React, Node.js, databases, and modern development
+            practices.
+          </p>
+        </div>
+        <div class="feature-box">
+          <h4>Mobile App Development</h4><p>
+            Learn to build native and cross-platform applications using React
+            Native, Flutter, Swift, and Kotlin.
+          </p>
+        </div>
+        <div class="feature-box">
+          <h4>Cloud Development</h4><p>
+            Master cloud platforms including AWS, Azure, and Google Cloud with
+            hands-on projects and certification prep.
+          </p>
+        </div>
+        <div class="feature-box">
+          <h4>DevOps & CI/CD</h4><p>
+            Learn modern DevOps practices, containerization with Docker,
+            orchestration with Kubernetes, and automation.
+          </p>
+        </div>
       </div>
 
       <h3>Programming Languages</h3>
-      <p>Build strong foundations or advance your skills in popular programming languages:</p>
+      <p>
+        Build strong foundations or advance your skills in popular programming
+        languages:
+      </p>
       <ul>
-        <li><strong>Python:</strong> From basics to advanced topics including data structures, OOP, and frameworks like Django and Flask</li>
-        <li><strong>JavaScript/TypeScript:</strong> Modern JavaScript, ES6+, TypeScript, and popular frameworks</li>
-        <li><strong>Java:</strong> Core Java, Spring Framework, microservices architecture, and enterprise development</li>
-        <li><strong>C# & .NET:</strong> .NET Core, ASP.NET, desktop and web application development</li>
-        <li><strong>Go:</strong> Modern concurrent programming, microservices, and cloud-native applications</li>
-        <li><strong>Rust:</strong> Systems programming with memory safety and high performance</li>
+        <li>
+          <strong>Python:</strong> From basics to advanced topics including data structures,
+          OOP, and frameworks like Django and Flask
+        </li>
+        <li>
+          <strong>JavaScript/TypeScript:</strong> Modern JavaScript, ES6+, TypeScript,
+          and popular frameworks
+        </li>
+        <li>
+          <strong>Java:</strong> Core Java, Spring Framework, microservices architecture,
+          and enterprise development
+        </li>
+        <li>
+          <strong>C# & .NET:</strong> .NET Core, ASP.NET, desktop and web application
+          development
+        </li>
+        <li>
+          <strong>Go:</strong> Modern concurrent programming, microservices, and cloud-native
+          applications
+        </li>
+        <li>
+          <strong>Rust:</strong> Systems programming with memory safety and high performance
+        </li>
       </ul>
 
       <h3>Data Science & AI Training</h3>
       <div class="features-grid">
-        <div class="feature-box"><h4>Machine Learning</h4><p>Comprehensive ML training covering algorithms, model building, and deployment using scikit-learn, TensorFlow.</p></div>
-        <div class="feature-box"><h4>Deep Learning</h4><p>Neural networks, CNNs, RNNs, and transformer models with practical applications in CV and NLP.</p></div>
-        <div class="feature-box"><h4>Data Analytics</h4><p>Learn data processing, visualization, and statistical analysis using Python, R, and modern tools.</p></div>
-        <div class="feature-box"><h4>Big Data Technologies</h4><p>Master Hadoop, Spark, Kafka, and other big data tools for processing large-scale datasets.</p></div>
+        <div class="feature-box">
+          <h4>Machine Learning</h4><p>
+            Comprehensive ML training covering algorithms, model building, and
+            deployment using scikit-learn, TensorFlow.
+          </p>
+        </div>
+        <div class="feature-box">
+          <h4>Deep Learning</h4><p>
+            Neural networks, CNNs, RNNs, and transformer models with practical
+            applications in CV and NLP.
+          </p>
+        </div>
+        <div class="feature-box">
+          <h4>Data Analytics</h4><p>
+            Learn data processing, visualization, and statistical analysis using
+            Python, R, and modern tools.
+          </p>
+        </div>
+        <div class="feature-box">
+          <h4>Big Data Technologies</h4><p>
+            Master Hadoop, Spark, Kafka, and other big data tools for processing
+            large-scale datasets.
+          </p>
+        </div>
       </div>
 
       <h3>Cybersecurity Training</h3>
-      <p>Equip your team to defend against modern cyber threats with comprehensive security training:</p>
+      <p>
+        Equip your team to defend against modern cyber threats with
+        comprehensive security training:
+      </p>
       <ul>
-        <li><strong>Ethical Hacking:</strong> Penetration testing techniques, vulnerability assessment, and security auditing</li>
-        <li><strong>Network Security:</strong> Firewall configuration, intrusion detection, VPN setup, and network hardening</li>
-        <li><strong>Application Security:</strong> Secure coding practices, OWASP Top 10, and security testing methodologies</li>
-        <li><strong>Cloud Security:</strong> Securing cloud infrastructure, IAM, compliance, and best practices</li>
-        <li><strong>Security Certifications:</strong> Preparation for CEH, CISSP, CompTIA Security+, and more</li>
+        <li>
+          <strong>Ethical Hacking:</strong> Penetration testing techniques, vulnerability
+          assessment, and security auditing
+        </li>
+        <li>
+          <strong>Network Security:</strong> Firewall configuration, intrusion detection,
+          VPN setup, and network hardening
+        </li>
+        <li>
+          <strong>Application Security:</strong> Secure coding practices, OWASP Top
+          10, and security testing methodologies
+        </li>
+        <li>
+          <strong>Cloud Security:</strong> Securing cloud infrastructure, IAM, compliance,
+          and best practices
+        </li>
+        <li>
+          <strong>Security Certifications:</strong> Preparation for CEH, CISSP, CompTIA
+          Security+, and more
+        </li>
       </ul>
 
       <h3>Web Technologies</h3>
       <div class="features-grid">
-        <div class="feature-box"><h4>Frontend Frameworks</h4><p>Master React, Angular, Vue.js, and modern frontend development with responsive design principles.</p></div>
-        <div class="feature-box"><h4>Backend Development</h4><p>Learn Node.js, Express, Django, Spring Boot, and RESTful API development.</p></div>
-        <div class="feature-box"><h4>Database Management</h4><p>SQL and NoSQL databases including PostgreSQL, MongoDB, Redis, and database optimization.</p></div>
-        <div class="feature-box"><h4>UI/UX Design</h4><p>Design thinking, wireframing, prototyping, and modern design tools like Figma and Adobe XD.</p></div>
+        <div class="feature-box">
+          <h4>Frontend Frameworks</h4><p>
+            Master React, Angular, Vue.js, and modern frontend development with
+            responsive design principles.
+          </p>
+        </div>
+        <div class="feature-box">
+          <h4>Backend Development</h4><p>
+            Learn Node.js, Express, Django, Spring Boot, and RESTful API
+            development.
+          </p>
+        </div>
+        <div class="feature-box">
+          <h4>Database Management</h4><p>
+            SQL and NoSQL databases including PostgreSQL, MongoDB, Redis, and
+            database optimization.
+          </p>
+        </div>
+        <div class="feature-box">
+          <h4>UI/UX Design</h4><p>
+            Design thinking, wireframing, prototyping, and modern design tools
+            like Figma and Adobe XD.
+          </p>
+        </div>
       </div>
 
       <h3>Corporate Training Programs</h3>
-      <p>Customized training solutions tailored to your organization's specific needs:</p>
+      <p>
+        Customized training solutions tailored to your organization's specific
+        needs:
+      </p>
       <ul>
-        <li><strong>Team Upskilling:</strong> Identify skill gaps and deliver targeted training to elevate team capabilities</li>
-        <li><strong>Technology Transition:</strong> Train teams on new technologies during platform or framework migrations</li>
-        <li><strong>Onboarding Programs:</strong> Accelerate new hire productivity with structured learning paths</li>
-        <li><strong>Leadership Development:</strong> Technical leadership, architecture, and management training for senior roles</li>
-        <li><strong>Certification Bootcamps:</strong> Intensive preparation for professional certifications and exams</li>
+        <li>
+          <strong>Team Upskilling:</strong> Identify skill gaps and deliver targeted
+          training to elevate team capabilities
+        </li>
+        <li>
+          <strong>Technology Transition:</strong> Train teams on new technologies
+          during platform or framework migrations
+        </li>
+        <li>
+          <strong>Onboarding Programs:</strong> Accelerate new hire productivity with
+          structured learning paths
+        </li>
+        <li>
+          <strong>Leadership Development:</strong> Technical leadership, architecture,
+          and management training for senior roles
+        </li>
+        <li>
+          <strong>Certification Bootcamps:</strong> Intensive preparation for professional
+          certifications and exams
+        </li>
       </ul>
 
       <h3>Training Formats</h3>
       <div class="features-grid">
-        <div class="feature-box"><h4>Instructor-Led Training</h4><p>Live, interactive sessions with expert instructors, hands-on labs, and real-time Q&A support.</p></div>
-        <div class="feature-box"><h4>Online Courses</h4><p>Self-paced learning with video lessons, coding exercises, and lifetime access to course materials.</p></div>
-        <div class="feature-box"><h4>Workshops & Bootcamps</h4><p>Intensive short-duration programs focused on specific technologies or skills with project-based learning.</p></div>
-        <div class="feature-box"><h4>Custom Corporate Training</h4><p>On-site or remote training programs tailored specifically to your team's needs and schedule.</p></div>
+        <div class="feature-box">
+          <h4>Instructor-Led Training</h4><p>
+            Live, interactive sessions with expert instructors, hands-on labs,
+            and real-time Q&A support.
+          </p>
+        </div>
+        <div class="feature-box">
+          <h4>Online Courses</h4><p>
+            Self-paced learning with video lessons, coding exercises, and
+            lifetime access to course materials.
+          </p>
+        </div>
+        <div class="feature-box">
+          <h4>Workshops & Bootcamps</h4><p>
+            Intensive short-duration programs focused on specific technologies
+            or skills with project-based learning.
+          </p>
+        </div>
+        <div class="feature-box">
+          <h4>Custom Corporate Training</h4><p>
+            On-site or remote training programs tailored specifically to your
+            team's needs and schedule.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <div class="container">
+      <div class="faq-container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">
+          Common questions about our custom software development process in the
+          UAE.
+        </p>
+        <div class="faq-list">
+          <details>
+            <summary>Do you offer training in Arabic?</summary>
+            Yes. Many of our instructors are bilingual, and we offer training delivery
+            in both English and Arabic. Course materials can also be provided in Arabic
+            on request. This is particularly valuable for corporate programs targeting
+            Emirati nationals or teams where Arabic is the primary working language.
+          </details>
+          <details>
+            <summary>Can training be delivered at our offices?</summary>
+            Yes. On-site training is one of our most popular formats for corporate
+            clients. We bring the instructor, materials, and lab environment to your
+            location anywhere in the UAE. This minimizes disruption to your team's
+            schedule and allows the training to be contextualized around your specific
+            systems and workflows.
+          </details>
+          <details>
+            <summary
+              >Can you develop a custom training program for our team?</summary
+            >
+            Yes. Custom corporate training programs start with a skills assessment
+            to identify gaps, followed by curriculum design aligned to your technology
+            stack and business objectives. Programs can range from a one-day workshop
+            on a specific technology to a multi-month structured upskilling program
+            covering multiple disciplines.
+          </details>
+          <details>
+            <summary>Do your training programs include certifications?</summary>
+            Many of our programs include preparation for industry certifications,
+            including AWS, Azure, Google Cloud, CompTIA Security+, CEH, CISSP, and
+            others. Certification preparation is structured around the official exam
+            domains while grounding the content in practical application so participants
+            are prepared for both the test and the real work.
+          </details>
+          <details>
+            <summary>What skill levels do you train?</summary>
+            We run programs at all levels — from absolute beginners learning programming
+            fundamentals for the first time to experienced engineers learning advanced
+            topics in system design, AI model development, or cloud security. During
+            the intake process, we assess participants' current level and place them
+            in the appropriate cohort or customize the curriculum accordingly.
+          </details>
+          <details>
+            <summary>How do you measure the effectiveness of training?</summary>
+            For corporate programs, we use pre and post-training technical assessments
+            to quantify skill development. We also gather qualitative feedback from
+            participants and managers. For longer programs, we offer periodic check-ins
+            and project reviews to ensure learning is being applied on the job.
+          </details>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="contact" id="contact">
-    <div class="container"><div class="contact-content">
-      <h2>Let's Build Something Great Together</h2>
-      <p>Ready to transform your business with cutting-edge technology solutions? Get in touch with our team today.</p>
-      <div class="contact-info">
-        <div class="contact-item"><div class="contact-item-icon">🌐</div><strong>Website</strong><a href="https://generalsoft.ae">generalsoft.ae</a></div>
-        <div class="contact-item"><a href="/contact/"><div class="contact-item-icon">📧</div><strong>Contact Us</strong><br>Get in touch</a></div>
-        <div class="contact-item"><div class="contact-item-icon">📍</div><strong>Location</strong><span>Ras Al Khaimah</span></div>
+    <div class="container">
+      <div class="contact-content">
+        <h2>Let's Build Something Great Together</h2>
+        <p>
+          Ready to transform your business with cutting-edge technology
+          solutions? Get in touch with our team today.
+        </p>
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-item-icon">🌐</div><strong>Website</strong><a
+              href="https://generalsoft.ae">generalsoft.ae</a
+            >
+          </div>
+          <div class="contact-item">
+            <a href="/contact/"
+              ><div class="contact-item-icon">📧</div><strong>Contact Us</strong
+              ><br />Get in touch</a
+            >
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">📍</div><strong>Location</strong
+            ><span>Ras Al Khaimah</span>
+          </div>
+        </div>
       </div>
-    </div></div>
+    </div>
   </section>
-
 </Layout>

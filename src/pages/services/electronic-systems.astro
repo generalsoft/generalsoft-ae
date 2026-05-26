@@ -1,87 +1,336 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import { BRAND } from "astro:schema";
+import Layout from "../../layouts/Layout.astro";
 ---
-<Layout 
+
+<Layout
   title="Electronic Systems & IoT Services | GeneralSoft UAE"
   description="IoT and embedded systems services - smart solutions for connected devices in the UAE."
   path="/services/electronic-systems/"
+  image="/img/og-electronic-systems.jpg"
 >
-
   <section class="service-content" id="iot-services">
     <div class="service-section" style="margin-top: 120px;">
-      <h2>Electronic Systems & IoT Services</h2>
-      <p>We design, develop, and deploy comprehensive IoT and embedded systems solutions that bridge the physical and digital worlds. Our expertise spans hardware integration, firmware development, cloud connectivity, and intelligent analytics.</p>
+      <h2 class="service-title">Electronic Systems & IoT Services</h2>
+      <p>
+        The UAE's smart city ambitions — from Dubai's Smart City initiative to
+        NEOM-adjacent developments and the rapid expansion of industrial zones
+        across Ras Al Khaimah and Abu Dhabi — are creating substantial demand
+        for connected hardware, embedded systems, and IoT platforms that can
+        operate reliably in demanding physical environments. Whether it is a
+        building automation system for a new commercial tower, an industrial
+        monitoring platform for a manufacturing facility, or a fleet of
+        connected environmental sensors for a smart campus, the engineering
+        challenge is the same: making hardware, firmware, and cloud software
+        work together seamlessly and securely at scale.
+      </p>
+      <p>
+        GeneralSoft bridges the hardware-software boundary in ways that most
+        software development companies cannot. Our team includes engineers with
+        embedded systems and firmware backgrounds alongside cloud and
+        application developers — which means we can design the full stack from
+        microcontroller firmware to the dashboard your operations team watches
+        in real time. We don't hand off at the hardware layer or outsource the
+        cloud integration; we own the entire system.
+      </p>
+      <p>
+        The UAE's climate presents specific engineering challenges for IoT
+        deployments. Extreme heat, humidity in coastal areas, and the dust
+        environment common across industrial and construction sites require
+        hardware selection and enclosure design that goes beyond what's adequate
+        in more temperate climates. We factor these environmental conditions
+        into every deployment recommendation and have direct experience with
+        systems operating in UAE industrial and outdoor environments.
+      </p>
+      <p>
+        Beyond hardware integration, a robust IoT system requires careful
+        attention to data architecture — how sensor data is transmitted, stored,
+        processed, and presented — as well as security, since connected devices
+        are an increasingly common attack surface. We design IoT systems with
+        security by default: encrypted device communication, secure OTA update
+        mechanisms, device authentication, and anomaly detection for unusual
+        behavior patterns.
+      </p>
 
       <h3>IoT Platform Development</h3>
       <div class="features-grid">
-        <div class="feature-box"><h4>End-to-End Solutions</h4><p>Complete IoT ecosystems from device management to cloud analytics, mobile apps, and dashboard interfaces.</p></div>
-        <div class="feature-box"><h4>Device Management</h4><p>Scalable platforms for provisioning, monitoring, and managing thousands of connected devices remotely.</p></div>
-        <div class="feature-box"><h4>Real-Time Analytics</h4><p>Process and analyze sensor data in real-time for actionable insights and automated responses.</p></div>
-        <div class="feature-box"><h4>Cloud Integration</h4><p>Seamless integration with AWS IoT, Azure IoT Hub, and Google Cloud IoT for scalable infrastructure.</p></div>
+        <div class="feature-box">
+          <h4>End-to-End Solutions</h4><p>
+            Complete IoT ecosystems from device management to cloud analytics,
+            mobile apps, and dashboard interfaces.
+          </p>
+        </div>
+        <div class="feature-box">
+          <h4>Device Management</h4><p>
+            Scalable platforms for provisioning, monitoring, and managing
+            thousands of connected devices remotely.
+          </p>
+        </div>
+        <div class="feature-box">
+          <h4>Real-Time Analytics</h4><p>
+            Process and analyze sensor data in real-time for actionable insights
+            and automated responses.
+          </p>
+        </div>
+        <div class="feature-box">
+          <h4>Cloud Integration</h4><p>
+            Seamless integration with AWS IoT, Azure IoT Hub, and Google Cloud
+            IoT for scalable infrastructure.
+          </p>
+        </div>
       </div>
 
       <h3>Embedded Systems Development</h3>
       <ul>
-        <li><strong>Microcontroller Programming:</strong> Firmware for ARM, AVR, PIC, ESP32, and STM32</li>
-        <li><strong>RTOS Development:</strong> Real-time operating systems including FreeRTOS, Zephyr, and custom implementations</li>
-        <li><strong>Embedded Linux:</strong> Custom Linux distributions, kernel modules, and device drivers</li>
-        <li><strong>Low-Power Design:</strong> Power-optimized firmware for battery-operated devices</li>
+        <li>
+          <strong>Microcontroller Programming:</strong> Firmware for ARM, AVR, PIC,
+          ESP32, and STM32
+        </li>
+        <li>
+          <strong>RTOS Development:</strong> Real-time operating systems including
+          FreeRTOS, Zephyr, and custom implementations
+        </li>
+        <li>
+          <strong>Embedded Linux:</strong> Custom Linux distributions, kernel modules,
+          and device drivers
+        </li>
+        <li>
+          <strong>Low-Power Design:</strong> Power-optimized firmware for battery-operated
+          devices
+        </li>
       </ul>
 
       <h3>Smart Home & Building Automation</h3>
       <div class="features-grid">
-        <div class="feature-box"><h4>Home Automation</h4><p>Smart control systems for lighting, climate, security, and entertainment integrated with voice assistants.</p></div>
-        <div class="feature-box"><h4>Building Management</h4><p>Comprehensive BMS for commercial buildings including HVAC, lighting, access control, and energy monitoring.</p></div>
-        <div class="feature-box"><h4>Energy Management</h4><p>Smart metering, energy monitoring, and optimization systems to reduce consumption and costs.</p></div>
-        <div class="feature-box"><h4>Security Systems</h4><p>Advanced security solutions with cameras, sensors, facial recognition, and automated alerts.</p></div>
+        <div class="feature-box">
+          <h4>Home Automation</h4><p>
+            Smart control systems for lighting, climate, security, and
+            entertainment integrated with voice assistants.
+          </p>
+        </div>
+        <div class="feature-box">
+          <h4>Building Management</h4><p>
+            Comprehensive BMS for commercial buildings including HVAC, lighting,
+            access control, and energy monitoring.
+          </p>
+        </div>
+        <div class="feature-box">
+          <h4>Energy Management</h4><p>
+            Smart metering, energy monitoring, and optimization systems to
+            reduce consumption and costs.
+          </p>
+        </div>
+        <div class="feature-box">
+          <h4>Security Systems</h4><p>
+            Advanced security solutions with cameras, sensors, facial
+            recognition, and automated alerts.
+          </p>
+        </div>
       </div>
 
       <h3>Industrial IoT (IIoT)</h3>
       <ul>
-        <li><strong>Predictive Maintenance:</strong> Monitor equipment health and predict failures before they occur</li>
-        <li><strong>Asset Tracking:</strong> Real-time location and condition monitoring of valuable assets</li>
-        <li><strong>Process Automation:</strong> Automated control systems for manufacturing and production lines</li>
-        <li><strong>Quality Control:</strong> Automated inspection and quality assurance using sensors and vision systems</li>
+        <li>
+          <strong>Predictive Maintenance:</strong> Monitor equipment health and predict
+          failures before they occur
+        </li>
+        <li>
+          <strong>Asset Tracking:</strong> Real-time location and condition monitoring
+          of valuable assets
+        </li>
+        <li>
+          <strong>Process Automation:</strong> Automated control systems for manufacturing
+          and production lines
+        </li>
+        <li>
+          <strong>Quality Control:</strong> Automated inspection and quality assurance
+          using sensors and vision systems
+        </li>
       </ul>
 
       <h3>Wireless Communication Technologies</h3>
       <div class="features-grid">
-        <div class="feature-box"><h4>WiFi & Bluetooth</h4><p>Short-range wireless solutions including BLE, WiFi 6, and mesh networking protocols.</p></div>
-        <div class="feature-box"><h4>Cellular IoT</h4><p>4G/5G, NB-IoT, and LTE-M connectivity for wide-area IoT applications.</p></div>
-        <div class="feature-box"><h4>LPWAN Technologies</h4><p>LoRaWAN, Sigfox, and low-power wide-area networks for long-range communications.</p></div>
-        <div class="feature-box"><h4>Zigbee & Z-Wave</h4><p>Home automation protocols for reliable, low-power mesh networks.</p></div>
+        <div class="feature-box">
+          <h4>WiFi & Bluetooth</h4><p>
+            Short-range wireless solutions including BLE, WiFi 6, and mesh
+            networking protocols.
+          </p>
+        </div>
+        <div class="feature-box">
+          <h4>Cellular IoT</h4><p>
+            4G/5G, NB-IoT, and LTE-M connectivity for wide-area IoT
+            applications.
+          </p>
+        </div>
+        <div class="feature-box">
+          <h4>LPWAN Technologies</h4><p>
+            LoRaWAN, Sigfox, and low-power wide-area networks for long-range
+            communications.
+          </p>
+        </div>
+        <div class="feature-box">
+          <h4>Zigbee & Z-Wave</h4><p>
+            Home automation protocols for reliable, low-power mesh networks.
+          </p>
+        </div>
       </div>
 
       <h3>IoT Security</h3>
       <ul>
-        <li><strong>Device Authentication:</strong> Secure device identity and certificate-based authentication</li>
-        <li><strong>Encrypted Communication:</strong> TLS/SSL encryption for data in transit</li>
-        <li><strong>OTA Updates:</strong> Secure over-the-air firmware updates with rollback capability</li>
-        <li><strong>Threat Detection:</strong> Anomaly detection and intrusion prevention systems</li>
+        <li>
+          <strong>Device Authentication:</strong> Secure device identity and certificate-based
+          authentication
+        </li>
+        <li>
+          <strong>Encrypted Communication:</strong> TLS/SSL encryption for data in
+          transit
+        </li>
+        <li>
+          <strong>OTA Updates:</strong> Secure over-the-air firmware updates with
+          rollback capability
+        </li>
+        <li>
+          <strong>Threat Detection:</strong> Anomaly detection and intrusion prevention
+          systems
+        </li>
       </ul>
 
       <h3>Our Tech Stack</h3>
       <ul>
-        <li><strong>Hardware Platforms:</strong> Arduino, Raspberry Pi, ESP32, STM32, Nordic nRF, Qualcomm</li>
-        <li><strong>Firmware Languages:</strong> C, C++, Rust, MicroPython, Assembly</li>
+        <li>
+          <strong>Hardware Platforms:</strong> Arduino, Raspberry Pi, ESP32, STM32,
+          Nordic nRF, Qualcomm
+        </li>
+        <li>
+          <strong>Firmware Languages:</strong> C, C++, Rust, MicroPython, Assembly
+        </li>
         <li><strong>RTOS:</strong> FreeRTOS, Zephyr, Mbed OS, Azure RTOS</li>
-        <li><strong>IoT Protocols:</strong> MQTT, CoAP, HTTP/HTTPS, WebSocket, AMQP</li>
-        <li><strong>Cloud Platforms:</strong> AWS IoT, Azure IoT, Google Cloud IoT, ThingSpeak</li>
-        <li><strong>Development Tools:</strong> PlatformIO, STM32CubeIDE, ESP-IDF, Keil, IAR</li>
+        <li>
+          <strong>IoT Protocols:</strong> MQTT, CoAP, HTTP/HTTPS, WebSocket, AMQP
+        </li>
+        <li>
+          <strong>Cloud Platforms:</strong> AWS IoT, Azure IoT, Google Cloud IoT,
+          ThingSpeak
+        </li>
+        <li>
+          <strong>Development Tools:</strong> PlatformIO, STM32CubeIDE, ESP-IDF, Keil,
+          IAR
+        </li>
       </ul>
     </div>
   </section>
 
-  <section class="contact" id="contact">
-    <div class="container"><div class="contact-content">
-      <h2>Let's Build Something Great Together</h2>
-      <p>Ready to transform your business with cutting-edge technology solutions? Get in touch with our team today.</p>
-      <div class="contact-info">
-        <div class="contact-item"><div class="contact-item-icon">🌐</div><strong>Website</strong><a href="https://generalsoft.ae">generalsoft.ae</a></div>
-        <div class="contact-item"><a href="/contact/"><div class="contact-item-icon">📧</div><strong>Contact Us</strong><br>Get in touch</a></div>
-        <div class="contact-item"><div class="contact-item-icon">📍</div><strong>Location</strong><span>Ras Al Khaimah</span></div>
+  <section class="faq-section">
+    <div class="container">
+      <div class="faq-container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">
+          Common questions about our custom software development process in the
+          UAE.
+        </p>
+        <div class="faq-list">
+          <details>
+            <summary
+              >What is the difference between IoT and embedded systems?</summary
+            >
+            An embedded system is a dedicated computing system built into a physical
+            device to perform a specific function — such as the controller in an industrial
+            machine, a medical device, or a smart appliance. IoT (Internet of Things)
+            extends this concept by connecting those devices to a network — typically
+            the internet — enabling remote monitoring, control, and data collection.
+            Many IoT deployments involve embedded systems at the device level combined
+            with cloud platforms for data aggregation and analytics.
+          </details>
+          <details>
+            <summary
+              >What industries do you serve with IoT solutions in the UAE?</summary
+            >
+            Common sectors include industrial manufacturing and production (predictive
+            maintenance, process monitoring), commercial real estate (building management
+            systems, energy monitoring, access control), logistics and fleet management
+            (asset tracking, cold chain monitoring), smart agriculture (irrigation
+            control, environmental sensing), and utilities and infrastructure (smart
+            metering, pipeline monitoring). We also work with developers on smart
+            home and smart building integrations for residential and hospitality projects.
+          </details>
+          <details>
+            <summary>How do you ensure IoT devices are secure?</summary>
+            Security for IoT systems includes several layers: device-level security
+            (hardware attestation, secure boot, encrypted storage), communication
+            security (TLS encryption, certificate-based device authentication), cloud-side
+            security (API authentication, network segmentation, anomaly detection),
+            and operational security (secure OTA updates with rollback capability,
+            audit logging). We design all of these into the system from the start
+            rather than attempting to add them after deployment.
+          </details>
+          <details>
+            <summary
+              >Can IoT systems operate in UAE outdoor and industrial
+              environments?</summary
+            >
+            Yes. We select hardware and specify enclosures rated for the temperature,
+            humidity, and ingress protection requirements of each deployment environment.
+            For UAE outdoor installations, this typically means specifying components
+            rated to operate at temperatures above 60°C, IP65 or higher enclosure
+            ratings for dust and moisture protection, and UV-resistant materials for
+            exposed installations.
+          </details>
+          <details>
+            <summary
+              >How do you connect IoT devices that are in remote locations
+              without reliable internet?</summary
+            >
+            We have experience with a range of connectivity options suited to different
+            range, bandwidth, and power requirements. For wide-area deployments in
+            remote locations, we work with cellular IoT (4G/LTE-M/NB-IoT), LoRaWAN,
+            and satellite connectivity options. For local-area deployments, WiFi,
+            Zigbee, and wired Ethernet are common choices. In many cases, we design
+            hybrid architectures where devices store data locally and sync when connectivity
+            is available.
+          </details>
+          <details>
+            <summary
+              >What does a typical IoT project engagement look like?</summary
+            >
+            It typically starts with a requirements and site assessment — understanding
+            the physical environment, connectivity landscape, data requirements, and
+            integration points with existing systems. We then produce a system architecture
+            document and hardware specification, followed by a prototype phase to
+            validate the core functionality before full deployment. After prototype
+            validation, we move to production build and deployment, followed by commissioning,
+            testing, and handover with documentation and training.
+          </details>
+        </div>
       </div>
-    </div></div>
+    </div>
   </section>
 
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-content">
+        <h2>Let's Build Something Great Together</h2>
+        <p>
+          Ready to transform your business with cutting-edge technology
+          solutions? Get in touch with our team today.
+        </p>
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-item-icon">🌐</div><strong>Website</strong><a
+              href="https://generalsoft.ae">generalsoft.ae</a
+            >
+          </div>
+          <div class="contact-item">
+            <a href="/contact/"
+              ><div class="contact-item-icon">📧</div><strong>Contact Us</strong
+              ><br />Get in touch</a
+            >
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">📍</div><strong>Location</strong
+            ><span>Ras Al Khaimah</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </Layout>

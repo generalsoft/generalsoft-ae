@@ -32,8 +32,13 @@ const normalizePath = (p: string) => {
 const enPath = normalizePath(isArabic ? currentPath.replace(/^\/ar/, "") || "/" : currentPath);
 const arPath = normalizePath(isArabic ? `/ar${currentPath.replace(/^\/ar/, "") || "/"}` : `/ar${currentPath}`);
 
-const enUrl = `https://generalsoft.ae${enPath}`;
-const arUrl = `https://generalsoft.ae${arPath}`;
+const siteUrl = Astro.site ? Astro.site.origin : 'https://generalsoft.ae';
+const enUrl = new URL(enPath, siteUrl).href;
+const arUrl = new URL(arPath, siteUrl).href;
+
+// Ensure the image path starts with a leading slash for the URL constructor
+const normalizedImage = image.startsWith('/') ? image : `/${image}`;
+const ogImageUrl = new URL(normalizedImage, siteUrl).href;
 ---
 <!-- Primary Meta Tags -->
 <title>{title}</title>
@@ -50,11 +55,14 @@ const arUrl = `https://generalsoft.ae${arPath}`;
 <meta property="og:url" content={isArabic ? arUrl : enUrl} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={new URL(image, Astro.url)} />
+<meta property="og:image" content={ogImageUrl} />
+<meta property="og:locale" content={isArabic ? "ar_AE" : "en_AE"} />
+<meta property="og:locale:alternate" content={isArabic ? "en_AE" : "ar_AE"} />
 
 <!-- X / Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={isArabic ? arUrl : enUrl} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={new URL(image, Astro.url)} />
+<meta property="twitter:image" content={ogImageUrl} />
+<meta name="twitter:site" content="@generalsoft_ae" />
