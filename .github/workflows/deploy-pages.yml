@@ -17,6 +17,7 @@ concurrency:
 
 env:
   BUILD_PATH: "."
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
   build:
@@ -66,6 +67,7 @@ jobs:
           ${{ steps.detect-package-manager.outputs.runner }} astro build \
             --site "${{ steps.pages.outputs.origin }}" \
             --base "${{ steps.pages.outputs.base_path }}"
+          node scripts/generate-sitemap.mjs
         working-directory: ${{ env.BUILD_PATH }}
       - name: Verify dist directory
         run: |
