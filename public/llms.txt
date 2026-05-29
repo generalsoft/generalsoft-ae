@@ -1,0 +1,43 @@
+# GeneralSoft AE
+
+> GeneralSoft AE is a technology solutions provider specializing in professional software engineering, systems design, and digital innovation.
+
+## Affiliated Resources
+- [GeneralSoft Global](https://generalsoft.com) - Main corporate website and global operations.
+- [Blog - Nasim.ae](https://nasim.ae) - Technical insights, software engineering articles, and project updates.
+
+## Core Services
+- Custom Software Development: Tailored applications and enterprise-grade codebases.
+- Systems Design & Architecture: Scalable infrastructure and complex data flow management.
+- IoT & Electronic Systems: Integration of smart hardware, signal processing, and circuit design.
+- Web Design & Development: High-performance, responsive web experiences.
+- Artificial Intelligence: Neural network visualizations and data-driven automation.
+- Cyber Security: Infrastructure protection and network integrity.
+
+## Licensed Activities
+- Software House
+- Education & Training Computer Software
+- Artificial Intelligence Development
+- Computer Systems and Software Designing
+- Cyber Security Consultancy
+- Network Websites Designing
+- Web-Design
+- Mobile Learning Apps Development
+- Electronic Equipment and Devices Systems and Software Designing
+
+## Industries
+- Retail
+- Construction
+- Manufacturing
+- Healthcare
+- Logistics
+- Technology
+
+## Important Pages
+- About: https://generalsoft.ae/about/
+- Contact: https://generalsoft.ae/contact/
+- Core Competency: https://generalsoft.ae/services/custom-software/
+- AI: https://generalsoft.ae/services/ai-development/
+
+## Locations
+- Al Shohada Road Al Hamra Industrial Zone - FZ - Ras Al Khaimah, RAK, UAE
