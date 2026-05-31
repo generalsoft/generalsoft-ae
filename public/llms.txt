@@ -2,6 +2,16 @@
 
 > GeneralSoft AE is a technology solutions provider specializing in professional software engineering, systems design, and digital innovation.
 
+## Organization Identity
+- **Legal Name:** GeneralSoft AE
+- **Type:** Software Development & IT Consultancy
+- **Founding Goal:** Engineering high-performance digital infrastructure for the MENA region and beyond.
+- **Social Profiles:**
+  - Facebook: [GeneralSoft AE](https://facebook.com/generalsoft)
+  - Instagram: [@generalsoft.ae](https://instagram.com/generalsoft)
+  - LinkedIn: [GeneralSoft AE](https://linkedin.com/in/generalsoft)
+  - YouTube: [GeneralSoft AE](https://youtube.com/@generalsoft_ae)
+
 ## Affiliated Resources
 - [GeneralSoft Global](https://generalsoft.com) - Main corporate website and global operations.
 - [Blog - Nasim.ae](https://nasim.ae) - Technical insights, software engineering articles, and project updates.
@@ -40,4 +50,11 @@
 - AI: https://generalsoft.ae/services/ai-development/
 
 ## Locations
-- Al Shohada Road Al Hamra Industrial Zone - FZ - Ras Al Khaimah, RAK, UAE
+- **Address:** Al Shohada Road, Al Hamra Industrial Zone - FZ, Ras Al Khaimah, UAE
+- **Region:** Ras Al Khaimah (RAK)
+- **Country:** United Arab Emirates
+- **GEO Coordinates:** 25.6967° N, 55.7772° E
+
+## Technical Specs
+- **Main Stack:** Astro, Node.js, Firebase
+- **Contact Email:** info@generalsoft.ae
