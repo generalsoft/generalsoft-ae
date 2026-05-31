@@ -1,131 +1,96 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+const prefix = '/ar';
 ---
 
-<Layout 
-  title="شركاؤنا التقنيون | جنرال سوفت الإمارات"
-  description="تتعاون جنرال سوفت مع قادة التكنولوجيا العالميين مثل مايكروسوفت وجوجل وأبل وآي بي إم وسيسكو وأوراكل لتقديم حلول برمجية وحلول إنترنت الأشياء عالمية المستوى في الإمارات."
-  path="/partners/"
+<Layout
+  title="الشركاء | جنرال سوفت"
+  description="اكتشف شبكة شركاء جنرال سوفت. نحن نتعاون مع رواد التكنولوجيا العالميين لتقديم حلول برمجية مبتكرة في دولة الإمارات."
+  path="/ar/partners/"
   isArabic={true}
   image="/img/og-partners.jpg"
 >
   <main>
     <section
       class="page-header"
-      style="padding: 100px 0 50px; text-align: center; background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d); color: white;"
+      style="padding: 100px 0 50px; text-align: center; background: linear-gradient(135deg, #0f172a, #1d4ed8); color: white;"
     >
       <div class="container">
-        <h1 style="font-size: 3rem; margin-bottom: 20px;">
-          شراكات استراتيجية
-        </h1>
+        <h1 style="font-size: 3rem; margin-bottom: 20px;">شركاؤنا</h1>
         <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto;">
-          نتعاون مع أكثر شركات التكنولوجيا ابتكاراً في العالم لتمكين الشركات في دولة الإمارات العربية المتحدة وخارجها.
+          نتعاون مع قادة التكنولوجيا العالميين لبناء أنظمة رقمية قوية ومتكاملة.
         </p>
       </div>
     </section>
 
-    <section class="partners-content" style="padding: 80px 0;">
+    <section class="partners-intro" style="padding: 80px 0;">
       <div class="container">
-        <div class="services-grid">
-          <div class="service-card">
-            <h3>
-              <a
-                href="https://www.microsoft.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                مايكروسوفت (Microsoft)
-              </a>
-            </h3>
-            <p>
-              نقوم بتخصيص وتنفيذ حلول Microsoft Dynamics 365 ERP وCRM لمساعدة الشركات على تحسين عملياتها وعلاقاتها مع العملاء، وإضافة تدفقات عمل ذكية ومستقلة.
-            </p>
-            <small> شريك تكنولوجي • الحلول السحابية والمؤسسية </small>
-          </div>
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+          <h2>التحالفات الاستراتيجية</h2>
+          <p>
+            في جنرال سوفت، نؤمن بقوة التعاون. تتيح لنا شبكة شركائنا في مجالات التكنولوجيا والأعمال 
+            مواجهة تحديات الهندسة المعقدة باستخدام أفضل الأدوات والخبرات المتاحة في السوق.
+          </p>
+        </div>
 
+        <div class="services-grid" style="margin-top: 60px;">
           <div class="service-card">
-            <h3>
-              <a
-                href="https://cloud.google.com/partners"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                جوجل (Google)
-              </a>
-            </h3>
-            <p>
-              نعمل مع تقنيات جوجل للذكاء الاصطناعي، وWorkspaces، والموارد السحابية، وFirebase، وأطر تطوير التطبيقات لإنشاء تطبيقات ذكية وتفاعلية تعتمد على البيانات لتلبية الاحتياجات المتطورة لعملائنا.
-            </p>
-            <small>مطور تطبيقات</small>
+            <div style="font-size: 2.5rem; margin-bottom: 1rem;">☁️</div>
+            <h3>البنية التحتية السحابية</h3>
+            <p>نعمل بشكل وثيق مع كبار مزودي الخدمات السحابية مثل <strong>AWS</strong> و <strong>Azure</strong> لضمان بنية تحتية قابلة للتوسع لعملائنا.</p>
           </div>
-
           <div class="service-card">
-            <h3>
-              <a
-                href="https://www.apple.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                أبل (Apple)
-              </a>
-            </h3>
-            <p>
-              تطوير تجارب iOS وmacOS أصلية ومتميزة، مما يضمن تلبية تطبيقات الهاتف المحمول لدينا لأعلى معايير الأداء والتصميم.
-            </p>
-            <small>مطور تطبيقات</small>
+            <div style="font-size: 2.5rem; margin-bottom: 1rem;">🛠️</div>
+            <h3>أحدث التقنيات</h3>
+            <p>من خلال شراكاتنا في أنظمة <strong>React</strong> و <strong>Node.js</strong> و <strong>Python</strong>، نبقى دائماً في طليعة الابتكار البرمجي.</p>
           </div>
-
           <div class="service-card">
-            <h3>
-              <a
-                href="https://www.cisco.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                سيسكو (Cisco)
-              </a>
-            </h3>
-            <p>
-              دمج أجهزة الشبكات والأمن عالمية المستوى لتزويد عملائنا بتصاميم شبكات موثوقة وعالية الأداء وبنية تحتية لإنترنت الأشياء.
-            </p>
-            <small>شريك متكامل</small>
-          </div>
-
-          <div class="service-card">
-            <h3>
-              <a
-                href="https://www.oracle.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                أوراكل (Oracle)
-              </a>
-            </h3>
-            <p>
-              بناء تطبيقات كثيفة البيانات مدعومة بأنظمة إدارة قواعد البيانات الرائدة من أوراكل وحلول ERP السحابية.
-            </p>
-            <small>عضو</small>
+            <div style="font-size: 2.5rem; margin-bottom: 1rem;">🇦🇪</div>
+            <h3>الشبكات الإقليمية</h3>
+            <p>بصفتنا عضواً في <strong>منطقة رأس الخيمة الاقتصادية (RAKEZ)</strong>، ندعم الشركات المحلية في رحلة تحولها الرقمي داخل الإمارات.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section
-      class="cta"
-      style="padding: 60px 0; background: #f8f9fa; text-align: center;"
-    >
+    <section class="collaboration" style="padding: 80px 0; background: var(--bg-alt);">
       <div class="container">
-        <h2>هل أنت مستعد للبناء مع الأفضل؟</h2>
-        <p>
-          اتصل بنا اليوم لمناقشة كيف يمكن لشراكاتنا أن تفيد مشروعك القادم.
-        </p>
-        <a
-          href="/ar/contact/"
-          class="btn"
-          style="display: inline-block; margin-top: 20px; padding: 12px 30px; background: #2563eb; color: white; text-decoration: none; border-radius: 5px;"
-          >تواصل معنا</a
-        >
+        <div class="about-detailed">
+          <h2>لماذا تشاركنا؟</h2>
+          <div class="features-grid">
+            <div class="feature-box">
+              <h4>الابتكار المشترك</h4>
+              <p>نجمع بين خبرتنا الهندسية ونقاط قوة شركائنا لتطوير حلول جاهزة للمستقبل.</p>
+            </div>
+            <div class="feature-box">
+              <h4>التوسع في السوق</h4>
+              <p>فهمنا العميق لسوق الإمارات يساعد شركاءنا العالميين على النجاح إقليمياً.</p>
+            </div>
+            <div class="feature-box">
+              <h4>التميز التقني</h4>
+              <p>نلتزم بمعايير جودة صارمة تضمن أن كل شراكة تضيف قيمة حقيقية للعميل النهائي.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" style="padding: 60px 0; background: #f8f9fa; text-align: center;">
+      <div class="container">
+        <div class="cta-content-with-qr">
+          <div class="cta-text-group">
+            <h2>كن شريكاً لجنرال سوفت</h2>
+            <p>
+              هل تبحث عن شريك هندسي موثوق في الإمارات؟ دعنا نناقش فرص التعاون معاً.
+            </p>
+            <a href={prefix + "/contact/"} class="cta-button" style="margin-top: 20px;">
+              اتصل بنا
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 </Layout>
+
+<style>.feature-box { background: white !important; }</style>

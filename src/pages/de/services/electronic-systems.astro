@@ -1,0 +1,111 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+---
+
+<Layout 
+  title="Elektronische Systeme & IoT-Engineering | Generalsoft VAE"
+  description="Robuste IoT-Architekturen und elektronische Systeme für intelligentes Monitoring, automatisierte Industriesysteme und Unterhaltungselektronik in den VAE."
+  path="/de/services/electronic-systems/"
+  image="/img/og-electronic-systems.jpg"
+>
+  <main>
+    <section
+      class="page-header iot-hero-background"
+      style="padding: 100px 0 50px; text-align: center; background: linear-gradient(135deg, #059669, #0891b2); color: white; position: relative; overflow: hidden;"
+    >
+      <!-- Canvas für die IoT-Hintergrundanimation -->
+      <canvas id="iotCanvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; opacity: 0.4;"></canvas>
+      
+      <div class="container" style="position: relative; z-index: 1;">
+        <h1 style="font-size: 3rem; margin-bottom: 20px;">Elektronische Systeme</h1>
+        <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto;">
+          Wir entwickeln vernetzte Hardware- und Softwarelösungen für eine intelligente Automatisierung.
+        </p>
+      </div>
+    </section>
+
+    <section class="service-details" style="padding: 80px 0;">
+      <div class="container">
+        <div class="about-detailed">
+          <h2>Innovation an der Schnittstelle von Hardware und Software</h2>
+          <p>
+            Das Internet der Dinge (IoT) transformiert die Art und Weise, wie Unternehmen agieren. Bei Generalsoft schließen wir die Lücke zwischen elektronischen Komponenten und Cloud-Software. Wir entwerfen Systeme, die Sensordaten sammeln, intelligent analysieren und physische Aktoren steuern – für eine nahtlose Automatisierung Ihrer Geschäftsprozesse.
+          </p>
+          
+          <div class="services-grid" style="margin-top: 40px;">
+            <div class="service-card">
+              <h3>Industrielle Automatisierung</h3>
+              <p>Wir entwickeln Steuerungssysteme für Fabriken und Logistikzentren, die die Effizienz steigern und Ausfallzeiten durch vorausschauende Wartung minimieren.</p>
+            </div>
+            <div class="service-card">
+              <h3>Smart Monitoring & Sensorik</h3>
+              <p>Echtzeit-Überwachung von Umgebungsdaten, Anlagenzuständen oder Lieferketten durch maßgeschneiderte Sensor-Netzwerke und Dashboard-Integration.</p>
+            </div>
+            <div class="service-card">
+              <h3>Hardware-nahe Softwareentwicklung</h3>
+              <p>Wir schreiben hocheffizienten Code für Mikrocontroller und Embedded Systems, der perfekt auf die zugrunde liegende Elektronik abgestimmt ist.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" style="padding: 80px 0; background: var(--bg-alt);">
+      <div class="container">
+        <h2 style="text-align: center; margin-bottom: 3rem;">Vorteile unserer IoT-Lösungen</h2>
+        <div class="features-grid">
+          <div class="feature-box" style="background: white;">
+            <h4>Echtzeit-Datenfluss</h4>
+            <p>Unsere Systeme garantieren minimale Latenzzeiten bei der Übertragung kritischer Informationen zwischen Geräten und Cloud.</p>
+          </div>
+          <div class="feature-box" style="background: white;">
+            <h4>Skalierbare Architekturen</h4>
+            <p>Von einzelnen Prototypen bis hin zu Netzwerken mit tausenden Geräten – unsere Lösungen wachsen mit Ihren Anforderungen.</p>
+          </div>
+          <div class="feature-box" style="background: white;">
+            <h4>Energieeffizienz</h4>
+            <p>Optimierte Algorithmen und Hardware-Designs sorgen für eine lange Lebensdauer batteriebetriebener IoT-Geräte.</p>
+          </div>
+          <div class="feature-box" style="background: white;">
+            <h4>Sichere Konnektivität</h4>
+            <p>End-to-End-Verschlüsselung schützt Ihre IoT-Infrastruktur vor unbefugtem Zugriff und Datenmanipulation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" style="padding: 60px 0; background: #f8f9fa; text-align: center;">
+      <div class="container">
+        <div class="cta-content-with-qr">
+          <div class="cta-text-group">
+            <h2>Haben Sie ein Hardware- oder IoT-Projekt?</h2>
+            <p>
+              Lassen Sie uns gemeinsam die beste elektronische Architektur für Ihre Vision entwerfen. Kontaktieren Sie unsere Experten für eine technische Beratung.
+            </p>
+            <a href="/de/contact/" class="cta-button" style="margin-top: 20px;">
+              Projekt anfragen
+            </a>
+          </div>
+          <div class="cta-qr-card">
+            <h3>Direkter Kontakt</h3>
+            <img src="/img/generalsoft_qr_vcard.png" alt="Generalsoft vCard QR" width="120" style="margin: 0.5rem 0;" />
+            <p>Scannen Sie den Code, um unsere Kontaktdaten sofort auf Ihrem Handy zu speichern.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+</Layout>
+
+<style>
+  .iot-hero-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.3) 100%);
+  }
+</style>

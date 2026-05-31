@@ -3,41 +3,111 @@ interface Props {
   isArabic?: boolean;
 }
 const { isArabic } = Astro.props;
-const langPath = isArabic ? '/ar' : '';
-
-// Logic to toggle current path between English and Arabic
 const currentPath = Astro.url.pathname;
-const toggleUrl = isArabic 
-  ? currentPath.replace(/^\/ar/, '') || '/' 
-  : `/ar${currentPath === '/' ? '/' : currentPath}`;
+const currentLocale = currentPath.match(/^\/(en|ar|de)(?=\/|$)/)?.[1] || 'en';
+const prefix = `/${currentLocale}`;
+const routePath = currentPath.replace(/^\/(?:en|ar|de)/, '') || '/';
+const languages = [
+  { code: 'en', label: 'English', flag: '🇺🇸' },
+  { code: 'ar', label: 'العربية', flag: '🇦🇪' },
+  { code: 'de', label: 'Deutsch', flag: '🇩🇪' },
+];
+
+const t = {
+  en: {
+    home: 'Home',
+    services: 'Services',
+    partners: 'Partners',
+    contact: 'Contact Us',
+    about: 'About Us',
+    csd: 'Custom Software Development',
+    edu: 'Education & Training',
+    ai: 'AI Development',
+    sys: 'Systems & Software Design',
+    cyber: 'Cyber Security',
+    web: 'Web & Network Design',
+    mobile: 'Mobile Applications',
+    elec: 'Electronic Systems',
+    logo: 'Generalsoft',
+    legal: 'FZ-LLC'
+  },
+  ar: {
+    home: 'الرئيسية',
+    services: 'خدماتنا',
+    partners: 'الشركاء',
+    contact: 'اتصل بنا',
+    about: 'من نحن',
+    csd: 'تطوير البرمجيات المخصصة',
+    edu: 'التعليم والتدريب',
+    ai: 'تطوير الذكاء الاصطناعي',
+    sys: 'تصميم الأنظمة والبرمجيات',
+    cyber: 'الأمن السيبراني',
+    web: 'تصميم الشبكات والمواقع',
+    mobile: 'تطبيقات الجوال',
+    elec: 'الأنظمة الإلكترونية',
+    logo: 'جنرال سوفت',
+    legal: 'ش.م.ح – ذ.م.م'
+  },
+  de: {
+    home: 'Startseite',
+    services: 'Services',
+    partners: 'Partner',
+    contact: 'Kontakt',
+    about: 'Über uns',
+    csd: 'Individualsoftware',
+    edu: 'Ausbildung & Training',
+    ai: 'KI-Entwicklung',
+    sys: 'System- & Softwaredesign',
+    cyber: 'Cybersicherheit',
+    web: 'Web- & Netzwerkdesign',
+    mobile: 'Mobile Apps',
+    elec: 'Elektronische Systeme',
+    logo: 'Generalsoft',
+    legal: 'FZ-LLC'
+  }
+};
+
+const labels = (t as any)[currentLocale] || t.en;
+const currentLanguage = languages.find((lang) => lang.code === currentLocale) ?? languages[0];
 ---
 <header>
   <nav>
-    <a href={isArabic ? "/ar/" : "/"} class="logo">
+    <a href={`${prefix}/`} class="logo">
       <img width="48" src="/img/logo.webp" alt="GeneralSoft Logo"/>
-      <span class="logo-text">{isArabic ? 'جنرال سوفت' : 'Generalsoft'}<span class="logo-legal">{isArabic ? 'ش.م.ح – ذ.م.م' : 'FZ-LLC'}</span></span>
+      <span class="logo-text">{labels.logo}<span class="logo-legal">{labels.legal}</span></span>
     </a>
-    <span class="lang-switch">
-      <a href={toggleUrl}>{isArabic ? 'English' : 'العربية'}</a>
+    <span class="lang-switch dropdown">
+      <button class="lang-btn dropbtn" type="button">
+        <span class="flag-icon">{currentLanguage.flag}</span>
+        <span class="lang-label">{currentLanguage.label}</span>
+        <span class="dropdown-arrow">▼</span>
+      </button>
+      <div class="dropdown-content lang-dropdown">
+        {languages.map(lang => (
+          <a class={currentLocale === lang.code ? 'active' : ''} href={`/${lang.code}${routePath === '/' ? '/' : routePath}`}>
+            <span class="flag-icon">{lang.flag}</span> {lang.label}
+          </a>
+        ))}
+      </div>
     </span>
     <ul class="nav-links">
-      <li><a href={isArabic ? "/ar/" : "/"}>{isArabic ? 'الرئيسية' : 'Home'}</a></li>
+      <li><a href={`${prefix}/`}>{labels.home}</a></li>
       <li class="dropdown">
-        <a href={isArabic ? "/ar/#services" : "/#services"} class="dropbtn">{isArabic ? 'خدماتنا' : 'Services'} <span class="dropdown-arrow">▼</span></a>
+        <a href={`${prefix}/#services`} class="dropbtn">{labels.services} <span class="dropdown-arrow">▼</span></a>
         <div class="dropdown-content">
-          <a href={`${langPath}/services/custom-software/`}>{isArabic ? 'تطوير البرمجيات' : 'Custom Software Development'}</a>
-          <a href={`${langPath}/services/education-training/`}>{isArabic ? 'التعليم والتدريب' : 'Education & Training'}</a>
-          <a href={`${langPath}/services/ai-development/`}>{isArabic ? 'تطوير الذكاء الاصطناعي' : 'AI Development'}</a>
-          <a href={`${langPath}/services/systems-design/`}>{isArabic ? 'تصميم الأنظمة' : 'Systems & Software Design'}</a>
-          <a href={`${langPath}/services/cyber-security/`}>{isArabic ? 'الأمن السيبراني' : 'Cyber Security'}</a>
-          <a href={`${langPath}/services/web-design/`}>{isArabic ? 'تصميم المواقع' : 'Web & Network Design'}</a>
-          <a href={`${langPath}/services/mobile-apps/`}>{isArabic ? 'تطبيقات الجوال' : 'Mobile Applications'}</a>
-          <a href={`${langPath}/services/electronic-systems/`}>{isArabic ? 'الأنظمة الإلكترونية' : 'Electronic Systems'}</a>
+          <a href={`${prefix}/services/custom-software/`}>{labels.csd}</a>
+          <a href={`${prefix}/services/education-training/`}>{labels.edu}</a>
+          <a href={`${prefix}/services/ai-development/`}>{labels.ai}</a>
+          <a href={`${prefix}/services/systems-design/`}>{labels.sys}</a>
+          <a href={`${prefix}/services/cyber-security/`}>{labels.cyber}</a>
+          <a href={`${prefix}/services/web-design/`}>{labels.web}</a>
+          <a href={`${prefix}/services/mobile-apps/`}>{labels.mobile}</a>
+          <a href={`${prefix}/services/electronic-systems/`}>{labels.elec}</a>
         </div>
       </li>
-      <li><a href={isArabic ? "/ar/partners/" : "/partners/"}>{isArabic ? 'الشركاء' : 'Partners'}</a></li>
-      <li><a href={isArabic ? "/ar/contact/" : "/contact/"}>{isArabic ? 'اتصل بنا' : 'Contact Us'}</a></li>
-      <li><a href={isArabic ? "/ar/about/" : "/about/"}>{isArabic ? 'من نحن' : 'About Us'}</a></li>
+      <li><a href={`${prefix}/partners/`}>{labels.partners}</a></li>
+      <li><a href={`${prefix}/contact/`}>{labels.contact}</a></li>
+      <li><a href={`${prefix}/about/`}>{labels.about}</a></li>
     </ul>
   </nav>
 </header>

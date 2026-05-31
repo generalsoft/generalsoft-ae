@@ -1,19 +1,33 @@
 import { initializeApp } from 'firebase/app';
 import { getFirestore, addDoc, collection, serverTimestamp } from 'firebase/firestore';
+import firebaseConfig from './firebase-config.js';
 
-const firebaseConfig = {
-  apiKey: "AIzaSyCSCQXYq5vtXuTDLvDGwYqHVD4UDzwB5yU",
-  authDomain: "generalsoft-contact.firebaseapp.com",
-  projectId: "generalsoft-contact",
-  storageBucket: "generalsoft-contact.firebasestorage.app",
-  messagingSenderId: "378490844099",
-  appId: "1:378490844099:web:adcc41af7b4f086c2a4376"
-};
-
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+// Resolve config: prefer build-time import, fall back to runtime window.__FIREBASE_DEFAULTS__
+let firebaseAvailable = true;
+let db = null;
+let app = null;
+const runtimeDefaults = typeof window !== 'undefined' && window.__FIREBASE_DEFAULTS__ && window.__FIREBASE_DEFAULTS__.config ? window.__FIREBASE_DEFAULTS__.config : null;
+const effectiveConfig = (firebaseConfig && firebaseConfig.apiKey) ? firebaseConfig : runtimeDefaults;
+if (!effectiveConfig || !effectiveConfig.apiKey) {
+  firebaseAvailable = false;
+  console.warn('Firebase client config missing; contact form will be disabled in this environment.');
+} else {
+  try {
+    app = initializeApp(effectiveConfig);
+    db = getFirestore(app);
+    console.info('Firebase initialized for contact form (apiKey present).');
+  } catch (e) {
+    firebaseAvailable = false;
+    console.error('Error initializing Firebase:', e);
+  }
+}
 
 async function submitToFirebase(data, locale = 'en') {
+  if (!firebaseAvailable || !db) {
+    console.warn('submitToFirebase called but Firebase is not configured.');
+    return { success: false, error: 'Firebase not configured' };
+  }
+
   try {
     const docRef = await addDoc(collection(db, 'contacts'), {
       name: data.name,
@@ -50,11 +64,19 @@ function validateForm(data, locale = 'en') {
 
   // Email validation
   if (!data.email || data.email.trim() === '') {
-    errors.email = locale === 'ar' ? 'الرجاء إدخال البريد الإلكتروني' : 'Please enter your email address';
+    errors.email = locale === 'ar'
+      ? 'الرجاء إدخال البريد الإلكتروني'
+      : locale === 'de'
+        ? 'Bitte geben Sie Ihre E-Mail-Adresse ein'
+        : 'Please enter your email address';
   } else {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(data.email.trim())) {
-      errors.email = locale === 'ar' ? 'الرجاء إدخال بريد إلكتروني صحيح' : 'Please enter a valid email address';
+      errors.email = locale === 'ar'
+        ? 'الرجاء إدخال بريد إلكتروني صحيح'
+        : locale === 'de'
+          ? 'Bitte geben Sie eine gültige E-Mail-Adresse ein'
+          : 'Please enter a valid email address';
     }
   }
 
@@ -125,9 +147,21 @@ export function initContactForm(formId, messageId, customMessages = {}, locale =
   }
 
   const messages = {
-    sending: locale === 'ar' ? 'جاري إرسال الرسالة...' : 'Sending your message...',
-    success: locale === 'ar' ? 'تم إرسال رسالتك بنجاح! سنتواصل معك قريباً.' : 'Your message has been sent successfully! We will get back to you soon.',
-    error: locale === 'ar' ? 'عذراً، حدث خطأ أثناء إرسال رسالتك. يرجى المحاولة مرة أخرى.' : 'Sorry, an error occurred while sending your message. Please try again.',
+    sending: locale === 'ar'
+      ? 'جاري إرسال الرسالة...'
+      : locale === 'de'
+        ? 'Ihre Nachricht wird gesendet...'
+        : 'Sending your message...',
+    success: locale === 'ar'
+      ? 'تم إرسال رسالتك بنجاح! سنتواصل معك قريباً.'
+      : locale === 'de'
+        ? 'Ihre Nachricht wurde erfolgreich gesendet! Wir melden uns bald bei Ihnen.'
+        : 'Your message has been sent successfully! We will get back to you soon.',
+    error: locale === 'ar'
+      ? 'عذراً، حدث خطأ أثناء إرسال رسالتك. يرجى المحاولة مرة أخرى.'
+      : locale === 'de'
+        ? 'Entschuldigung, beim Senden Ihrer Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.'
+        : 'Sorry, an error occurred while sending your message. Please try again.',
     ...customMessages
   };
 
@@ -157,7 +191,11 @@ export function initContactForm(formId, messageId, customMessages = {}, locale =
 
       // Show general error message
       if (messageEl) {
-        const generalMsg = locale === 'ar' ? 'الرجاء تصحيح الأخطاء أدناه قبل الإرسال.' : 'Please correct the errors below before submitting.';
+        const generalMsg = locale === 'ar'
+        ? 'الرجاء تصحيح الأخطاء أدناه قبل الإرسال.'
+        : locale === 'de'
+          ? 'Bitte korrigieren Sie die unten stehenden Fehler, bevor Sie absenden.'
+          : 'Please correct the errors below before submitting.';
         messageEl.textContent = generalMsg;
         messageEl.className = 'form-message form-message-error';
         messageEl.style.display = 'block';

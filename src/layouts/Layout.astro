@@ -12,11 +12,15 @@ interface Props {
   image?: string;
 }
 const { title, description, path, isArabic, image } = Astro.props;
-const lang = isArabic ? 'ar' : 'en';
-const dir = isArabic ? 'rtl' : 'ltr';
+
+const currentPath = Astro.url.pathname;
+const currentLocale = currentPath.match(/^\/(en|ar|de)(?=\/|$)/)?.[1] || 'en';
+const lang = currentLocale;
+const dir = currentLocale === 'ar' ? 'rtl' : 'ltr';
+
 ---
 <!DOCTYPE html>
-<html lang={lang} dir={dir}>
+<html lang={lang} dir={dir} data-locale={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -24,6 +28,23 @@ const dir = isArabic ? 'rtl' : 'ltr';
     <link rel="alternate icon" href="/favicon.png" type="image/png" sizes="32x32" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <SEO title={title} description={description} path={path} isArabic={isArabic} image={image} />
+    <script>
+      // Expose Firebase public config at runtime so bundles can read it (dev/preview/runtime)
+      (function(){
+        try{
+          window.__FIREBASE_DEFAULTS__ = {
+            config: {
+              apiKey: import.meta.env.PUBLIC_FIREBASE_API_KEY || null,
+              authDomain: import.meta.env.PUBLIC_FIREBASE_AUTH_DOMAIN || null,
+              projectId: import.meta.env.PUBLIC_FIREBASE_PROJECT_ID || null,
+              storageBucket: import.meta.env.PUBLIC_FIREBASE_STORAGE_BUCKET || null,
+              messagingSenderId: import.meta.env.PUBLIC_FIREBASE_MESSAGING_SENDER_ID || null,
+              appId: import.meta.env.PUBLIC_FIREBASE_APP_ID || null
+            }
+          };
+        }catch(e){/* ignore in non-browser contexts */}
+      })();
+    </script>
     
     <script type="application/ld+json">
       {
@@ -58,7 +79,14 @@ const dir = isArabic ? 'rtl' : 'ltr';
     <slot />
     <footer>
       <div class="container">
-        <p>{isArabic ? 'حقوق الطبع والنشر © 2026 جنرال سوفت' : '© Copyrights 2026 Generalsoft'} <span class="legal-small">{isArabic ? 'ش.م.ح – ذ.م.م' : 'FZ-LLC'}</span></p>
+        <p>
+          {currentLocale === 'ar' ? 'حقوق الطبع والنشر © 2026 جنرال سوفت' : 
+           currentLocale === 'de' ? '© Urheberrecht 2026 Generalsoft' : 
+           '© Copyrights 2026 Generalsoft'} 
+          <span class="legal-small">
+            {currentLocale === 'ar' ? 'ش.م.ح – ذ.م.م' : 'FZ-LLC'}
+          </span>
+        </p>
       </div>
     </footer>
 
@@ -70,7 +98,9 @@ const dir = isArabic ? 'rtl' : 'ltr';
         </button>
         <div class="qr-popup">
           <img src="/img/generalsoft_qr_vcard.png" alt="Scan to save contact" width="150" height="150" />
-          <p>{isArabic ? 'امسح لحفظ جهة الاتصال' : 'Scan to save contact'}</p>
+          <p>{currentLocale === 'ar' ? 'امسح لحفظ جهة الاتصال' : 
+              currentLocale === 'de' ? 'Scannen zum Speichern' : 
+              'Scan to save contact'}</p>
         </div>
       </div>
       <a href="https://wa.me/971558809863" class="float-btn whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">

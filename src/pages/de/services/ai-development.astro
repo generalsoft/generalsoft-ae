@@ -1,0 +1,112 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+---
+
+<Layout 
+  title="KI-Entwicklung & Maschinelles Lernen | Generalsoft VAE"
+  description="Intelligente KI-Lösungen für Unternehmen in den VAE. Wir entwickeln maßgeschneiderte Modelle für maschinelles Lernen, NLP und Computer Vision zur Automatisierung Ihrer Prozesse."
+  path="/de/services/ai-development/"
+  image="/img/og-ai.jpg"
+>
+  <main>
+    <section
+      class="page-header ai-hero-background"
+      style="padding: 100px 0 50px; text-align: center; background: linear-gradient(135deg, #dc2626, #7c3aed); color: white; position: relative; overflow: hidden;"
+    >
+      <!-- Canvas für die KI-Hintergrundanimation -->
+      <canvas id="aiCanvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; opacity: 0.4;"></canvas>
+      
+      <div class="container" style="position: relative; z-index: 1;">
+        <h1 style="font-size: 3rem; margin-bottom: 20px;">KI-Entwicklung</h1>
+        <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto;">
+          Wir nutzen die Kraft künstlicher Intelligenz, um Innovationen voranzutreiben und komplexe Geschäftsprozesse zu automatisieren.
+        </p>
+      </div>
+    </section>
+
+    <section class="service-details" style="padding: 80px 0;">
+      <div class="container">
+        <div class="about-detailed">
+          <h2>Intelligente Lösungen für die Welt von morgen</h2>
+          <p>
+            Künstliche Intelligenz ist weit mehr als nur ein Trend – sie ist das Werkzeug, um aus Daten echtes Wissen zu generieren. 
+            Bei Generalsoft entwickeln wir maßgeschneiderte KI-Modelle, die exakt auf Ihre geschäftlichen Herausforderungen zugeschnitten sind. 
+            Unser Ziel ist es, Systeme zu schaffen, die nicht nur Daten verarbeiten, sondern intelligente Entscheidungen in Echtzeit ermöglichen.
+          </p>
+          
+          <div class="services-grid" style="margin-top: 40px;">
+            <div class="service-card">
+              <h3>Maschinelles Lernen (ML)</h3>
+              <p>Entwicklung von prädiktiven Modellen, die Trends erkennen und Entscheidungsprozesse durch Algorithmen optimieren, die kontinuierlich aus Ihren Daten lernen.</p>
+            </div>
+            <div class="service-card">
+              <h3>Natural Language Processing (NLP)</h3>
+              <p>Intelligente Textanalyse, automatisierte Dokumentenverarbeitung und fortschrittliche Chatbot-Systeme zur Verbesserung der Kundenkommunikation.</p>
+            </div>
+            <div class="service-card">
+              <h3>Computer Vision</h3>
+              <p>KI-gestützte Bild- und Videoerkennung für Anwendungen wie Qualitätskontrolle in der Fertigung, Objekterkennung oder biometrische Sicherheitssysteme.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" style="padding: 80px 0; background: var(--bg-alt);">
+      <div class="container">
+        <h2 style="text-align: center; margin-bottom: 3rem;">Vorteile unserer KI-Lösungen</h2>
+        <div class="features-grid">
+          <div class="feature-box" style="background: white;">
+            <h4>Effizienzsteigerung</h4>
+            <p>Automatisieren Sie repetitive Aufgaben und setzen Sie Ressourcen für strategisch wichtigere Projekte frei.</p>
+          </div>
+          <div class="feature-box" style="background: white;">
+            <h4>Datengesteuerte Einblicke</h4>
+            <p>Entdecken Sie verborgene Muster in Ihren Daten, die mit herkömmlichen Analysen unsichtbar geblieben wären.</p>
+          </div>
+          <div class="feature-box" style="background: white;">
+            <h4>Skalierbare Intelligenz</h4>
+            <p>Unsere Lösungen wachsen mit Ihren Anforderungen und lassen sich nahtlos in bestehende Cloud-Infrastrukturen integrieren.</p>
+          </div>
+          <div class="feature-box" style="background: white;">
+            <h4>Ethische KI</h4>
+            <p>Wir legen großen Wert auf Transparenz und Fairness bei der Entwicklung unserer Algorithmen (Explainable AI).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" style="padding: 60px 0; background: #f8f9fa; text-align: center;">
+      <div class="container">
+        <div class="cta-content-with-qr">
+          <div class="cta-text-group">
+            <h2>Bereit für den nächsten Schritt?</h2>
+            <p>
+              Lassen Sie uns besprechen, wie KI Ihr Unternehmen transformieren kann. Kontaktieren Sie unsere Experten für eine erste Beratung.
+            </p>
+            <a href="/de/contact/" class="cta-button" style="margin-top: 20px;">
+              KI-Projekt anfragen
+            </a>
+          </div>
+          <div class="cta-qr-card">
+            <h3>Direkter Kontakt</h3>
+            <img src="/img/generalsoft_qr_vcard.png" alt="Generalsoft vCard QR" width="120" style="margin: 0.5rem 0;" />
+            <p>Scannen Sie den Code, um unsere Kontaktdaten sofort zu speichern.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .ai-hero-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.3) 100%);
+  }
+</style>

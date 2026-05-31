@@ -1,0 +1,100 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const prefix = '/de';
+---
+
+<Layout
+  title="Partner | Generalsoft VAE"
+  description="Entdecken Sie das Partner-Netzwerk von Generalsoft. Wir arbeiten mit weltweit führenden Technologieanbietern zusammen, um innovative Softwarelösungen in den VAE zu liefern."
+  path="/de/partners/"
+  image="/img/og-partners.jpg"
+>
+  <main>
+    <section
+      class="page-header"
+      style="padding: 100px 0 50px; text-align: center; background: linear-gradient(135deg, #0f172a, #1d4ed8); color: white;"
+    >
+      <div class="container">
+        <h1 style="font-size: 3rem; margin-bottom: 20px;">Unsere Partner</h1>
+        <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto;">
+          Zusammenarbeit mit globalen Technologieführern zur Schaffung robuster digitaler Ökosysteme.
+        </p>
+      </div>
+    </section>
+
+    <section class="partners-intro" style="padding: 80px 0;">
+      <div class="container">
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+          <h2>Strategische Allianzen</h2>
+          <p>
+            Bei Generalsoft glauben wir an die Kraft der Zusammenarbeit. Unser Netzwerk aus Technologie- und 
+            Geschäftspartnern ermöglicht es uns, komplexe Engineering-Herausforderungen mit den besten 
+            verfügbaren Werkzeugen und Expertisen auf dem Markt zu lösen.
+          </p>
+        </div>
+
+        <div class="services-grid" style="margin-top: 60px;">
+          <div class="service-card">
+            <div style="font-size: 2.5rem; margin-bottom: 1rem;">☁️</div>
+            <h3>Cloud-Infrastruktur</h3>
+            <p>Wir arbeiten eng mit führenden Cloud-Anbietern wie <strong>AWS</strong> und <strong>Azure</strong> zusammen, um skalierbare und hochverfügbare Infrastrukturen für unsere Kunden zu gewährleisten.</p>
+          </div>
+          <div class="service-card">
+            <div style="font-size: 2.5rem; margin-bottom: 1rem;">🛠️</div>
+            <h3>Technologie-Stacks</h3>
+            <p>Durch unsere Partnerschaften in den Bereichen <strong>React</strong>, <strong>Node.js</strong> und <strong>Python-Ökosysteme</strong> bleiben wir an der Spitze der Software-Innovation.</p>
+          </div>
+          <div class="service-card">
+            <div style="font-size: 2.5rem; margin-bottom: 1rem;">🇦🇪</div>
+            <h3>Regionale Netzwerke</h3>
+            <p>Als stolzes Mitglied der <strong>RAKEZ (Ras Al Khaimah Economic Zone)</strong> unterstützen wir lokale Unternehmen bei ihrer digitalen Transformation in den VAE.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="collaboration" style="padding: 80px 0; background: var(--bg-alt);">
+      <div class="container">
+        <div class="about-detailed">
+          <h2>Warum mit uns zusammenarbeiten?</h2>
+          <div class="features-grid">
+            <div class="feature-box">
+              <h4>Gemeinsame Innovation</h4>
+              <p>Wir kombinieren unsere Engineering-Expertise mit den Stärken unserer Partner, um zukunftssichere Lösungen zu entwickeln.</p>
+            </div>
+            <div class="feature-box">
+              <h4>Markterweiterung</h4>
+              <p>Unser tiefes Verständnis des Marktes in den VAE hilft unseren globalen Partnern, regional erfolgreich zu sein.</p>
+            </div>
+            <div class="feature-box">
+              <h4>Technische Exzellenz</h4>
+              <p>Wir halten uns an strenge Qualitätsstandards und stellen sicher, dass jede Partnerschaft einen Mehrwert für den Endkunden schafft.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" style="padding: 60px 0; background: #f8f9fa; text-align: center;">
+      <div class="container">
+        <div class="cta-content-with-qr">
+          <div class="cta-text-group">
+            <h2>Werden Sie Generalsoft-Partner</h2>
+            <p>
+              Suchen Sie einen zuverlässigen Engineering-Partner in den VAE? Lassen Sie uns über Möglichkeiten der Zusammenarbeit sprechen.
+            </p>
+            <a href={prefix + "/contact/"} class="cta-button" style="margin-top: 20px;">
+              Kontakt aufnehmen
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .feature-box {
+    background: white !important;
+  }
+</style>

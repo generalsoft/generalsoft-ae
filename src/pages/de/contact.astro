@@ -1,10 +1,10 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '../../layouts/Layout.astro';
 ---
 <Layout 
-  title="Contact Generalsoft FZ-LLC | Software Company in RAKEZ, UAE"
-  description="Contact Generalsoft FZ-LLC in RAKEZ, UAE for software development, AI solutions, and IT services. Call, email, or visit us."
-  path="/contact/"
+  title="Kontakt Generalsoft FZ-LLC | Softwareunternehmen in RAKEZ, VAE"
+  description="Kontaktieren Sie Generalsoft FZ-LLC in RAKEZ, VAE für Softwareentwicklung, KI-Lösungen und IT-Dienstleistungen. Rufen Sie uns an, schreiben Sie eine E-Mail oder besuchen Sie uns."
+  path="/de/contact/"
   image="/img/og-contact.jpg"
 >
 
@@ -12,55 +12,55 @@ import Layout from '../layouts/Layout.astro';
     <div class="container">
       <div class="contact-grid">
         <div class="contact-form-container">
-          <h2>Send Us a Message</h2>
+          <h2>Schreiben Sie uns eine Nachricht</h2>
           <form id="contactForm" class="contact-form" novalidate>
             <div class="form-group">
-              <label for="name">Full Name *</label>
+              <label for="name">Vollständiger Name *</label>
               <input type="text" id="name" name="name" required>
             </div>
 
             <div class="form-group">
-              <label for="email">Email Address *</label>
+              <label for="email">E-Mail-Adresse *</label>
               <input type="email" id="email" name="email" required>
             </div>
 
             <div class="form-group">
-              <label for="phone">Phone Number</label>
+              <label for="phone">Telefonnummer</label>
               <input type="tel" id="phone" name="phone">
             </div>
 
             <div class="form-group">
-              <label for="company">Company Name</label>
+              <label for="company">Firmenname</label>
               <input type="text" id="company" name="company">
             </div>
 
             <div class="form-group">
-              <label for="service">Service Required</label>
+              <label for="service">Gewünschte Dienstleistung</label>
               <select id="service" name="service">
-                <option value="">Select a service</option>
-                <option value="Custom Software Development">Custom Software Development</option>
-                <option value="Education & Training">Education & Training</option>
-                <option value="AI Development">AI Development</option>
-                <option value="Systems & Software Design">Systems & Software Design</option>
-                <option value="Cyber Security">Cyber Security</option>
-                <option value="Web & Network Design">Web & Network Design</option>
-                <option value="Mobile Applications">Mobile Applications</option>
-                <option value="Electronic Systems">Electronic Systems</option>
+                <option value="">Dienstleistung auswählen</option>
+                <option value="Individualsoftware-Entwicklung">Individualsoftware-Entwicklung</option>
+                <option value="Ausbildung & Training">Ausbildung & Training</option>
+                <option value="KI-Entwicklung">KI-Entwicklung</option>
+                <option value="System- & Softwaredesign">System- & Softwaredesign</option>
+                <option value="Cybersicherheit">Cybersicherheit</option>
+                <option value="Web- & Netzwerkdesign">Web- & Netzwerkdesign</option>
+                <option value="Mobile Anwendungen">Mobile Anwendungen</option>
+                <option value="Elektronische Systeme">Elektronische Systeme</option>
               </select>
             </div>
 
             <div class="form-group">
-              <label for="message">Message *</label>
+              <label for="message">Nachricht *</label>
               <textarea id="message" name="message" rows="6" required></textarea>
             </div>
 
-            <button type="submit" class="submit-btn">Send Message</button>
+            <button type="submit" class="submit-btn">Nachricht senden</button>
             <div id="formMessage" class="form-message"></div>
           </form>
         </div>
 
         <div class="contact-info-container">
-          <h2>Contact Information</h2>
+          <h2>Kontaktinformationen</h2>
 
           <div class="info-item">
             <div class="info-icon">📧</div>
@@ -73,7 +73,7 @@ import Layout from '../layouts/Layout.astro';
           <div class="info-item">
             <div class="info-icon">📞</div>
             <div class="info-content">
-              <h3>Phone</h3>
+              <h3>Telefon</h3>
               <p>+971.55.880.9863</p>
             </div>
           </div>
@@ -81,7 +81,7 @@ import Layout from '../layouts/Layout.astro';
           <div class="info-item">
             <div class="info-icon">📍</div>
             <div class="info-content">
-              <h3>Address</h3>
+              <h3>Adresse</h3>
               <p>Ras Al Khaimah Economic Zone (RAKEZ)<br>Ras Al Khaimah, United Arab Emirates</p>
             </div>
           </div>
@@ -89,8 +89,8 @@ import Layout from '../layouts/Layout.astro';
           <div class="info-item">
             <div class="info-icon">🕐</div>
             <div class="info-content">
-              <h3>Business Hours</h3>
-              <p>Sunday - Thursday: 9:00 AM - 6:00 PM<br>Friday - Saturday: Closed</p>
+              <h3>Geschäftszeiten</h3>
+              <p>Sonntag - Donnerstag: 09:00 - 18:00 Uhr<br>Freitag - Samstag: Geschlossen</p>
             </div>
           </div>
         </div>
@@ -98,8 +98,5 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <script>
-    import { initContactForm } from '../js/firebase-contact.js';
-    initContactForm('contactForm', 'formMessage', {}, 'en');
-  </script>
+  <script type="module" src="/js/contact-form-de.js"></script>
 </Layout>

@@ -1,0 +1,113 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+---
+
+<Layout 
+  title="Ausbildung & Training | Generalsoft VAE"
+  description="Professionelle Schulungsprogramme für Softwareentwicklung und IT-Engineering in den VAE. Wir statten Ihre Teams mit modernstem Wissen in KI, IoT und Full-Stack-Entwicklung aus."
+  path="/de/services/education-training/"
+  image="/img/og-education.jpg"
+>
+  <main>
+    <section
+      class="page-header education-hero-background"
+      style="padding: 100px 0 50px; text-align: center; background: linear-gradient(135deg, #f093fb, #f5576c); color: white; position: relative; overflow: hidden;"
+    >
+      <!-- Canvas für die Hintergrundanimation -->
+      <canvas id="educationCanvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; opacity: 0.4;"></canvas>
+      
+      <div class="container" style="position: relative; z-index: 1;">
+        <h1 style="font-size: 3rem; margin-bottom: 20px;">Ausbildung & Training</h1>
+        <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto;">
+          Wir befähigen Teams durch praxisorientiertes Engineering-Wissen und technologische Exzellenz.
+        </p>
+      </div>
+    </section>
+
+    <section class="service-details" style="padding: 80px 0;">
+      <div class="container">
+        <div class="about-detailed">
+          <h2>Warum technisches Training mit Generalsoft?</h2>
+          <p>
+            In der sich ständig verändernden IT-Landschaft ist kontinuierliche Weiterbildung der Schlüssel zum Erfolg. 
+            Unsere Schulungsprogramme sind nicht bloß Theorie – sie basieren auf unserer täglichen Arbeit als 
+            Software-Ingenieure. Wir vermitteln das Wissen, das Ihre Mitarbeiter benötigen, um komplexe 
+            Herausforderungen souverän zu meistern.
+          </p>
+          
+          <div class="services-grid" style="margin-top: 40px;">
+            <div class="service-card">
+              <h3>Enterprise Workshops</h3>
+              <p>Maßgeschneiderte Schulungen für Ihre internen Entwicklungsteams zu modernen Software-Architekturen, CI/CD-Prozessen und Clean Code Best Practices.</p>
+            </div>
+            <div class="service-card">
+              <h3>KI & Daten-Akademie</h3>
+              <p>Vertiefen Sie Ihr Wissen in Machine Learning, der Integration von Large Language Models (LLMs) und datengestützter Entscheidungsfindung.</p>
+            </div>
+            <div class="service-card">
+              <h3>IoT & Hardware-Training</h3>
+              <p>Praxisnahe Einführung in die Entwicklung vernetzter Systeme, von der Schaltkreisplanung über Sensorik bis zur Cloud-Anbindung.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" style="padding: 80px 0; background: var(--bg-alt);">
+      <div class="container">
+        <h2 style="text-align: center; margin-bottom: 3rem;">Unser Schulungsansatz</h2>
+        <div class="features-grid">
+          <div class="feature-box" style="background: white;">
+            <h4>Praxisorientiert</h4>
+            <p>Keine trockenen Folien: Wir arbeiten direkt an realen Codebases und lösen praxisnahe Industrieprobleme in Echtzeit.</p>
+          </div>
+          <div class="feature-box" style="background: white;">
+            <h4>Aktueller Tech-Stack</h4>
+            <p>Wir unterrichten nur Technologien, die wir selbst täglich einsetzen, wie Node.js, Python, React und moderne Cloud-Plattformen.</p>
+          </div>
+          <div class="feature-box" style="background: white;">
+            <h4>Zertifizierte Experten</h4>
+            <p>Ihre Trainer sind aktive Senior-Ingenieure von Generalsoft, die über jahrelange Projekterfahrung in verschiedenen Industrien verfügen.</p>
+          </div>
+          <div class="feature-box" style="background: white;">
+            <h4>Flexibilität</h4>
+            <p>Wir bieten Vor-Ort-Workshops in den VAE (RAKEZ/Dubai) sowie interaktive Remote-Sitzungen an, die perfekt in Ihren Geschäftsalltag passen.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" style="padding: 60px 0; background: #f8f9fa; text-align: center;">
+      <div class="container">
+        <div class="cta-content-with-qr">
+          <div class="cta-text-group">
+            <h2>Möchten Sie Ihr Team zukunftssicher machen?</h2>
+            <p>
+              Lassen Sie uns gemeinsam ein Schulungsprogramm entwickeln, das genau auf Ihre technischen Ziele und Ihre Branche zugeschnitten ist.
+            </p>
+            <a href="/de/contact/" class="cta-button" style="margin-top: 20px;">
+              Schulung anfragen
+            </a>
+          </div>
+          <div class="cta-qr-card">
+            <h3>Direkter Kontakt</h3>
+            <img src="/img/generalsoft_qr_vcard.png" alt="Generalsoft vCard QR" width="120" style="margin: 0.5rem 0;" />
+            <p>Scannen Sie den Code, um unsere Kontaktdaten sofort in Ihrem Adressbuch zu speichern.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .education-hero-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.2) 100%);
+  }
+</style>

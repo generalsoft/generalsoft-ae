@@ -100,8 +100,5 @@ import Layout from '../../layouts/Layout.astro';
     </div>
   </section>
 
-  <script>
-    import { initContactForm } from '../../js/firebase-contact.js';
-    initContactForm('contactForm', 'formMessage', {}, 'ar');
-  </script>
+  <script type="module" src="/js/contact-form-ar.js"></script>
 </Layout>

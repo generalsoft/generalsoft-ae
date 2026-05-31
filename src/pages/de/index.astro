@@ -1,0 +1,169 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import heroImage from '../../assets/hero-banner.png';
+const prefix = '/de';
+---
+
+<Layout 
+  title="Generalsoft | Individualsoftware & Webentwicklung VAE"
+  description="Expertenlösungen für Individualsoftware, mobile Apps und IoT-Systemdesign in RAKEZ. Transformieren Sie Ihr Unternehmen mit dem innovativen Engineering von Generalsoft."
+  path="/de/"
+  image="/img/og-home.jpg"
+>
+  <main>
+    <section class="hero-carousel">
+      <div class="hero-carousel-container">
+        <div class="hero-carousel-track">
+
+          <!-- Individualsoftware-Entwicklung -->
+          <div class="hero-carousel-slide" data-href={prefix + '/services/custom-software/'}>
+            <div class="hero-carousel-image">
+              <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="400" height="300" fill="url(#csd-grad-1)"/>
+                <defs><linearGradient id="csd-grad-1" x1="0" y1="0" x2="400" y2="300"><stop offset="0%" stop-color="#2563eb"/><stop offset="100%" stop-color="#7c3aed"/></linearGradient></defs>
+                <rect x="60" y="50" width="280" height="40" rx="6" fill="rgba(255,255,255,0.2)"/>
+                <rect x="60" y="110" width="200" height="12" rx="4" fill="rgba(255,255,255,0.15)"/>
+                <rect x="60" y="135" width="240" height="12" rx="4" fill="rgba(255,255,255,0.15)"/>
+                <rect x="60" y="160" width="180" height="12" rx="4" fill="rgba(255,255,255,0.15)"/>
+                <rect x="60" y="200" width="120" height="36" rx="8" fill="rgba(255,255,255,0.25)"/>
+                <circle cx="320" cy="200" r="40" fill="rgba(255,255,255,0.1)"/>
+                <path d="M305 200l10 10 20-20" stroke="rgba(255,255,255,0.4)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="hero-carousel-overlay">
+              <h2>Individualsoftware-Entwicklung</h2>
+              <p>Erstklassige Softwarelösungen, die die digitale Transformation und das Geschäftswachstum vorantreiben.</p>
+            </div>
+          </div>
+
+          <!-- Ausbildung & Training -->
+          <div class="hero-carousel-slide" data-href={prefix + '/services/education-training/'}>
+            <div class="hero-carousel-image">
+              <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="400" height="300" fill="url(#edu-grad-2)"/>
+                <defs><linearGradient id="edu-grad-2" x1="0" y1="0" x2="400" y2="300"><stop offset="0%" stop-color="#059669"/><stop offset="100%" stop-color="#2563eb"/></linearGradient></defs>
+                <rect x="100" y="60" width="200" height="30" rx="6" fill="rgba(255,255,255,0.2)"/>
+                <rect x="120" y="105" width="160" height="8" rx="4" fill="rgba(255,255,255,0.15)"/>
+                <rect x="120" y="125" width="160" height="8" rx="4" fill="rgba(255,255,255,0.15)"/>
+                <rect x="120" y="145" width="160" height="8" rx="4" fill="rgba(255,255,255,0.15)"/>
+                <circle cx="200" cy="210" r="35" fill="rgba(255,255,255,0.1)"/>
+                <path d="M200 195v30M185 210h30" stroke="rgba(255,255,255,0.4)" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="hero-carousel-overlay">
+              <h2>Ausbildung & Training</h2>
+              <p>Umfassende Schulungsprogramme, um Ihre Belegschaft mit modernstem Technologie-Know-how auszustatten.</p>
+            </div>
+          </div>
+
+          <!-- KI-Entwicklung -->
+          <div class="hero-carousel-slide" data-href={prefix + '/services/ai-development/'}>
+            <div class="hero-carousel-image">
+              <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="400" height="300" fill="url(#ai-grad-3)"/>
+                <defs><linearGradient id="ai-grad-3" x1="0" y1="0" x2="400" y2="300"><stop offset="0%" stop-color="#dc2626"/><stop offset="100%" stop-color="#7c3aed"/></linearGradient></defs>
+                <circle cx="200" cy="100" r="45" fill="rgba(255,255,255,0.1)"/>
+                <circle cx="200" cy="100" r="25" fill="rgba(255,255,255,0.15)"/>
+                <circle cx="200" cy="100" r="10" fill="rgba(255,255,255,0.25)"/>
+                <line x1="200" y1="145" x2="200" y2="180" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+                <circle cx="170" cy="200" r="8" fill="rgba(255,255,255,0.15)"/>
+                <circle cx="200" cy="210" r="8" fill="rgba(255,255,255,0.15)"/>
+                <circle cx="230" cy="200" r="8" fill="rgba(255,255,255,0.15)"/>
+                <line x1="170" y1="200" x2="200" y2="210" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+                <line x1="200" y1="210" x2="230" y2="200" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <div class="hero-carousel-overlay">
+              <h2>KI-Entwicklung</h2>
+              <p>Nutzen Sie die Kraft von Machine Learning und intelligenter Automatisierung für Ihre Geschäftsprozesse.</p>
+            </div>
+          </div>
+
+          <!-- System- & Softwaredesign -->
+          <div class="hero-carousel-slide" data-href={prefix + '/services/systems-design/'}>
+            <div class="hero-carousel-image">
+              <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="400" height="300" fill="url(#sys-grad-4)"/>
+                <defs><linearGradient id="sys-grad-4" x1="0" y1="0" x2="400" y2="300"><stop offset="0%" stop-color="#0891b2"/><stop offset="100%" stop-color="#059669"/></linearGradient></defs>
+                <rect x="80" y="60" width="240" height="160" rx="8" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+                <rect x="100" y="80" width="80" height="50" rx="4" fill="rgba(255,255,255,0.15)"/>
+                <rect x="200" y="80" width="100" height="50" rx="4" fill="rgba(255,255,255,0.15)"/>
+                <rect x="100" y="145" width="200" height="8" rx="4" fill="rgba(255,255,255,0.12)"/>
+                <rect x="100" y="162" width="160" height="8" rx="4" fill="rgba(255,255,255,0.12)"/>
+                <rect x="100" y="179" width="180" height="8" rx="4" fill="rgba(255,255,255,0.12)"/>
+                <rect x="80" y="235" width="240" height="3" rx="2" fill="rgba(255,255,255,0.15)"/>
+                <circle cx="100" cy="236.5" r="5" fill="rgba(255,255,255,0.3)"/>
+              </svg>
+            </div>
+            <div class="hero-carousel-overlay">
+              <h2>System- & Softwaredesign</h2>
+              <p>Experten für Systemarchitektur, die sicherstellen, dass Ihre digitale Infrastruktur robust und skalierbar ist.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="hero-carousel-nav">
+          <button class="hero-carousel-btn hero-carousel-prev" aria-label="Vorheriger Slide">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <div class="hero-carousel-dots"></div>
+          <button class="hero-carousel-btn hero-carousel-next" aria-label="Nächster Slide">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-detailed">
+      <h2>Umfassendes Software-Engineering in den VAE</h2>
+      <p>
+        Bei GeneralSoft spezialisieren wir uns darauf, die Lücke zwischen komplexen geschäftlichen Herausforderungen und 
+        eleganten technischen Lösungen zu schließen. Unsere Expertise erstreckt sich über Systemdesign, mobile App-Entwicklung 
+        und elektronische Systeme (IoT). Durch den Einsatz moderner Architekturen stellen wir sicher, dass Ihre 
+        digitale Infrastruktur nicht nur heute robust ist, sondern auch für das Wachstum von morgen skalierbar bleibt.
+      </p>
+    </section>
+
+    <section class="services-detailed">
+      <div class="container">
+        <h2>Unsere Kernspezialisierungen</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <h3>Individualsoftware-Entwicklung</h3>
+            <p>Wir entwickeln maßgeschneiderte Softwarelösungen zur Optimierung Ihrer individuellen Geschäftsprozesse. Von ERP bis CRM konzentriert sich unser Team auf Sicherheit, Skalierbarkeit und nahtlose Integration in Ihre bestehenden Systeme.</p>
+          </div>
+          <div class="service-card">
+            <h3>Mobile Application Engineering</h3>
+            <p>Unsere mobilen Lösungen umfassen die native Entwicklung für iOS und Android mit modernen Frameworks wie Flutter und React Native. Wir sorgen für ein erstklassiges Benutzererlebnis mit Hochleistungsschnittstellen.</p>
+          </div>
+          <div class="service-card">
+            <h3>IoT & Elektronische Systeme</h3>
+            <p>GeneralSoft schließt die Lücke zwischen Hardware und Software. Wir entwerfen robuste IoT-Architekturen für intelligentes Monitoring und automatisierte Systeme, die einen zuverlässigen Datenfluss gewährleisten.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="process">
+      <div class="container">
+        <h2>Unser Entwicklungsprozess</h2>
+        <p>Unsere Methodik basiert auf der Agile-Philosophie und gewährleistet Transparenz und schnelle Lieferung. Wir beginnen mit einer intensiven Discovery-Phase, gefolgt von iterativen Sprints, QA-Tests und automatisierten CI/CD-Pipelines.</p>
+        <ul>
+          <li><strong>Discovery & Strategie:</strong> Abstimmung der Geschäftsziele mit der technischen Machbarkeit.</li>
+          <li><strong>Architekturdesign:</strong> Entwurf skalierbarer Systemstrukturen.</li>
+          <li><strong>Entwicklung:</strong> Sauberer, dokumentierter Code nach Industriestandards.</li>
+          <li><strong>Bereitstellung & Support:</strong> Nahtloser Go-Live und laufende Wartung.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="tech-stack">
+      <div class="container">
+        <h2>Moderner Tech-Stack</h2>
+        <p>Wir nutzen einen modernen Tech-Stack für zukunftssichere Lösungen, darunter <strong>Node.js</strong>, <strong>Astro</strong>, <strong>React</strong>, <strong>Python</strong> für KI/ML und <strong>AWS/Azure</strong> für Cloud-Infrastruktur. Dies gewährleistet neueste Sicherheitspatches und Performance-Optimierungen.</p>
+      </div>
+    </section>
+  </main>
+</Layout>

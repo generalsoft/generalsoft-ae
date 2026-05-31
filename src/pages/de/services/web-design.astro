@@ -1,0 +1,112 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+---
+
+<Layout 
+  title="Web- & Netzwerkdesign | Generalsoft VAE"
+  description="Professionelle Webentwicklung und Netzwerkdesign-Services in den VAE. Wir liefern außergewöhnliche Benutzererlebnisse und zuverlässige, leistungsstarke Konnektivität."
+  path="/de/services/web-design/"
+  image="/img/og-web-design.jpg"
+>
+  <main>
+    <section
+      class="page-header web-hero-background"
+      style="padding: 100px 0 50px; text-align: center; background: linear-gradient(135deg, #2563eb, #06b6d4); color: white; position: relative; overflow: hidden;"
+    >
+      <!-- Canvas für die Web-Hintergrundanimation -->
+      <canvas id="webCanvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; opacity: 0.4;"></canvas>
+      
+      <div class="container" style="position: relative; z-index: 1;">
+        <h1 style="font-size: 3rem; margin-bottom: 20px;">Web- & Netzwerkdesign</h1>
+        <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto;">
+          Wir gestalten moderne digitale Erlebnisse und bauen die Infrastruktur für nahtlose Konnektivität.
+        </p>
+      </div>
+    </section>
+
+    <section class="service-details" style="padding: 80px 0;">
+      <div class="container">
+        <div class="about-detailed">
+          <h2>Kreativität trifft auf Konnektivität</h2>
+          <p>
+            Eine starke Online-Präsenz beginnt mit einer performanten Website, aber sie endet nicht dort. 
+            Bei Generalsoft kombinieren wir modernes Web-Engineering mit robustem Netzwerkdesign, um sicherzustellen, 
+            dass Ihre digitalen Dienste nicht nur gut aussehen, sondern auch jederzeit schnell und zuverlässig erreichbar sind.
+          </p>
+          
+          <div class="services-grid" style="margin-top: 40px;">
+            <div class="service-card">
+              <h3>Modernes Web-Engineering</h3>
+              <p>Entwicklung von reaktionsschnellen (responsive), barrierefreien und SEO-optimierten Webanwendungen mit Technologien wie Astro, React und Next.js.</p>
+            </div>
+            <div class="service-card">
+              <h3>Netzwerk-Architektur</h3>
+              <p>Planung und Implementierung skalierbarer Netzwerklösungen, die eine hohe Performance und minimale Latenzzeiten für Ihre Unternehmensanwendungen garantieren.</p>
+            </div>
+            <div class="service-card">
+              <h3>UX/UI & Performance</h3>
+              <p>Fokus auf außergewöhnliche Benutzererfahrung und blitzschnelle Ladezeiten durch modernste Caching-Strategien und optimierte Workflows.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" style="padding: 80px 0; background: var(--bg-alt);">
+      <div class="container">
+        <h2 style="text-align: center; margin-bottom: 3rem;">Unsere Web- & Netzwerk-Standards</h2>
+        <div class="features-grid">
+          <div class="feature-box" style="background: white;">
+            <h4>Responsive Design</h4>
+            <p>Ihre Plattform funktioniert perfekt auf allen Endgeräten – vom Smartphone bis zum Desktop-Monitor.</p>
+          </div>
+          <div class="feature-box" style="background: white;">
+            <h4>Optimierte Bandbreite</h4>
+            <p>Intelligentes Traffic-Management und Netzwerkkonfigurationen zur Maximierung Ihrer verfügbaren Ressourcen.</p>
+          </div>
+          <div class="feature-box" style="background: white;">
+            <h4>Sicherheit integriert</h4>
+            <p>Schutz vor Web-Bedrohungen durch SSL-Zertifikate, WAFs und gehärtete Server-Konfigurationen.</p>
+          </div>
+          <div class="feature-box" style="background: white;">
+            <h4>Hohe Verfügbarkeit</h4>
+            <p>Design von Web-Infrastrukturen mit Load Balancern und CDNs für eine globale Erreichbarkeit ohne Ausfälle.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" style="padding: 60px 0; background: #f8f9fa; text-align: center;">
+      <div class="container">
+        <div class="cta-content-with-qr">
+          <div class="cta-text-group">
+            <h2>Bereit für eine modernere Web-Präsenz?</h2>
+            <p>
+              Lassen Sie uns besprechen, wie wir Ihre Web-Performance steigern und Ihre IT-Infrastruktur optimieren können.
+            </p>
+            <a href="/de/contact/" class="cta-button" style="margin-top: 20px;">
+              Kostenlose Beratung anfragen
+            </a>
+          </div>
+          <div class="cta-qr-card">
+            <h3>Direkter Kontakt</h3>
+            <img src="/img/generalsoft_qr_vcard.png" alt="Generalsoft vCard QR" width="120" style="margin: 0.5rem 0;" />
+            <p>Scannen Sie den Code, um unsere Kontaktdaten sofort zu speichern.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .web-hero-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.2) 100%);
+  }
+</style>

@@ -1,0 +1,113 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+---
+
+<Layout 
+  title="Mobile Anwendungen & App-Engineering | Generalsoft VAE"
+  description="Native und plattformübergreifende App-Entwicklung für iOS und Android in den VAE. Wir bauen leistungsstarke mobile Lösungen mit Flutter und React Native."
+  path="/de/services/mobile-apps/"
+  image="/img/og-mobile-apps.jpg"
+>
+  <main>
+    <section
+      class="page-header mobile-hero-background"
+      style="padding: 100px 0 50px; text-align: center; background: linear-gradient(135deg, #7c3aed, #dc2626); color: white; position: relative; overflow: hidden;"
+    >
+      <!-- Canvas für die Mobile-Hintergrundanimation -->
+      <canvas id="mobileCanvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; opacity: 0.4;"></canvas>
+      
+      <div class="container" style="position: relative; z-index: 1;">
+        <h1 style="font-size: 3rem; margin-bottom: 20px;">Mobile Anwendungen</h1>
+        <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto;">
+          Wir entwickeln mobile Erlebnisse, die Ihre Kunden begeistern und Ihr Geschäft überallhin begleiten.
+        </p>
+      </div>
+    </section>
+
+    <section class="service-details" style="padding: 80px 0;">
+      <div class="container">
+        <div class="about-detailed">
+          <h2>Ihre Vision als App realisiert</h2>
+          <p>
+            In der heutigen mobilen Welt ist eine App oft der wichtigste Berührungspunkt mit Ihren Kunden. 
+            Bei Generalsoft entwickeln wir nicht einfach nur Applikationen – wir schaffen digitale Werkzeuge, 
+            die durch Geschwindigkeit, intuitive Bedienung und technische Raffinesse überzeugen. 
+            Ob für Endverbraucher oder komplexe interne Unternehmensprozesse: Wir bringen Ihre Ideen auf das Smartphone.
+          </p>
+          
+          <div class="services-grid" style="margin-top: 40px;">
+            <div class="service-card">
+              <h3>iOS & Android Entwicklung</h3>
+              <p>Native Entwicklung für das Apple- und Google-Ökosystem, um die maximale Hardware-Performance und die besten Betriebssystem-Funktionen zu nutzen.</p>
+            </div>
+            <div class="service-card">
+              <h3>Plattformübergreifende Lösungen</h3>
+              <p>Effiziente Entwicklung mit Frameworks wie Flutter und React Native: Eine einzige Codebasis für beide Plattformen – ohne Kompromisse bei der Qualität.</p>
+            </div>
+            <div class="service-card">
+              <h3>App-Modernisierung & Support</h3>
+              <p>Wir optimieren bestehende Apps, bringen sie auf den neuesten Stand der Technik und sorgen für einen reibungslosen Betrieb in den App Stores.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" style="padding: 80px 0; background: var(--bg-alt);">
+      <div class="container">
+        <h2 style="text-align: center; margin-bottom: 3rem;">Unsere App-Qualitätsmerkmale</h2>
+        <div class="features-grid">
+          <div class="feature-box" style="background: white;">
+            <h4>Hohe Performance</h4>
+            <p>Flüssige Animationen und minimale Ladezeiten sind für uns Standard. Wir optimieren jede Zeile Code für ein reibungsloses Erlebnis.</p>
+          </div>
+          <div class="feature-box" style="background: white;">
+            <h4>Offline-First Design</h4>
+            <p>Ihre App bleibt auch ohne Internetverbindung funktionsfähig – durch intelligente Datensynchronisierung im Hintergrund.</p>
+          </div>
+          <div class="feature-box" style="background: white;">
+            <h4>Intuitive UX/UI</h4>
+            <p>Wir gestalten Oberflächen, die nicht nur modern aussehen, sondern sich auch natürlich und einfach bedienen lassen.</p>
+          </div>
+          <div class="feature-box" style="background: white;">
+            <h4>Sichere Architektur</h4>
+            <p>Verschlüsselung, sichere Authentifizierung und der Schutz sensibler Nutzerdaten haben bei jeder Entwicklung oberste Priorität.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" style="padding: 60px 0; background: #f8f9fa; text-align: center;">
+      <div class="container">
+        <div class="cta-content-with-qr">
+          <div class="cta-text-group">
+            <h2>Haben Sie eine App-Idee?</h2>
+            <p>
+              Lassen Sie uns gemeinsam besprechen, welche Technologie am besten zu Ihrem Projekt passt und wie wir Ihre App zum Erfolg führen.
+            </p>
+            <a href="/de/contact/" class="cta-button" style="margin-top: 20px;">
+              Projekt anfragen
+            </a>
+          </div>
+          <div class="cta-qr-card">
+            <h3>Direkter Kontakt</h3>
+            <img src="/img/generalsoft_qr_vcard.png" alt="Generalsoft vCard QR" width="120" style="margin: 0.5rem 0;" />
+            <p>Scannen Sie den Code, um unsere Kontaktdaten sofort auf Ihrem Handy zu speichern.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .mobile-hero-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.2) 100%);
+  }
+</style>

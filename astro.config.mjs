@@ -4,9 +4,9 @@ export default defineConfig({
   site: 'https://generalsoft.ae',
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'ar'],
+    locales: ['en', 'ar', 'de'],
     routing: {
-      prefixDefaultLocale: false,
+      prefixDefaultLocale: true,
     },
   },
 });
