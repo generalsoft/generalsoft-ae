@@ -1,5 +1,6 @@
 ---
-export function get() {
-  return Response.redirect('/en/', 301);
-}
 ---
+<script is:inline>
+  window.location.pathname = '/en/';
+</script>
+<meta http-equiv="refresh" content="0;url=/en/" />
