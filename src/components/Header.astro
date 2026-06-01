@@ -76,20 +76,34 @@ const currentLanguage = languages.find((lang) => lang.code === currentLocale) ??
       <img width="48" src="/img/logo.webp" alt="GeneralSoft Logo"/>
       <span class="logo-text">{labels.logo}<span class="logo-legal">{labels.legal}</span></span>
     </a>
-    <span class="lang-switch dropdown">
-      <button class="lang-btn dropbtn" type="button">
-        <span class="flag-icon">{currentLanguage.flag}</span>
-        <span class="lang-label">{currentLanguage.label}</span>
-        <span class="dropdown-arrow">▼</span>
+    <div class="lang-switch">
+      <button class="lang-btn" type="button" aria-haspopup="true" aria-expanded="false">
+        <span class="lang-btn-inner">
+          <span class="flag-icon">{currentLanguage.flag}</span>
+          <span class="lang-label">{currentLanguage.label}</span>
+          <svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </span>
       </button>
-      <div class="dropdown-content lang-dropdown">
+      <div class="lang-dropdown">
         {languages.map(lang => (
-          <a class={currentLocale === lang.code ? 'active' : ''} href={`/${lang.code}${routePath === '/' ? '/' : routePath}`}>
-            <span class="flag-icon">{lang.flag}</span> {lang.label}
+          <a 
+            class={`lang-option${currentLocale === lang.code ? ' active' : ''}`} 
+            href={`/${lang.code}${routePath === '/' ? '/' : routePath}`}
+          >
+            <span class="lang-option-flag">{lang.flag}</span>
+            <span class="lang-option-label">{lang.label}</span>
+            {currentLocale === lang.code && (
+              <svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            )}
           </a>
         ))}
       </div>
-    </span>
+    </div>
+
     <ul class="nav-links">
       <li><a href={`${prefix}/`}>{labels.home}</a></li>
       <li class="dropdown">

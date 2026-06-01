@@ -1,6 +1,37 @@
 ---
+// Root index page - serves as the canonical homepage with language detection
+// Uses a 302 redirect to send users to their preferred language
+// The canonical URL points to the root domain to avoid "alternate page" issues
 ---
-<script is:inline>
-  window.location.pathname = '/en/';
-</script>
-<meta http-equiv="refresh" content="0;url=/en/" />
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>GeneralSoft | Custom Software & Web Development UAE</title>
+    <meta name="description" content="GeneralSoft provides world-class custom software development, mobile apps, and IoT solutions in the UAE." />
+    <link rel="canonical" href="https://generalsoft.ae/" />
+    <link rel="alternate" hreflang="en-AE" href="https://generalsoft.ae/en/" />
+    <link rel="alternate" hreflang="ar-AE" href="https://generalsoft.ae/ar/" />
+    <link rel="alternate" hreflang="de-AE" href="https://generalsoft.ae/de/" />
+    <link rel="alternate" hreflang="x-default" href="https://generalsoft.ae/en/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://generalsoft.ae/" />
+    <meta property="og:title" content="GeneralSoft | Custom Software & Web Development UAE" />
+    <meta property="og:description" content="GeneralSoft provides world-class custom software development, mobile apps, and IoT solutions in the UAE." />
+    <meta http-equiv="refresh" content="0;url=/en/" />
+  </head>
+  <body>
+    <script>
+      // Detect browser language and redirect accordingly
+      var navLang = navigator.language || 'en';
+      var lang = navLang.substring(0, 2);
+      var path = '/' + (lang === 'ar' ? 'ar' : lang === 'de' ? 'de' : 'en') + '/';
+      window.location.replace(path);
+    </script>
+
+    <p><a href="/en/">Redirecting to GeneralSoft UAE</a></p>
+  </body>
+</html>
+

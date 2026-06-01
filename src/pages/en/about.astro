@@ -1,6 +1,11 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+
+const currentPath = Astro.url.pathname;
+const currentLocale = currentPath.match(/^\/(en|ar|de)(?=\/|$)/)?.[1] || 'en';
+const prefix = `/${currentLocale}`;
 ---
+
 
 <Layout
   title="About Us | Generalsoft UAE"
@@ -75,7 +80,8 @@ import Layout from '../../layouts/Layout.astro';
             <p>
               Let's discuss how our team can help you achieve your digital goals.
             </p>
-            <a href="/contact/" class="cta-button" style="margin-top: 20px;">
+            <a href={`${prefix}/contact/`} class="cta-button" style="margin-top: 20px;">
+
               Get in Touch
             </a>
           </div>

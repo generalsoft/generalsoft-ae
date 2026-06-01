@@ -17,24 +17,39 @@ const {
 } = Astro.props;
 
 // Determine the current page path from Astro.url if not explicitly provided
-// The path prop should always be the English path (e.g., "/", "/services/ai-development/")
 const currentPath = path || Astro.url.pathname;
+
+// Detect locale from the actual URL pathname (which is always accurate)
+const urlLocale = Astro.url.pathname.match(/^\/(en|ar|de)(?=\/|$)/)?.[1] || 'en';
 
 // Normalize paths: ensure they end with / for consistency
 const normalizePath = (p: string) => {
-  if (p === "/") return "/";
+  if (p === "/" || p === "") return "/";
   return p.endsWith("/") ? p : `${p}/`;
 };
 
-// Build the English and Arabic URLs for the current page
-// The path prop is always the English path. For Arabic pages, we derive the English path
-// by stripping /ar/ prefix, and the Arabic path by prepending /ar/ to the English path.
-const enPath = normalizePath(isArabic ? currentPath.replace(/^\/ar/, "") || "/" : currentPath);
-const arPath = normalizePath(isArabic ? `/ar${currentPath.replace(/^\/ar/, "") || "/"}` : `/ar${currentPath}`);
+// Strip any locale prefix from the path to get the bare path
+const stripLocale = (p: string) => {
+  return p.replace(/^\/(en|ar|de)(?=\/|$)/, '') || '/';
+};
+
+// Get the path without any locale prefix
+const barePath = stripLocale(currentPath);
+
+// Build locale-specific paths using the detected locale
+const enPath = normalizePath(`/en${barePath}`);
+const arPath = normalizePath(`/ar${barePath}`);
+const dePath = normalizePath(`/de${barePath}`);
+
+// Determine which URL to use as canonical based on the current page's locale
+const canonicalPath = urlLocale === 'ar' ? arPath : urlLocale === 'de' ? dePath : enPath;
 
 const siteUrl = Astro.site ? Astro.site.origin : 'https://generalsoft.ae';
+const canonicalUrl = new URL(canonicalPath, siteUrl).href;
 const enUrl = new URL(enPath, siteUrl).href;
 const arUrl = new URL(arPath, siteUrl).href;
+const deUrl = new URL(dePath, siteUrl).href;
+
 
 // Ensure the image path starts with a leading slash for the URL constructor
 const normalizedImage = image.startsWith('/') ? image : `/${image}`;
@@ -43,26 +58,28 @@ const ogImageUrl = new URL(normalizedImage, siteUrl).href;
 <!-- Primary Meta Tags -->
 <title>{title}</title>
 <meta name="description" content={description} />
-<link rel="canonical" href={isArabic ? arUrl : enUrl} />
+<link rel="canonical" href={canonicalUrl} />
 
 <!-- Hreflang Tags -->
 <link rel="alternate" hreflang="en-AE" href={enUrl} />
 <link rel="alternate" hreflang="ar-AE" href={arUrl} />
+<link rel="alternate" hreflang="de-DE" href={deUrl} />
 <link rel="alternate" hreflang="x-default" href={enUrl} />
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
-<meta property="og:url" content={isArabic ? arUrl : enUrl} />
+<meta property="og:url" content={canonicalUrl} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={ogImageUrl} />
-<meta property="og:locale" content={isArabic ? "ar_AE" : "en_AE"} />
-<meta property="og:locale:alternate" content={isArabic ? "en_AE" : "ar_AE"} />
+<meta property="og:locale" content={urlLocale === 'ar' ? "ar_AE" : urlLocale === 'de' ? "de_DE" : "en_AE"} />
+<meta property="og:locale:alternate" content={urlLocale === 'ar' ? "en_AE" : urlLocale === 'de' ? "en_AE" : "ar_AE"} />
 
 <!-- X / Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={isArabic ? arUrl : enUrl} />
+<meta property="twitter:url" content={canonicalUrl} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={ogImageUrl} />
 <meta name="twitter:site" content="@generalsoft_ae" />
+
