@@ -51,7 +51,7 @@ import Layout from '../../layouts/Layout.astro';
 
             <div class="form-group">
               <label for="message">Message *</label>
-              <textarea id="message" name="message" rows="6" required></textarea>
+              <textarea id="message" name="message" rows="6" maxlength="500" required></textarea>
             </div>
 
             <button type="submit" class="submit-btn">Send Message</button>
@@ -90,7 +90,7 @@ import Layout from '../../layouts/Layout.astro';
             <div class="info-icon">🕐</div>
             <div class="info-content">
               <h3>Business Hours</h3>
-              <p>Sunday - Thursday: 9:00 AM - 6:00 PM<br>Friday - Saturday: Closed</p>
+              <p>Sunday - Thursday: 10:00 AM - 4:00 PM<br>Friday - Saturday: Closed</p>
             </div>
           </div>
         </div>
@@ -98,5 +98,7 @@ import Layout from '../../layouts/Layout.astro';
     </div>
   </section>
 
-  <script type="module" src="/js/contact-form-en.js"></script>
+  <script>
+    import '../../js/contact-form-en.js';
+  </script>
 </Layout>

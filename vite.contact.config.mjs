@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import { fileURLToPath, URL } from 'node:url';
 
 export default defineConfig({
+  publicDir: false,
   build: {
     outDir: 'dist/js',
     emptyOutDir: false,

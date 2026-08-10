@@ -9,4 +9,9 @@ export default defineConfig({
       prefixDefaultLocale: true,
     },
   },
+  vite: {
+    build: {
+      sourcemap: true,
+    },
+  },
 });

@@ -28,6 +28,22 @@ async function submitToFirebase(data, locale = 'en') {
     return { success: false, error: 'Firebase not configured' };
   }
 
+  let ip_address = '';
+  const domain = window.location.hostname;
+  const referrer = document.referrer || ""; // empty string if none
+  const user_agent = navigator.userAgent || "";
+
+  try {
+    const ipResponse = await fetch('https://api.ipify.org?format=json');
+
+    if (ipResponse.ok) {
+      const ipData = await ipResponse.json();
+      ip_address = ipData.ip || '';
+    }
+  } catch (error) {
+    console.warn('Could not determine visitor IP:', error);
+  }
+
   try {
     const docRef = await addDoc(collection(db, 'contacts'), {
       name: data.name,
@@ -36,11 +52,15 @@ async function submitToFirebase(data, locale = 'en') {
       company: data.company || '',
       service: data.service || '',
       message: data.message,
+      domain: domain,
+      referrer : referrer,
+      user_agent: user_agent,
+      ip_address: ip_address,
       locale: locale,
-      createdAt: serverTimestamp(),
+      timestamp: serverTimestamp(),
       read: false
     });
-    console.log('Contact form submitted successfully. ID:', docRef.id);
+    console.log('Contact form submitted successfully.');
     return { success: true, id: docRef.id };
   } catch (error) {
     console.error('Error submitting contact form:', error);
@@ -192,10 +212,10 @@ export function initContactForm(formId, messageId, customMessages = {}, locale =
       // Show general error message
       if (messageEl) {
         const generalMsg = locale === 'ar'
-        ? 'الرجاء تصحيح الأخطاء أدناه قبل الإرسال.'
-        : locale === 'de'
-          ? 'Bitte korrigieren Sie die unten stehenden Fehler, bevor Sie absenden.'
-          : 'Please correct the errors below before submitting.';
+          ? 'الرجاء تصحيح الأخطاء أدناه قبل الإرسال.'
+          : locale === 'de'
+            ? 'Bitte korrigieren Sie die unten stehenden Fehler, bevor Sie absenden.'
+            : 'Please correct the errors below before submitting.';
         messageEl.textContent = generalMsg;
         messageEl.className = 'form-message form-message-error';
         messageEl.style.display = 'block';
