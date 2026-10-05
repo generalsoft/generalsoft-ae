@@ -419,6 +419,28 @@ nav {
   text-shadow: 0 1px 5px rgba(0,0,0,0.2);
 }
 
+.hero-learn-btn {
+  display: inline-block;
+  margin-top: 1.25rem;
+  padding: 0.875rem 2.25rem;
+  background: white;
+  color: var(--primary-dark);
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 999px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.hero-learn-btn:hover,
+.hero-learn-btn:focus-visible {
+  background: var(--accent);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+}
+
 .hero-carousel-nav {
   position: absolute;
   bottom: 2rem;

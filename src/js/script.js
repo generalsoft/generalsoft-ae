@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
     slides.forEach(slide => {
       slide.addEventListener('click', function(e) {
         // Don't navigate if clicking nav buttons
-        if (e.target.closest('.hero-carousel-btn') || e.target.closest('.hero-carousel-dot')) {
+        if (e.target.closest('.hero-carousel-btn') || e.target.closest('.hero-carousel-dot') || e.target.closest('a')) {
           return;
         }
         const href = this.getAttribute('data-href');
