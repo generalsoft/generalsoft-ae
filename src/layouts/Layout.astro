@@ -18,6 +18,38 @@ const currentLocale = currentPath.match(/^\/(en|ar|de)(?=\/|$)/)?.[1] || 'en';
 const lang = currentLocale;
 const dir = currentLocale === 'ar' ? 'rtl' : 'ltr';
 
+const consentCopy = {
+  en: {
+    title: 'Cookie and storage preferences',
+    message: 'We store your choice so we can remember it. The contact page also uses Firebase browser storage for technical service metadata. Optional analytics and marketing technologies are not currently used. You can change your choice at any time.',
+    privacy: 'Privacy notice',
+    privacyLabel: 'Privacy notice (German)',
+    reject: 'Necessary only',
+    accept: 'Accept all',
+    settings: 'Cookie settings',
+    saved: 'Your preference has been saved.'
+  },
+  de: {
+    title: 'Cookie- und Speichereinstellungen',
+    message: 'Wir speichern Ihre Auswahl, um sie zu berücksichtigen. Die Kontaktseite verwendet außerdem Firebase-Browserspeicher für technische Dienstmetadaten. Optionale Analyse- und Marketingtechnologien setzen wir derzeit nicht ein. Sie können Ihre Auswahl jederzeit ändern.',
+    privacy: 'Datenschutzerklärung',
+    privacyLabel: 'Datenschutzerklärung',
+    reject: 'Nur notwendige',
+    accept: 'Alle akzeptieren',
+    settings: 'Cookie-Einstellungen',
+    saved: 'Ihre Auswahl wurde gespeichert.'
+  },
+  ar: {
+    title: 'تفضيلات ملفات تعريف الارتباط والتخزين',
+    message: 'نحفظ اختيارك لتذكره. تستخدم صفحة الاتصال أيضاً تخزين Firebase في المتصفح لبيانات تقنية خاصة بالخدمة. لا نستخدم حالياً تقنيات اختيارية للتحليلات أو التسويق. يمكنك تغيير اختيارك في أي وقت.',
+    privacy: 'إشعار الخصوصية',
+    privacyLabel: 'إشعار الخصوصية (بالألمانية)',
+    reject: 'الضرورية فقط',
+    accept: 'قبول الكل',
+    settings: 'إعدادات ملفات تعريف الارتباط',
+    saved: 'تم حفظ تفضيلاتك.'
+  }
+}[currentLocale];
 ---
 <!DOCTYPE html>
 <html lang={lang} dir={dir} data-locale={lang}>
@@ -86,9 +118,30 @@ const dir = currentLocale === 'ar' ? 'rtl' : 'ltr';
           <span class="legal-small">
             {currentLocale === 'ar' ? 'ش.م.ح – ذ.م.م' : 'FZ-LLC'}
           </span>
+          {currentLocale === 'de' && (
+            <a class="footer-privacy-link" href="/de/datenschutz/">Datenschutzerklärung</a>
+          )}
+          <button class="footer-consent-settings" type="button" data-consent-open>
+            {consentCopy.settings}
+          </button>
         </p>
       </div>
     </footer>
+
+    <section class="cookie-consent" data-cookie-consent hidden aria-labelledby="cookie-consent-title">
+      <div class="cookie-consent-copy">
+        <h2 id="cookie-consent-title">{consentCopy.title}</h2>
+        <p>{consentCopy.message}</p>
+        <a href="/de/datenschutz/">
+          {currentLocale === 'de' ? consentCopy.privacy : consentCopy.privacyLabel}
+        </a>
+        <p class="cookie-consent-saved" data-consent-saved role="status" hidden>{consentCopy.saved}</p>
+      </div>
+      <div class="cookie-consent-actions">
+        <button type="button" class="cookie-consent-reject" data-consent-choice="necessary">{consentCopy.reject}</button>
+        <button type="button" class="cookie-consent-accept" data-consent-choice="all">{consentCopy.accept}</button>
+      </div>
+    </section>
 
     <!-- Floating Action Buttons -->
     <div class="floating-buttons">
@@ -114,6 +167,9 @@ const dir = currentLocale === 'ar' ? 'rtl' : 'ltr';
     {/* Ensure script.js is handled by Astro's bundler */}
     <script>
       import '../js/script.js';
+    </script>
+    <script>
+      import '../js/cookie-consent.js';
     </script>
   </body>
 </html>

@@ -693,6 +693,138 @@ footer p {
   vertical-align: super;
 }
 
+.footer-privacy-link {
+  display: block;
+  margin-top: 0.5rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-consent-settings {
+  display: block;
+  margin: 0.5rem auto 0;
+  padding: 0;
+  color: rgba(255, 255, 255, 0.8);
+  background: transparent;
+  border: 0;
+  font: inherit;
+  font-size: 0.875rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.privacy-notice {
+  margin: 0;
+  color: var(--text-light);
+  font-size: 0.875rem;
+}
+
+.privacy-notice a {
+  color: var(--primary);
+}
+
+.privacy-page {
+  padding: 4rem 0;
+}
+
+.privacy-page h1 {
+  margin-bottom: 1.5rem;
+}
+
+.privacy-page h2 {
+  margin: 2rem 0 0.75rem;
+}
+
+.privacy-page p,
+.privacy-page ul {
+  margin-bottom: 1rem;
+}
+
+.privacy-page ul {
+  padding-left: 1.5rem;
+}
+
+.cookie-consent {
+  position: fixed;
+  z-index: 10001;
+  right: 1rem;
+  bottom: 1rem;
+  left: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.25rem;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+}
+
+.cookie-consent[hidden],
+.cookie-consent-saved[hidden] {
+  display: none;
+}
+
+.cookie-consent-copy {
+  max-width: 680px;
+}
+
+.cookie-consent h2 {
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+}
+
+.cookie-consent p {
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+.cookie-consent a {
+  display: inline-block;
+  margin-top: 0.25rem;
+  color: var(--primary);
+  font-size: 0.875rem;
+}
+
+.cookie-consent-actions {
+  display: flex;
+  flex-shrink: 0;
+  gap: 0.5rem;
+}
+
+.cookie-consent-actions button {
+  min-height: 44px;
+  padding: 0.625rem 0.875rem;
+  border: 1px solid var(--primary);
+  border-radius: var(--radius);
+  font: inherit;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.cookie-consent-reject {
+  color: var(--primary);
+  background: var(--bg);
+}
+
+.cookie-consent-accept {
+  color: white;
+  background: var(--primary);
+}
+
+.cookie-consent-actions button:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.cookie-consent-actions button:disabled {
+  cursor: default;
+  opacity: 0.7;
+}
+
 /* CTA Button */
 .cta-button {
   display: inline-block;
@@ -1110,6 +1242,24 @@ section.faq-section {
 
 /* Responsive */
 @media (max-width: 768px) {
+  .cookie-consent {
+    right: 0.75rem;
+    bottom: 0.75rem;
+    left: 0.75rem;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+
+  .cookie-consent-actions {
+    flex-wrap: wrap;
+  }
+
+  .cookie-consent-actions button {
+    flex: 1 1 130px;
+  }
+
   .hero-content h1 {
     font-size: 2rem;
   }
