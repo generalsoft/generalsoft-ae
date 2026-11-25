@@ -17,6 +17,10 @@ const t = {
   en: {
     home: 'Home',
     services: 'Services',
+    aiNav: 'AI',
+    eduNav: 'Education',
+    nahw: 'Nahw — Qur\'an Grammar',
+    learn: 'Learn — AI Training',
     partners: 'Partners',
     contact: 'Contact Us',
     about: 'About Us',
@@ -34,6 +38,10 @@ const t = {
   ar: {
     home: 'الرئيسية',
     services: 'خدماتنا',
+    aiNav: 'الذكاء الاصطناعي',
+    eduNav: 'التعليم',
+    nahw: 'نحو — إعراب القرآن',
+    learn: 'تعلّم — تدريب الذكاء الاصطناعي',
     partners: 'الشركاء',
     contact: 'اتصل بنا',
     about: 'من نحن',
@@ -51,6 +59,10 @@ const t = {
   de: {
     home: 'Startseite',
     services: 'Services',
+    aiNav: 'KI',
+    eduNav: 'Bildung',
+    nahw: 'Nahw — Koran-Grammatik',
+    learn: 'Lernen — KI-Schulungen',
     partners: 'Partner',
     contact: 'Kontakt',
     about: 'Über uns',
@@ -117,6 +129,16 @@ const currentLanguage = languages.find((lang) => lang.code === currentLocale) ??
           <a href={`${prefix}/services/web-design/`}>{labels.web}</a>
           <a href={`${prefix}/services/mobile-apps/`}>{labels.mobile}</a>
           <a href={`${prefix}/services/electronic-systems/`}>{labels.elec}</a>
+        </div>
+      </li>
+      <li>
+        <a href="https://spindex.generalsoft.ai" target="_blank" rel="noopener">{labels.aiNav}</a>
+      </li>
+      <li class="dropdown">
+        <a href="https://generalsoft.ai/nahw" class="dropbtn" target="_blank" rel="noopener">{labels.eduNav} <span class="dropdown-arrow">▼</span></a>
+        <div class="dropdown-content">
+          <a href="https://generalsoft.ai/nahw" target="_blank" rel="noopener">{labels.nahw}</a>
+          <a href="https://learn.generalsoft.ai" target="_blank" rel="noopener">{labels.learn}</a>
         </div>
       </li>
       <li><a href={`${prefix}/partners/`}>{labels.partners}</a></li>

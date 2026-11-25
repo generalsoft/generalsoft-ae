@@ -326,6 +326,14 @@ nav {
   display: block;
 }
 
+.dropdown.open .dropdown-content {
+  display: block;
+}
+
+.dropdown.open .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
 .dropdown-content a {
   display: block;
   padding: 0.5rem 1rem;
@@ -1316,6 +1324,26 @@ section.faq-section {
   .nav-links.active {
     display: flex; /* Shown when active */
     animation: slideDown 0.3s ease-out;
+  }
+
+  .nav-links .dropdown-content {
+    display: none;
+    position: static;
+    min-width: 0;
+    background: var(--bg-alt);
+    box-shadow: none;
+    border-radius: var(--radius);
+    margin-top: 0.75rem;
+    padding: 0.25rem 0;
+  }
+
+  /* Use tap-to-open instead of hover on mobile */
+  .nav-links .dropdown:hover .dropdown-content {
+    display: none;
+  }
+
+  .nav-links .dropdown.open .dropdown-content {
+    display: block;
   }
 
   .services-grid {
