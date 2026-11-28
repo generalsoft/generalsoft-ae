@@ -1,6 +1,7 @@
 ---
 import Header from '../components/Header.astro';
 import SEO from '../components/SEO.astro';
+import Analytics from '../components/Analytics.astro';
 import '../css/styles.css';
 import '../css/rtl.css';
 
@@ -21,7 +22,7 @@ const dir = currentLocale === 'ar' ? 'rtl' : 'ltr';
 const consentCopy = {
   en: {
     title: 'Cookie and storage preferences',
-    message: 'We store your choice so we can remember it. The contact page also uses Firebase browser storage for technical service metadata. Optional analytics and marketing technologies are not currently used. You can change your choice at any time.',
+    message: 'We store your choice so we can remember it. The contact page also uses Firebase browser storage for technical service metadata. If you accept all, we load Google Analytics 4 to measure how the website is used; if you choose necessary only, no analytics is loaded. You can change your choice at any time.',
     privacy: 'Privacy notice',
     privacyLabel: 'Privacy notice (German)',
     reject: 'Necessary only',
@@ -31,7 +32,7 @@ const consentCopy = {
   },
   de: {
     title: 'Cookie- und Speichereinstellungen',
-    message: 'Wir speichern Ihre Auswahl, um sie zu berücksichtigen. Die Kontaktseite verwendet außerdem Firebase-Browserspeicher für technische Dienstmetadaten. Optionale Analyse- und Marketingtechnologien setzen wir derzeit nicht ein. Sie können Ihre Auswahl jederzeit ändern.',
+    message: 'Wir speichern Ihre Auswahl, um sie zu berücksichtigen. Die Kontaktseite verwendet außerdem Firebase-Browserspeicher für technische Dienstmetadaten. Wenn Sie alle akzeptieren, laden wir Google Analytics 4, um die Nutzung der Website zu messen; bei „Nur notwendige“ wird keine Analyse geladen. Sie können Ihre Auswahl jederzeit ändern.',
     privacy: 'Datenschutzerklärung',
     privacyLabel: 'Datenschutzerklärung',
     reject: 'Nur notwendige',
@@ -41,7 +42,7 @@ const consentCopy = {
   },
   ar: {
     title: 'تفضيلات ملفات تعريف الارتباط والتخزين',
-    message: 'نحفظ اختيارك لتذكره. تستخدم صفحة الاتصال أيضاً تخزين Firebase في المتصفح لبيانات تقنية خاصة بالخدمة. لا نستخدم حالياً تقنيات اختيارية للتحليلات أو التسويق. يمكنك تغيير اختيارك في أي وقت.',
+    message: 'نحفظ اختيارك لتذكره. تستخدم صفحة الاتصال أيضاً تخزين Firebase في المتصفح لبيانات تقنية خاصة بالخدمة. عند قبول الكل نحمّل Google Analytics 4 لقياس استخدام الموقع، وعند اختيار الضرورية فقط لا نحمّل أي تحليلات. يمكنك تغيير اختيارك في أي وقت.',
     privacy: 'إشعار الخصوصية',
     privacyLabel: 'إشعار الخصوصية (بالألمانية)',
     reject: 'الضرورية فقط',
@@ -60,6 +61,7 @@ const consentCopy = {
     <link rel="alternate icon" href="/favicon.png" type="image/png" sizes="32x32" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <SEO title={title} description={description} path={path} isArabic={isArabic} image={image} />
+    <Analytics />
     <script>
       // Expose Firebase public config at runtime so bundles can read it (dev/preview/runtime)
       (function(){
